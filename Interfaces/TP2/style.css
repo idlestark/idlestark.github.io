@@ -24,8 +24,12 @@
     --gris: #A3ADA1;
     --grisoscuro: #425A6C;
     --grisverdoso: #37433E;
-    
+
     --atencion: #D3D711;
     --negroopacidad: #140303; /*con 75% de opacidad*/
    
+}
+
+body{
+    background-color: var(--primario);
 }
