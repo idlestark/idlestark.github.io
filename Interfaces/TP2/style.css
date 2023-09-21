@@ -1,0 +1,31 @@
+:root{
+    --primario: #9FFFF5;
+    --primarios1: #85FFD1;
+    --primarios2: #73DFB6;
+    --primariol1: #BDFFFD;
+    --primariol2: #DCFFFE;
+
+    --secundario: #50426A;
+    --secundarios1: #3E2F5B;
+    --secundarios2: #312053;
+    --secundariol1: #625875;
+    --secundariol2: #867F92;
+    
+    --acento: #FF499E;
+
+    --blanco: #F1ECEF;
+    --negro: #140303;
+
+    --error: #DB1515;
+    --exito: #B1DD14;
+    --verdeoscuro: #3E5E13;
+   
+
+    --gris: #A3ADA1;
+    --grisoscuro: #425A6C;
+    --grisverdoso: #37433E;
+    
+    --atencion: #D3D711;
+    --negroopacidad: #140303; /*con 75% de opacidad*/
+   
+}
