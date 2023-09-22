@@ -1,3 +1,9 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
 :root{
     --primario: #9FFFF5;
     --primarios1: #85FFD1;
@@ -32,4 +38,41 @@
 
 body{
     background-color: var(--primario);
+}
+
+img{
+    width: 8vh;
+}
+
+.header{
+    background-color: var(--grisverdoso);
+    width: 250vh;
+    height: 13vh;
+    display: flex;
+}
+
+.nombre-pagina{
+    color: var(--blanco);
+    font-size: 1.3em;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.barra-busqueda{
+    display: flex;
+    align-items: center;
+}
+
+.main{
+    height: 85vh;
+}
+
+.footer{
+    display:flex;
+    background-color: var(--grisverdoso);
+    height: 60vh;
 }
