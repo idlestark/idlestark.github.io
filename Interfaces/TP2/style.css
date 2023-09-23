@@ -67,6 +67,13 @@ img{
     align-items: center;
 }
 
+.perfil{
+    width: 54px;
+    height: 54px;
+    border-radius: 1000px;
+    background-color: var(--blanco);
+}
+
 .main{
     height: 85vh;
 }
@@ -74,7 +81,7 @@ img{
 .footer{
     display:flex;
     background-color: var(--grisverdoso);
-    height: 60vh;
+    height: 62vh;
 }
 
 .contenedor-formulario{
@@ -155,4 +162,10 @@ input{
     height: 35px;
     border-radius: 100px;
     background: #00ACEE;
+}
+
+.fondo-carrusel{
+    background-color: var(--grisoscuro);
+    width:1442px;
+    height:455px;
 }
