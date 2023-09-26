@@ -13,13 +13,31 @@
 <link href="https://fonts.googleapis.com/css2?family=Sarpanch&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <h1 class="nombre-pagina">PLANROMA</h1>
-            <img src="img/Nuevo-Documento-de-Microsoft-Word-_3_.jpg" alt="logo de PLANROMA">
-        </div>
-        <div class="contenedor-barra-busqueda">
-            <input class="barra-busqueda" type="text">
+    <div class="contenedor-header">
+        <header class="header">
+            <div class="logo">
+                <h1 class="nombre-pagina">PLANROMA</h1>
+                <img src="img/Nuevo-Documento-de-Microsoft-Word-_3_.jpg" alt="logo de PLANROMA">
+            </div>
+            <div class="contenedor-barra-busqueda">
+                <input class="barra-busqueda" type="text">
+            </div>
+            <div class="div-carrito">
+            <svg class="carrito" xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43" fill="none">
+                <path d="M14.3584 41.0019C15.2338 41.0019 15.9435 40.2025 15.9435 39.2163C15.9435 38.2301 15.2338 37.4307 14.3584 37.4307C13.483 37.4307 12.7733 38.2301 12.7733 39.2163C12.7733 40.2025 13.483 41.0019 14.3584 41.0019Z" stroke="#F1ECEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M36.5498 41.0019C37.4252 41.0019 38.1349 40.2025 38.1349 39.2163C38.1349 38.2301 37.4252 37.4307 36.5498 37.4307C35.6744 37.4307 34.9647 38.2301 34.9647 39.2163C34.9647 40.2025 35.6744 41.0019 36.5498 41.0019Z" stroke="#F1ECEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1.3606 1H7.75613L12.5528 31.7127H38.1349" stroke="#F1ECEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12.7908 24.5691H37.6387C37.823 24.5692 38.0017 24.4978 38.1443 24.367C38.2868 24.2361 38.3845 24.054 38.4207 23.8515L41.2896 7.78092C41.3128 7.65133 41.3099 7.5176 41.2814 7.38938C41.2528 7.26117 41.1992 7.14165 41.1243 7.03948C41.0495 6.9373 40.9554 6.855 40.8488 6.79852C40.7421 6.74205 40.6256 6.7128 40.5076 6.71289H9.60312" stroke="#F1ECEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </div>
+            <div class="contenedor-perfil">
+            <div class="texto-javier">
+            <h3>Hola Javier</h3>
+            </div>
+            <div class="perfil">
+            </div>   
+            </div>
+            </header>
         </div>
    </header>
    <main class="main contenedor-formulario">
@@ -28,16 +46,21 @@
         <input type="text">
         <label>Apellido</label>
         <input type="text">
-        <h3><a>¿Aún no tiene cuenta? Registrate aqui</a></h3>
+        <h3><a href="">¿Aún no tiene cuenta? Registrate aqui</a></h3>
         <button class="boton-registrarse">Registrarse</button>
+    <div>
         <button class="boton-google">Logueate con Google</button>
         <button class="boton-facebook">Logueate con Facebook</button>
+    </div>
     </form>
    </main>
    <footer class="footer">
     <div>
-        <h2>Acerca de PlanRoma</h2>
-        <p>Diviértete en PlanRoma, ofrecemos una gran selección de juegos gratis, ya sea ser un intrépido luchador, un feroz guerrero, un fugaz piloto de carreras, o un impecable caballero. Contamos con juegos para todas las edades, ¡Todas aquellas experiencias gratuitas y sin ningún tipo de descargas te esperan en PlanRoma, tu plataforma de videojuegos online favorita!</p>
+        <div class="acerca-de">
+            <h2>Acerca de PlanRoma</h2>
+            <p>Diviértete en PlanRoma, ofrecemos una gran selección de juegos gratis, ya sea ser un intrépido luchador, un feroz guerrero, un fugaz piloto de carreras, o un impecable caballero. Contamos con juegos para todas las edades, ¡Todas aquellas experiencias gratuitas y sin ningún tipo de descargas te esperan en PlanRoma, tu plataforma de videojuegos online favorita!</p>
+        </div>
+        <div class="redes">
         <div>
             <a href="" class="redes-facebook">@planroma_</a>
         </div>
@@ -47,8 +70,10 @@
         <div>
             <a href="" class="redes-twitter">@planroma_</a>
         </div>
+        </div>   
+        <div class="clickeables">
         <img src="img/Nuevo-Documento-de-Microsoft-Word-_3_.jpg" alt="logo de PLANROMA">
-        <div>
+        
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M19.3333 0H0.666667C0.489856 0 0.320286 0.0810437 0.195262 0.225302C0.0702379 0.369561 0 0.565218 0 0.769231V16.1538C0 16.3579 0.0702379 16.5535 0.195262 16.6978C0.320286 16.842 0.489856 16.9231 0.666667 16.9231H7.66667V18.4615H4.66667V20H15.3333V18.4615H12.3333V16.9231H19.3333C19.5101 16.9231 19.6797 16.842 19.8047 16.6978C19.9298 16.5535 20 16.3579 20 16.1538V0.769231C20 0.565218 19.9298 0.369561 19.8047 0.225302C19.6797 0.0810437 19.5101 0 19.3333 0ZM18.5 1.73077V12.1154H1.5V1.73077H18.5ZM9.33875 14.7154C9.32069 14.5561 9.34632 14.3942 9.41204 14.2526C9.47776 14.1109 9.58027 13.9966 9.70518 13.9256C9.8301 13.8546 9.97114 13.8305 10.1085 13.8567C10.2459 13.8829 10.3727 13.9581 10.4712 14.0717C10.5697 14.1853 10.6348 14.3316 10.6575 14.4902C10.6802 14.6487 10.6594 14.8114 10.5978 14.9556C10.5363 15.0997 10.4372 15.218 10.3144 15.2938C10.1917 15.3696 10.0514 15.3992 9.91333 15.3784C9.76762 15.3564 9.63229 15.2795 9.52838 15.1596C9.42447 15.0397 9.35781 14.8835 9.33875 14.7154Z" fill="#F1ECEF"/>
             </svg>

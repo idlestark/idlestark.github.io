@@ -96,6 +96,11 @@ img{
     background-color: var(--grisverdoso);
     width:693px;
     height:391px;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .boton-registrarse{
@@ -105,16 +110,19 @@ img{
     height: 40px;
     justify-content: center;
     align-items: center;
+    color: var(--blanco);
 }
 
 .boton-google{
     background-color:#DB4A39;
+    color: var(--blanco);
     width: 300px;
     height: 35px;
 }
 
 .boton-facebook{
     background-color:#3B5998;
+    color: var(--blanco);
     width: 300px;
     height: 35px;
 }
@@ -122,6 +130,10 @@ img{
 a{
     color:var(--blanco)
 
+}
+
+label{
+    color: var(--blanco);
 }
 
 input{
@@ -132,9 +144,10 @@ input{
 }
 
 .contenedor-barra-busqueda{
+    width: 100%;
     display:flex;
     align-items: center;
-margin-left: 555px;
+    justify-content: center;
 }
 
 .barra-busqueda{
