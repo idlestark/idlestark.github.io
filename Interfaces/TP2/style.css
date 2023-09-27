@@ -79,6 +79,10 @@ img{
     height: 85vh;
 }
 
+.main-registro{
+    height: 150vh;
+}
+
 .footer{
     display:flex;
     align-items: center;
@@ -96,6 +100,17 @@ img{
     background-color: var(--grisverdoso);
     width:693px;
     height:391px;
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.formulario-registro{
+    background-color: var(--grisverdoso);
+    width: 804px;
+    height: 901px;
     display: flex;
     flex-direction:column;
     justify-content:center;
@@ -125,6 +140,11 @@ img{
     color: var(--blanco);
     width: 300px;
     height: 35px;
+}
+
+.g-recaptcha{
+    width: 300px;
+    height: 71px;
 }
 
 a{
@@ -176,6 +196,12 @@ input{
     height: 35px;
     border-radius: 100px;
     background: #00ACEE;
+}
+
+.volver{
+    width: 120vh;
+   display: flex;
+   justify-content: end;
 }
 
 .fondo-carrusel{
