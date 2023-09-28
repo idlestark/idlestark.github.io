@@ -33,7 +33,17 @@
 
     --atencion: #D3D711;
     --negroopacidad: #140303; /*con 75% de opacidad*/
-   
+
+    --fuenteh1: 36px;
+    --fuenteh2: 24px;
+    --fuenteh3: 20px;
+    --fuentebody: 16px;
+    --fuenteaclaracion: 14px;
+    --espaciadoboton: 2.52px;
+    --fuenteboton: 14px;
+    --fuenteprecio: 40px;
+    --fuentepreciochico: 32px;
+    --fuentecard: 14px;
 }
 
 body{
@@ -49,12 +59,14 @@ img{
     width: 100%;
     height: 13vh;
     display: flex;
+    justify-content: center;
 }
 
 .nombre-pagina{
     color: var(--blanco);
     font-size: 1.3em;
     font-family: 'Sarpanch', sans-serif;
+    font-size: var(--fuenteh1);
 }
 
 .logo{
@@ -126,6 +138,8 @@ img{
     justify-content: center;
     align-items: center;
     color: var(--blanco);
+    letter-spacing: var(--espaciadoBoton);
+    font-size:var(--fuenteboton)
 }
 
 .boton-google{
@@ -175,6 +189,8 @@ input{
     border-bottom: none;
     border-radius: 2em;
     color: var(--blanco);
+    align-items: center;
+    justify-content: center;
 }
 
 .redes-facebook{
@@ -182,6 +198,9 @@ input{
     height: 35px;
     border-radius: 980px;
     background: #3B5998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .redes-instagram{
@@ -189,6 +208,9 @@ input{
     height: 35px;
     border-radius: 100px;
     background: linear-gradient(180deg, #FF499E 0%, #FFE249 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .redes-twitter{
@@ -196,12 +218,13 @@ input{
     height: 35px;
     border-radius: 100px;
     background: #00ACEE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .volver{
-    width: 120vh;
-   display: flex;
-   justify-content: end;
+  float: right;
 }
 
 .fondo-carrusel{
@@ -223,22 +246,39 @@ input{
     margin-left: auto;
     margin-right: 35px;
     margin-left: 0;
-      margin-top: 35px;
-      justify-content: space-around;
+    margin-top: 35px;
+    justify-content: space-around;
 }
 
 .acerca-de{
-    margin-left: 35px;
-    width: 60%;
-    margin-bottom: 10px;
-  
+    margin-left: 45px;
+    width: 95%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.contenido-footer{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contenedor-redes{
+    display: flex;
+    justify-content: center;
+    
 }
 
 .redes{
-    margin-top: 35px;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    font-size: var(--fuentebody);
+}
+
+.redes a{
+    text-decoration: none;
 }
 
 .clickeables{
@@ -248,7 +288,55 @@ input{
     justify-content: space-around;
 }
 
+.clickeables a{
+    font-size: var(--fuentebody)
+}
+
+
 .texto-javier{
     margin-top: 15px;
     margin-right: 20px;
 }
+
+input, label {
+    display:block;
+}
+
+.nombre-nombre, .contraseña-contraseña, .email-email, .nickname-nickname,
+.apellido-apellido{
+    margin-bottom: 4px;
+    font-size: var(--fuenteh3);
+}
+.contenedor-separador{
+    display: flex;
+}
+
+.o{
+    color: var(--blanco);
+}
+
+.separador{
+    width: 139px;
+    height: 1px;
+    background: var(--Gris, #A3ADA1);
+}
+
+.titulo-footer{
+    color: var(--blanco);
+    font-size: var(--fuenteh1);
+}
+
+.texto-footer{
+    color: var(--gris);
+    font-size: var(--fuenteh3);
+}
+
+.clickeables-interno{
+    display: flex;
+    align-items: center;
+}
+
+.clickeables-interno svg{
+    margin-right: 10px;
+}
+
