@@ -80,11 +80,15 @@ img{
     align-items: center;
 }
 
+
+.saludo-perfil{
+    font-size: var(--fuentebody);
+}
+
 .perfil{
     width: 54px;
     height: 54px;
-    border-radius: 1000px;
-    background-color: var(--blanco);
+    border-radius: 100px;
 }
 
 .main{
@@ -117,6 +121,18 @@ img{
     justify-content:center;
     align-items: center;
     justify-content: space-around;
+}
+
+.fondo-carrusel .populares{
+    color: var(--blanco);
+    display: flex;
+    padding: 20px;
+}
+
+.main-index h2{
+    font-weight: 100;
+    display: inline;
+    padding: 20px;
 }
 
 .formulario-registro{
@@ -177,6 +193,7 @@ input{
     height: 35px;
 }
 
+
 .contenedor-barra-busqueda{
     width: 100%;
     display:flex;
@@ -186,11 +203,15 @@ input{
 
 .barra-busqueda{
     background-color: #140303;
-    border-bottom: none;
     border-radius: 2em;
     color: var(--blanco);
     align-items: center;
     justify-content: center;
+    border: 2px solid var(--Primario-S1, #85FFD1);
+}
+
+.linea{
+    width: 100%;
 }
 
 .redes-facebook{
@@ -233,21 +254,17 @@ input{
     height:455px;
 }
 
-.div-carrito{
-    margin-right: 45px;
-    margin-top: 40px;
-    display: flex;
-    margin-left: auto;
-    justify-content: space-around;
+.compra{
+    width: 11px;
+    height: 12px;
+    border-radius: 100px;
+    background: var(--Exito, #B1DD14);
 }
 
 .contenedor-perfil{
     display: flex;
-    margin-left: auto;
-    margin-right: 35px;
-    margin-left: 0;
-    margin-top: 35px;
-    justify-content: space-around;
+    align-items: center;
+    margin-right: 20px;
 }
 
 .acerca-de{
@@ -257,7 +274,7 @@ input{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-}
+} 
 
 .contenido-footer{
     height: 85%;
@@ -294,8 +311,16 @@ input{
 
 
 .texto-javier{
-    margin-top: 15px;
-    margin-right: 20px;
+  width: 100px;
+  color: var(--blanco);
+}
+
+.texto-javier h3{
+    font-weight: 200;
+}
+
+.div-carrito{
+    margin-right: 25px;
 }
 
 input, label {
@@ -340,3 +365,36 @@ input, label {
     margin-right: 10px;
 }
 
+
+
+.card-juego-pago{
+    margin-top: 12px;
+    width: 300px;
+    height: 350px;
+    background-color: green;
+    margin-bottom: 12px;
+}
+
+.card-juego-pago .imagen-card{
+    height: 151px;
+    width: 300px;
+}
+
+.card-juego-pago .imagen-card img{
+    height: 100%;
+    width: 100%;
+}
+
+.card-juego-pago .descripcion-juego p{
+    font-size: var(--fuentecard);
+}
+
+.card-juego-pago .nombre-juego p{
+    font-size: var(--fuenteh3);
+}
+
+.card-juego-pago .boton-pago{
+ width: 300px;
+ height:64px;
+ bottom: 10px;
+}
