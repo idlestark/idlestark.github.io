@@ -367,34 +367,152 @@ input, label {
 
 
 
-.card-juego-pago{
+.card-juego-gratis{
+    margin-left: 30px;
+    position: relative;
     margin-top: 12px;
     width: 300px;
     height: 350px;
-    background-color: green;
+    background-color: var(--primariol2);
     margin-bottom: 12px;
 }
 
-.card-juego-pago .imagen-card{
+.card-juego-gratis .imagen-card{
     height: 151px;
     width: 300px;
 }
 
-.card-juego-pago .imagen-card img{
+.card-juego-gratis .imagen-card img{
     height: 100%;
     width: 100%;
 }
 
-.card-juego-pago .descripcion-juego p{
-    font-size: var(--fuentecard);
+.card-juego-gratis .descripcion-juego p{
+margin-top: 8px;
+margin-left: 25px;
+margin-bottom: 34px;
+margin-right: 25px;
+font-size: var(--fuentecard);
+max-height: 11ch;
+ max-width: 45ch;
+ display: -webkit-box;
+ -webkit-box-orient: vertical;
+ -webkit-line-clamp: 4;
+ overflow: hidden;
+ text-overflow: ellipsis;
 }
 
-.card-juego-pago .nombre-juego p{
+.card-juego-gratis .nombre-juego p{
     font-size: var(--fuenteh3);
+    margin-top: 17px;
+    margin-left: 25px;
 }
 
-.card-juego-pago .boton-pago{
- width: 300px;
- height:64px;
- bottom: 10px;
+.card-juego-gratis .boton-card div{
+box-sizing: border-box;
+
+}
+
+.boton-gratis{
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: var(--secundario);
+bottom: 0;
+height: 64px;
+width: 300px;
+outline: none;
+border: 0;
+color: var(--blanco);
+letter-spacing: var(--espaciadoboton);
+}
+
+.boton-gratis:hover{
+    background-color: #5F5179;
+    cursor: pointer;
+}
+
+.contenedor-juegos{
+    display: flex;
+}
+
+
+.contenedor_boton{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 12%;
+    height: 3em;
+}
+
+.boton{
+    width: 55%;
+    height: 0.3em;
+    background-color: var(--primarios1);
+}
+
+.contenedor-breakpoints{
+    color: var(--blanco);
+    width: 100%;
+    height: 5em;
+    background-color: var(--grisoscuro);
+
+}
+.titulo-breakpoints{
+    margin-left: 10px;
+}
+
+.main-juego{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+.juego{
+    margin-top: 50px;
+    width: 950px;
+    height: 600px;
+    background-color: var(--acento);
+}
+
+.opciones-juego{
+    margin-bottom: 50px;
+    width: 950px;
+    height: 98px; 
+    background-color: var(--blanco);
+    display: flex;
+    justify-content: end;
+}
+
+.breakpoints{
+    font-size:var(--fuentebody); 
+    margin-left: 10px;
+    margin-top: 10px;  
+}
+
+.puntero{
+    display: flex;
+}
+
+.acerca-del-juego{
+    width: 1400px;
+    height: 900px;
+    background-color: var(--blanco);
+}
+
+.escribir-comentario{
+    width: 862px;
+    height: 46px;
+    display: flex;
+}
+
+.comentario{
+    width: 1000px;
+    height: 126px;
+    background-color: var(--blanco);
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
