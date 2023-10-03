@@ -377,6 +377,7 @@ input, label {
     margin-bottom: 12px;
 }
 
+
 .card-juego-gratis .imagen-card{
     height: 151px;
     width: 300px;
@@ -435,6 +436,87 @@ letter-spacing: var(--espaciadoboton);
 
 .contenedor-juegos{
     display: flex;
+}
+
+.card-juego-pago{
+    margin-left: 30px;
+    position: relative;
+    margin-top: 12px;
+    width: 300px;
+    height: 350px;
+    background-color: var(--primariol2);
+    margin-bottom: 12px;
+}
+
+.card-juego-pago .imagen-card{
+    height: 151px;
+    width: 300px;
+}
+
+.card-juego-pago .imagen-card img{
+    height: 100%;
+    width: 100%;
+}
+
+.card-juego-pago .descripcion-juego p{
+    margin-top: 8px;
+    margin-left: 25px;
+    margin-bottom: 34px;
+    margin-right: 25px;
+    font-size: var(--fuentecard);
+    max-height: 11ch;
+     max-width: 45ch;
+     display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 4;
+     overflow: hidden;
+     text-overflow: ellipsis;
+    }
+    
+.card-juego-pago .nombre-juego p{
+   font-size: var(--fuenteh3);
+    margin-top: 17px;
+    margin-left: 25px;
+    }
+
+.precio-juego-pago{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 123px;
+    height: 64px;
+    background-color: var(--verdeoscuro);
+    bottom: 0;
+    box-sizing: border-box;
+    font-size: var(--fuenteprecio);
+    color: var(--exito);
+    font-weight: 900;
+}    
+
+.boton-pago{
+font-size: var(--fuenteboton);
+letter-spacing: var(--espaciadoboton);
+background-color: var(--exito);
+width: 177px;
+height: 64px;
+position: absolute;
+bottom: 0;
+right: 0;
+outline: none;
+border: 0;
+}
+
+.boton-pago:hover{
+    background-color: #C7F61A;
+    cursor: pointer;
+}
+
+
+.contenedor-boton-card-pago div{
+    display: flex;
+    box-sizing: border-box;
+
 }
 
 
