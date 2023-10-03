@@ -495,6 +495,11 @@ letter-spacing: var(--espaciadoboton);
     margin-top: 17px;
     margin-left: 25px;
     }
+.preferencias p{
+    font-size: var(--fuenteh3);
+    margin-top: 17px;
+    margin-left: 25px;
+}
 
 .precio-juego-pago{
     position: absolute;
