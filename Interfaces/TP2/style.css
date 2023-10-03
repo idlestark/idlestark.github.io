@@ -255,10 +255,23 @@ input{
 }
 
 .compra{
-    width: 11px;
-    height: 12px;
+    display: flex;
+    width: 15px;
+    height: 15px;
     border-radius: 100px;
     background: var(--Exito, #B1DD14);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 17px;
+    bottom: 20px;
+    box-sizing: border-box;
+}
+
+.contenedor-carrito{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
 }
 
 .contenedor-perfil{
@@ -321,6 +334,10 @@ input{
 
 .div-carrito{
     margin-right: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 input, label {
