@@ -602,15 +602,40 @@ border: 0;
 }
 
 .acerca-del-juego{
-    width: 1400px;
-    height: 900px;
+    width: 100%;
+    height: 800px;
     background-color: var(--blanco);
+    display: flex;
 }
 
 .escribir-comentario{
     width: 862px;
     height: 46px;
     display: flex;
+}
+
+.descrpcion-del-juego{
+    margin-top: 20px;
+}
+
+.sobre-el-juego{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 50%;
+    height: 50%;
+}
+
+.como-jugar{
+    margin-top: 20px;
+    margin-left:20px; 
+}
+
+.controles{
+    display: flex;
+    margin-top:20px;
+    height: 50%;
 }
 
 .comentario{
@@ -626,4 +651,30 @@ border: 0;
     margin-left: 22px;
     margin-top: 9px;
     margin-bottom: 11px;
+}
+
+.contenedor-generos{
+    background-color: var(--grisverdoso);
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    height: 51vh;
+    width: 20vh;
+    left: 0;
+    top:13vh;
+    display: none;
+}
+
+
+.generos{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    color: var(--blanco);
+}
+
+.activo{
+    display: block;
 }
