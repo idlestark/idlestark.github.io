@@ -210,10 +210,6 @@ input{
     border: 2px solid var(--Primario-S1, #85FFD1);
 }
 
-.linea{
-    width: 100%;
-}
-
 .redes-facebook{
     width: 150px;
     height: 35px;
@@ -538,7 +534,6 @@ border: 0;
 .contenedor-boton-card-pago div{
     display: flex;
     box-sizing: border-box;
-
 }
 
 
@@ -549,6 +544,7 @@ border: 0;
     justify-content: space-evenly;
     width: 12%;
     height: 3em;
+    margin-top: 18px;
 }
 
 .boton{
@@ -611,7 +607,7 @@ border: 0;
 .escribir-comentario{
     width: 862px;
     height: 46px;
-    display: flex;
+    border: none;
 }
 
 .descrpcion-del-juego{
@@ -646,11 +642,43 @@ border: 0;
     margin-top: 30px;
 }
 
+.icono-comentario{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.input-comentario{
+    display: flex;
+}
+
+.contenedor-comentarios{
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 90%;
+}
+
+.enviar{
+    width: 138px;
+    height: 46px;
+    background-color: var(--exito);
+    border: none;
+}
+
 .linea-prueba{
     border-bottom: 1px solid #000000;
     margin-left: 22px;
     margin-top: 9px;
     margin-bottom: 11px;
+}
+
+.contenedor-publicidad{
+    display: flex;
+}
+
+.publicidad{
+    width: 232px;
+    height: 462px;
 }
 
 .contenedor-generos{
