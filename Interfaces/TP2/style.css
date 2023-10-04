@@ -511,6 +511,8 @@ letter-spacing: var(--espaciadoboton);
     font-weight: 900;
 }    
 
+
+
 .boton-pago{
 font-size: var(--fuenteboton);
 letter-spacing: var(--espaciadoboton);
@@ -523,6 +525,8 @@ right: 0;
 outline: none;
 border: 0;
 }
+
+
 
 .boton-pago:hover{
     background-color: #C7F61A;
@@ -685,7 +689,7 @@ border: 0;
     height: 100%;
     position: absolute;
     z-index: 1;
-    height: 51vh;
+    height: 38vh;
     width: 20vh;
     left: 0;
     top:13vh;
@@ -697,9 +701,13 @@ border: 0;
     display: flex;
     justify-content: center;
     list-style-type: none;
-    margin-top: 13px;
-    margin-bottom: 13px;
+    height: 26px;
     color: var(--blanco);
+    
+}
+
+.generos:hover{
+background-color: var(--negroopacidad);
 }
 
 .activo{
@@ -858,10 +866,10 @@ width: 48%;
    color: #fff;
 }
 #slides .slide_1 {
-   background: rgba(62, 47, 91, 0.35)
+   background: rgba(62, 47, 91, 0.35);
 }
 #slides .slide_2 {
-   background: #003459;
+    background: rgba(62, 47, 91, 0.35);
 }
 #slides .slide_3 {
    background: #007EA7;
@@ -937,4 +945,75 @@ width: 48%;
       max-width: calc(100% - 140px);
       margin: 0 auto;
    }
+}
+
+.card-pequenio-pago{
+    width: 300px;
+    height: 160px;
+    margin-left: 30px;
+    margin-top: 12px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.card-pequeño-gratis{
+    width: 300px;
+    height: 160px;
+    margin-left: 30px;
+    margin-top: 12px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.boton-card-pequenio-gratis{
+    position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: var(--secundario);
+bottom: 0;
+height: 47px;
+width: 300px;
+outline: none;
+border: 0;
+color: var(--blanco);
+letter-spacing: var(--espaciadoboton);
+}
+
+.precio-juego-pago-pequenio{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 123px;
+    height: 47px;
+    background-color: var(--verdeoscuro);
+    bottom: 0;
+    box-sizing: border-box;
+    font-size: var(--fuenteprecio);
+    color: var(--exito);
+    font-weight: 900;
+}
+
+.boton-pago-pequenio{
+    font-size: var(--fuenteboton);
+letter-spacing: var(--espaciadoboton);
+background-color: var(--exito);
+width: 177px;
+height: 47px;
+position: absolute;
+bottom: 0;
+right: 0;
+outline: none;
+border: 0;
+}
+
+.imagen-card-pequenio img{
+    width: 100%;
+    
+}
+
+.contenedor-card-pequenio{
+    display: flex;
+    flex-direction: column;
 }
