@@ -56,8 +56,7 @@
                 </svg>
                 <div class="compra"><p>0</p></div>
             </div>
-        
-            
+    
             <div class="texto-javier">
                 <h3 class="saludo-perfil">Hola Javier</h3>
             </div>
@@ -67,9 +66,92 @@
     </div>
    <main class="main-index">
         <div class="fondo-carrusel">
+            
             <h2 class="populares">Más populares</h2>
+            <div id="slider">
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+                <input type="radio" name="slider" id="slide3">
+                <input type="radio" name="slider" id="slide4">
+                <div id="slides">
+                   <div id="overflow">
+                      <div class="inner">
+                         <div class="slide slide_1">
+                            <div class="slide-content">
+                                <div class="contenedor-juego-destacado">
+                                    <div class="imagen-juego-destacado">
+                                        <img src="https://jumboargentina.vtexassets.com/arquivos/ids/754469/Juego-4-En-Linea-Spin-Master-2-939858.jpg?v=638022226401170000" alt="" srcset="">
+                                    </div>
+                                    <div class="titulo-juego-destacado">
+                                    <p>4 en Línea</p>
+                                    </div>
+                                    <div class="galeria-juego-destacado">
+                                        <img src="https://fpschampion.com/wp-content/uploads/2022/07/valorant-vs-csgo.jpg" alt="">
+                                        <img src="https://www.pinnacle.com/Cms_Data/Contents/Guest/Media/esports2017/Article-Images/Education/2020/CSGO-vs-VALORANT/Esports-CSGO-vs-Valorant-Article.jpg" alt="">
+                                        <img src="https://media-management-service.s3.amazonaws.com/media/images/d2c2d8f275df83df56a62121ca8bbcd8_longread_large.original.jpg" alt="">
+                                        <img src="https://s3-eu-central-1.amazonaws.com/www-staging.esports.com/WP%20Media%20Folder%20-%20esports-com//var/app/current/web/app/uploads/2021/01/VALORANT-versus-CSGO-which-game-does-it-better.jpg" alt="">
+                                    </div>
+                                    <div class="etiqueta1-juego-destacado"><p>De mesa</p></div>
+                                    <div class="etiqueta2-juego-destacado"><p>2 Jugadores</p></div>
+                                    <div class="contenedor-boton-destacado">
+                                        <button class="boton-destacado">JUGAR</button>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="slide slide_2">
+                            <div class="slide-content">
+                                <div class="contenedor-juego-destacado">
+                                    <div class="imagen-juego-destacado">
+                                        <img src="https://www.infobae.com/new-resizer/rzjpEY2f6jR2YqIt4OpxAdIRXME=/arc-anglerfish-arc2-prod-infobae/public/BPRQAKGVMNDF3FDBLDW5S3SXLU.jpg" alt="" srcset="">
+                                    </div>
+                                    <div class="titulo-juego-destacado">
+                                    <p>Elden Ring</p>
+                                    </div>
+                                    <div class="galeria-juego-destacado">
+                                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/awXpg40UOkDwzriHY3ZQb7tn.jpg" alt="">
+                                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/hqUvX42LItEDs6yNm4jWbHpt.jpg" alt="">
+                                        <img src="https://images.theconversation.com/files/527540/original/file-20230522-29-dho4t2.jpeg?ixlib=rb-1.1.0&rect=66%2C0%2C1467%2C864&q=45&auto=format&w=926&fit=clip" alt="">
+                                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/ss_e80a907c2c43337e53316c71555c3c3035a1343e.1920x1080.jpg?t=1683618443" alt="">
+                                    </div>
+                                    <div class="etiqueta1-juego-destacado"><p>RPG</p></div>
+                                    <div class="etiqueta2-juego-destacado"><p>Multijugador</p></div>
+                                    <div class="contenedor-boton-destacado">
+                                        <button class="boton-destacado">JUGAR</button>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="slide slide_3">
+                            <div class="slide-content">
+                               <h2>Slide 3</h2>
+                               <p>Content for Slide 3</p>
+                            </div>
+                         </div>
+                         <div class="slide slide_4">
+                            <div class="slide-content">
+                               <h2>Slide 4</h2>
+                               <p>Content for Slide 4</p>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+                <div id="controls">
+                   <label for="slide1"></label>
+                   <label for="slide2"></label>
+                   <label for="slide3"></label>
+                   <label for="slide4"></label>
+                </div>
+                <div id="bullets">
+                   <label for="slide1"></label>
+                   <label for="slide2"></label>
+                   <label for="slide3"></label>
+                   <label for="slide4"></label>
+                </div>
+             </div>
         </div>
-        <div class="preferencias">
+        <div class="nombre-categoria">
             <p>Basado en tus preferencias</p>
             <div class="linea-prueba"></div>
             <div class="contenedor-juegos">
@@ -104,8 +186,8 @@
                     </div>  
             </div>
         </div>
-        <div class="multijugador">
-            <h2>Multijugador</h2>
+        <div class="nombre-categoria">
+            <p>Multijugador</p>
            <div class="linea-prueba"></div>
             <div class="contenedor-juegos">
                 <div class="card-juego-gratis">
@@ -159,11 +241,9 @@
                 </div>  
             </div>
         </div>
-        <div class="accion">
-            <h2>Acción</h2>
-            <svg class="linea" xmlns="http://www.w3.org/2000/svg" height="1" viewBox="0 0 1400 1" fill="none">
-                <path d="M0 0.5H1400" stroke="#140303" stroke-opacity="0.75"/>
-            </svg>
+        <div class="nombre-categoria">
+            <p>Acción</p>
+            <div class="linea-prueba"></div>
             <div class="contenedor-juegos">
                 <div class="card-juego-gratis">
                     <div class="imagen-card">
@@ -197,11 +277,9 @@
             </div>
         </div>
         </div>
-        <div class="deporte">
-            <h2>Deportes</h2>
-            <svg class="linea" xmlns="http://www.w3.org/2000/svg" height="1" viewBox="0 0 1400 1" fill="none">
-                <path d="M0 0.5H1400" stroke="#140303" stroke-opacity="0.75"/>
-            </svg>
+        <div class="nombre-categoria">
+            <p>Deportes</p>
+            <div class="linea-prueba"></div>
             <div class="contenedor-juegos">
                 <div class="card-juego-gratis">
                     <div class="imagen-card">
@@ -234,11 +312,9 @@
                     </div>  
             </div>
         </div>
-        <div class="terror">
-            <h2>Terror</h2>
-            <svg class="linea" xmlns="http://www.w3.org/2000/svg" height="1" viewBox="0 0 1400 1" fill="none">
-                <path d="M0 0.5H1400" stroke="#140303" stroke-opacity="0.75"/>
-            </svg>
+        <div class="nombre-categoria">
+            <p>Terror</p>
+            <div class="linea-prueba"></div>
             <div class="contenedor-juegos">
                 <div class="card-juego-gratis">
                     <div class="imagen-card">
