@@ -741,6 +741,17 @@ border: 0;
     display: flex;
 }
 
+.publicidad{
+    position: relative;
+    left: 1050px;
+    bottom: 428px;
+}
+
+.publicidad img{
+    width: 200px;
+    height: 425px;
+}
+
 .escribir-comentario{
     width: 862px;
     height: 46px;
