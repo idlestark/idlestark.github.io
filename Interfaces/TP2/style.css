@@ -78,6 +78,13 @@ img{
 .barra-busqueda{
     display: flex;
     align-items: center;
+
+}
+
+.lupa{
+    z-index: 1;
+    position: relative;
+    right: 40px;
 }
 
 
@@ -208,6 +215,7 @@ input{
     justify-content: center;
     border: 2px solid var(--Primario-S1, #85FFD1);
 }
+
 
 .redes-facebook{
     width: 150px;
@@ -533,7 +541,6 @@ border: 0;
     cursor: pointer;
 }
 
-
 .contenedor-boton-card-pago div{
     display: flex;
     box-sizing: border-box;
@@ -565,6 +572,7 @@ border: 0;
 }
 .titulo-breakpoints{
     margin-left: 10px;
+    margin-top: 4px;
 }
 
 .main-juego{
@@ -584,11 +592,52 @@ border: 0;
 .opciones-juego{
     margin-bottom: 50px;
     width: 950px;
-    height: 98px; 
+    height: 78px; 
     background-color: var(--blanco);
     display: flex;
     justify-content: end;
 }
+
+.contenedor-opciones-juego{
+    position: absolute;
+}
+
+.compartir{
+    position: relative;
+    top:20px;
+    right: 35px;
+}
+
+.like{
+    position: relative;
+    top:20px;
+    right: 18px;
+}
+
+.dislike{
+    position: relative;
+    top:23px;
+    left:4px;
+}
+
+.ampliar{
+    position: relative;
+    top:20px;
+    left: 25px;
+}
+
+.likes{
+    position: relative;
+    top:51px;
+    right: 115px;
+}
+
+.dislikes{
+    position: relative;
+    top:28px;
+    right: 58px;
+}
+
 
 .breakpoints{
     font-size:var(--fuentebody); 
@@ -689,7 +738,7 @@ border: 0;
     height: 100%;
     position: absolute;
     z-index: 1;
-    height: 38vh;
+    height: 39vh;
     width: 20vh;
     left: 0;
     top:13vh;
@@ -1016,4 +1065,72 @@ border: 0;
 .contenedor-card-pequenio{
     display: flex;
     flex-direction: column;
+}
+
+.contenedor-imagenes-videos{
+    position: absolute;
+}
+
+.mouse-seleccionar{
+    position: relative;
+    top:30px;
+    left:180px;
+}
+
+.mouse-poner{
+    position: relative;
+    top:30px;
+    left: 30px;
+}
+
+.texto-control1{
+    position: relative;
+    top:30px;
+    left:45px;
+}
+
+.texto-control2{
+    position: relative;
+    top:30px;
+    left:195px;
+}
+
+.video{
+    width: 600px;
+    height: 391px;
+    position: relative;
+    top:310px;
+    left:50px;
+}
+
+.imagen-juego-1{
+    position: relative;
+    height:180px;
+    width:300px;
+    top:99px;
+    left: 76px
+}
+
+.imagen-juego-2{
+    position: relative;
+    height:180px;
+    width:300px;
+    top:99px;
+    left: 102px
+}
+
+.imagen-juego-3{
+    position: relative;
+    height:180px;
+    width:300px;
+    top:125px;
+    left:680px;
+}
+
+.imagen-juego-4{
+    position: relative;
+    height:180px;
+    width:300px;
+    top:125px;
+    left:706px;
 }
