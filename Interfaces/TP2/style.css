@@ -1361,7 +1361,6 @@ border: 0;
   }
 
 
-
   @media screen and (max-width: 900px) {
     .wrapper .carousel {
     margin-right: 50px;
@@ -1375,6 +1374,100 @@ border: 0;
     #right{
         display: none;
     }
+
+    .nombre-pagina{
+        color: var(--blanco);
+        font-size: 1.1em;
+        font-family: 'Sarpanch', sans-serif;
+        font-size: var(--fuenteh3);
+    }
+
+    .logo{
+        height: 35%;
+        width: 35%;
+        margin-right: 35px;
+        margin-left: 15px;
+    }
+
+    .contenedor_boton{
+        margin-top: 0;
+        width: 20%;
+        
+    }
+
+    .texto-javier{
+        display: none;
+    }
+
+    .logo img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .contenedor-barra-busqueda{
+        display: none;
+    }
+
+    .header{
+   justify-content: space-evenly;
+    align-items: center;
+    }
+
+    .div-carrito{
+        display: none;
+    }
+    
+    .body{
+        overflow-x: hidden;
+    }
+
+    .body{
+        position: relative;
+    }
+
+    .footer{
+        max-width: 100vh;
+    }
+
+    .contenido-footer{
+        max-width: 400px;
+    }
+
+    .texto-footer{
+        font-size: var(--fuenteaclaracion);
+        max-width: 350px;
+    }
+
+    .titulo-footer{
+        font-size: var(--fuenteh3);
+    }
+
+    .acerca-de{
+        margin-left: 25px;;
+    }
+
+    .contenedor-redes{
+        display: grid;
+        justify-content: center;
+        
+    }
+
+    .clickeables a{
+        font-size: var(--fuenteaclaracion);
+    }
+
+    .clickeables svg{
+        display: none;
+    }
+
+    .clickeables-interno{
+        max-width: 75px;
+    }
+
+    .clickeables img{
+        display: none;
+    }
+
   }
   @media screen and (max-width: 600px) {
     .wrapper .carousel {
