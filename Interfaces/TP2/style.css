@@ -1367,6 +1367,71 @@ border: 0;
 
 
   @media screen and (max-width: 900px) {
+
+
+.contenedor-juego-destacado{
+    display: flex;
+    position: relative;
+    width: 265px;
+    height: 300px;
+}
+
+.boton-destacado{
+    width: 265px;
+    right: 10px;
+}
+
+.imagen-juego-destacado{
+    width: 265px;
+    height: 150px;
+}
+
+.imagen-juego-destacado img{
+width: 100%;
+height: 100%;
+}
+
+.titulo-juego-destacado{
+    position: absolute;
+    bottom: 145px;
+    width: 100%;
+    right: 65px;
+}
+
+.etiqueta2-juego-destacado{
+    position: absolute;
+    right: 30px;
+}
+
+.etiqueta1-juego-destacado{
+    
+}
+
+.galeria-juego-destacado{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     .wrapper .carousel {
     margin-right: 50px;
       grid-auto-columns: calc((100% / 1) - 25px);
