@@ -447,6 +447,7 @@ input, label {
 .texto-footer{
     color: var(--gris);
     font-size: var(--fuenteh3);
+   
 }
 
 .clickeables-interno{
@@ -866,6 +867,10 @@ border: 0;
     display: none;
 }
 
+.contenedor-redes svg{
+    margin-right: 8px;
+}
+
 
 .generos{
     display: flex;
@@ -1099,7 +1104,7 @@ width: 48%;
    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
    float:right;
    margin: 0 -50px 0 0;
-   display: block;
+   display: none;
 }
 #slide1:checked ~ #controls label:nth-last-child(2),
 #slide2:checked ~ #controls label:nth-last-child(3),
@@ -1108,7 +1113,7 @@ width: 48%;
    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
    float:left;
    margin: 0 0 0 -50px;
-   display: block;
+   display: none;
 }
 #bullets {
    margin: 150px 0 0;
@@ -1329,6 +1334,7 @@ border: 0;
     border-radius: 8px;
     scroll-behavior: smooth;
     scrollbar-width: none;
+
   }
   .carousel::-webkit-scrollbar {
     display: none;
@@ -1355,7 +1361,6 @@ border: 0;
   .carousel .card {
     scroll-snap-align: start;
     cursor: pointer;
-    padding-bottom: 15px;
     flex-direction: column;
     
   }
@@ -1402,7 +1407,7 @@ border: 0;
     .logo img{
         height: 100%;
         width: 100%;
-        object-fit: cover;
+
     }
     .contenedor-barra-busqueda{
         display: none;
@@ -1435,7 +1440,8 @@ border: 0;
 
     .texto-footer{
         font-size: var(--fuenteaclaracion);
-        max-width: 350px;
+        max-width: 325px;
+        margin-bottom: 10px;
     }
 
     .titulo-footer{
@@ -1449,11 +1455,18 @@ border: 0;
     .contenedor-redes{
         display: grid;
         justify-content: center;
-        
+        gap: 15px;
+    }
+
+    .clickeables{
+        display: flex;
+        width: 100%;
+        gap: 15px;
     }
 
     .clickeables a{
-        font-size: var(--fuenteaclaracion);
+        font-size: 11px;
+    
     }
 
     .clickeables svg{
@@ -1471,7 +1484,7 @@ border: 0;
   }
   @media screen and (max-width: 600px) {
     .wrapper .carousel {
-      grid-auto-columns: 100%;
+      grid-auto-columns: 89%;
     }
 
   }
