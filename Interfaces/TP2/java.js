@@ -5,6 +5,13 @@ boton.addEventListener('click',()=>{
     nav.classList.toggle('activo')
 })
 
+const botonPerfil = document.querySelector('.perfil');
+const desplegar = document.querySelector('.perfil-usuario');
+
+botonPerfil.addEventListener('click',()=>{
+  desplegar.classList.toggle('desplegar')
+})
+
 const carouselContainers = document.querySelectorAll(".carousel-container");
 
 carouselContainers.forEach(container => {
@@ -94,3 +101,4 @@ carouselContainers.forEach(container => {
   container.addEventListener("mouseenter", () => clearTimeout(timeoutId));
   container.addEventListener("mouseleave", autoPlay);
 });
+

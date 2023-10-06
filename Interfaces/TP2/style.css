@@ -214,7 +214,7 @@ img{
     align-items: center;
     color: var(--blanco);
     letter-spacing: var(--espaciadoBoton);
-    font-size:var(--fuenteboton)
+    font-size:var(--fuenteboton);
 }
 
 .boton-google{
@@ -237,8 +237,8 @@ img{
 }
 
 a{
-    color:var(--blanco)
-
+    color:var(--blanco);
+    text-decoration:none;
 }
 
 label{
@@ -319,7 +319,8 @@ input{
 }
 
 .volver{
-  float: right;
+  position: relative;
+  left:377px;
 }
 
 .fondo-carrusel{
@@ -373,7 +374,6 @@ input{
 .contenedor-redes{
     display: flex;
     justify-content: center;
-    
 }
 
 .redes{
@@ -432,9 +432,11 @@ input, label {
 }
 
 .separador{
-    width: 139px;
+    width: 143px;
     height: 1px;
     background: var(--Gris, #A3ADA1);
+    position: relative;
+    top: 10px;
 }
 
 .titulo-footer{
@@ -661,12 +663,18 @@ border: 0;
 }
 
 .opciones-juego{
-    margin-bottom: 50px;
+    margin-bottom: 35px;
     width: 950px;
     height: 78px; 
     background-color: var(--blanco);
     display: flex;
     justify-content: end;
+}
+
+.otros-juegos{
+    position: relative;
+    right: 500px;
+    margin-bottom: 30px;
 }
 
 .contenedor-opciones-juego{
@@ -874,6 +882,34 @@ background-color: var(--negroopacidad);
 
 .activo{
     display: block;
+}
+
+.perfil-usuario{
+    background-color: var(--grisverdoso);
+    width: 240px;
+    height: 175px;
+    z-index: 1;
+    right: 0;
+    top:85px;
+    position: absolute;
+    display: none;
+}
+
+.desplegar{
+    display: block;
+}
+
+.opciones-usuario{
+    color: var(--blanco);
+    font-weight: 100;
+    position: relative;
+    left: 90px;
+}
+
+.icono-usuario{
+    position: relative;
+    bottom:22px;   
+    left:30px
 }
 
 .contenedor-boton-destacado{
@@ -1344,4 +1380,5 @@ border: 0;
     .wrapper .carousel {
       grid-auto-columns: 100%;
     }
+
   }
