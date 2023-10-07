@@ -102,3 +102,31 @@ carouselContainers.forEach(container => {
   container.addEventListener("mouseleave", autoPlay);
 });
 
+setTimeout(function() {
+  document.querySelector(".body-falso").classList.toggle("loader2");
+}, 5000);
+
+document.addEventListener("DOMContentLoaded", function() {
+  var barraFondo = document.querySelector('.barra-fondo');
+  var porcentaje = 0;
+
+  var intervalo = setInterval(function() {
+      if (porcentaje >= 100) {
+          clearInterval(intervalo);
+      } else {
+          porcentaje += 1;
+          barraFondo.style.width = porcentaje + '%';
+      }
+  }, 50);
+});
+
+
+
+
+
+
+
+
+
+
+

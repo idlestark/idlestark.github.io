@@ -48,7 +48,65 @@
 
 body{
     background-color: var(--primario);
+    width: 100vw;
+    overflow-x: hidden;
 }
+
+.body-falso{
+    background-color: var(--negro);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+    clip-path: circle(150% at 100% 0);
+    transition: clip-path 2s ease-in-out;
+}
+
+.loader{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid white;
+    border-top-color: transparent;
+    animation: spin 1.2s linear infinite;
+    position: relative;
+    left: 20px;
+    top:8px;
+}
+
+.loader2{
+    clip-path: circle(0 at 100% 0);
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.barra-progreso {
+    width: 50%;
+    height: 20px;
+    background-color: #ccc;
+    margin-top: 20px;
+}
+
+.barra-fondo {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.1s;
+}
+
+.barra {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+}
+
 
 img{
     width: 8vh;
@@ -319,8 +377,13 @@ input{
 }
 
 .volver{
-  position: relative;
-  left:377px;
+  position: absolute;
+}
+
+.icono-volver{
+    position: relative;
+    bottom:420px;
+    left: 375px;
 }
 
 .fondo-carrusel{
