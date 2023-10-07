@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sarpanch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
 </head>
 <body>
   <div class="body-falso">
@@ -23,7 +24,7 @@
     <div class="loader" id="loader"></div>
   </div>
   <div class="contenedor-header">
-    <header class="header">
+    <nav class="header">
         <div class="contenedor_boton">
             <div class="boton"></div>
             <div class="boton"></div>
@@ -90,93 +91,55 @@
                     </svg>
                 </div>
             </div>
-        </header>
+        </nav>
     </div>
    <main class="main-index">
         <div class="fondo-carrusel">
             <h2 class="populares">Más populares</h2>
-            <div id="slider">
-                <input type="radio" name="slider" id="slide1" checked>
-                <input type="radio" name="slider" id="slide2">
-                <input type="radio" name="slider" id="slide3">
-                <input type="radio" name="slider" id="slide4">
-                <div id="slides">
-                   <div id="overflow">
-                      <div class="inner">
-                         <div class="slide slide_1">
-                            <div class="slide-content">
-                                <div class="contenedor-juego-destacado">
-                                    <div class="imagen-juego-destacado">
-                                        <img src="https://jumboargentina.vtexassets.com/arquivos/ids/754469/Juego-4-En-Linea-Spin-Master-2-939858.jpg?v=638022226401170000" alt="" srcset="">
-                                    </div>
-                                    <div class="titulo-juego-destacado">
-                                    <p>4 en Línea</p>
-                                    </div>
-                                    <div class="galeria-juego-destacado">
-                                        <img src="https://fpschampion.com/wp-content/uploads/2022/07/valorant-vs-csgo.jpg" alt="">
-                                        <img src="https://www.pinnacle.com/Cms_Data/Contents/Guest/Media/esports2017/Article-Images/Education/2020/CSGO-vs-VALORANT/Esports-CSGO-vs-Valorant-Article.jpg" alt="">
-                                        <img src="https://media-management-service.s3.amazonaws.com/media/images/d2c2d8f275df83df56a62121ca8bbcd8_longread_large.original.jpg" alt="">
-                                        <img src="https://s3-eu-central-1.amazonaws.com/www-staging.esports.com/WP%20Media%20Folder%20-%20esports-com//var/app/current/web/app/uploads/2021/01/VALORANT-versus-CSGO-which-game-does-it-better.jpg" alt="">
-                                    </div>
-                                    <div class="etiqueta1-juego-destacado"><p>De mesa</p></div>
-                                    <div class="etiqueta2-juego-destacado"><p>2 Jugadores</p></div>
-                                    <div class="contenedor-boton-destacado">
-                                        <button class="boton-destacado">JUGAR</button>
-                                    </div>
-                                </div>
-                            </div>
-                         </div>
-                         <div class="slide slide_2">
-                            <div class="slide-content">
-                                <div class="contenedor-juego-destacado">
-                                    <div class="imagen-juego-destacado">
-                                        <img src="https://www.infobae.com/new-resizer/rzjpEY2f6jR2YqIt4OpxAdIRXME=/arc-anglerfish-arc2-prod-infobae/public/BPRQAKGVMNDF3FDBLDW5S3SXLU.jpg" alt="" srcset="">
-                                    </div>
-                                    <div class="titulo-juego-destacado">
-                                    <p>Elden Ring</p>
-                                    </div>
-                                    <div class="galeria-juego-destacado">
-                                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/awXpg40UOkDwzriHY3ZQb7tn.jpg" alt="">
-                                        <img src="https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/hqUvX42LItEDs6yNm4jWbHpt.jpg" alt="">
-                                        <img src="https://images.theconversation.com/files/527540/original/file-20230522-29-dho4t2.jpeg?ixlib=rb-1.1.0&rect=66%2C0%2C1467%2C864&q=45&auto=format&w=926&fit=clip" alt="">
-                                        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/ss_e80a907c2c43337e53316c71555c3c3035a1343e.1920x1080.jpg?t=1683618443" alt="">
-                                    </div>
-                                    <div class="etiqueta1-juego-destacado"><p>RPG</p></div>
-                                    <div class="etiqueta2-juego-destacado"><p>Multijugador</p></div>
-                                    <div class="contenedor-boton-destacado">
-                                        <button class="boton-destacado">JUGAR</button>
-                                    </div>
-                                </div>
-                            </div>
-                         </div>
-                         <div class="slide slide_3">
-                            <div class="slide-content">
-                               <h2>Slide 3</h2>
-                               <p>Content for Slide 3</p>
-                            </div>
-                         </div>
-                         <div class="slide slide_4">
-                            <div class="slide-content">
-                               <h2>Slide 4</h2>
-                               <p>Content for Slide 4</p>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
+            <div class="blog-slider">
+                <div class="blog-slider__wrp swiper-wrapper">
+              
+                  <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img">
+                      <img src="https://jumboargentina.vtexassets.com/arquivos/ids/754469/Juego-4-En-Linea-Spin-Master-2-939858.jpg?v=638022226401170000" alt="">
+                    </div>
+                    <div class="blog-slider__content">
+                      <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+                      <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi? </div>
+                      <div class="contenedor-boton-prueba">
+                      <button href="#" class="blog-slider__button">READ MORE</button>
+                    </div>
+                    </div>
+                  </div>
+                  
+                  <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img">
+                      <img src="https://images.unsplash.com/photo-1595868228899-abc8fabb3447?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="">
+                    </div>
+                    <div class="blog-slider__content">
+                      <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
+                      <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+                      <button href="#" class="blog-slider__button">READ MORE</button>
+                    </div>
+                  </div>
+                  
+                  <div class="blog-slider__item swiper-slide">
+                    <div class="blog-slider__img">
+                      <img src="https://images.unsplash.com/photo-1524638431109-93d95c968f03?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" alt="">
+                    </div>
+                    <div class="blog-slider__content">
+
+                      <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+                      <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae voluptate repellendus magni illo ea animi?</div>
+                      
+                      <button href="#" class="blog-slider__button">READ MORE</button>
+
+                    </div>
+                  </div>
+                  
                 </div>
-                <div id="controls">
-                   <label for="slide1"></label>
-                   <label for="slide2"></label>
-                   <label for="slide3"></label>
-                   <label for="slide4"></label>
-                </div>
-                <div id="bullets">
-                   <label for="slide1"></label>
-                   <label for="slide2"></label>
-                   <label for="slide3"></label>
-                   <label for="slide4"></label>
-                </div>
-             </div>
+                <div class="blog-slider__pagination"></div>
+              </div>
         </div>
         <div class="nombre-categoria">
             <p>Basado en tus preferencias</p>
@@ -815,6 +778,7 @@
         </div>
     </div>
 </footer>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
 <script src="java.js"></script>
 </body>
 </html>
