@@ -566,24 +566,44 @@ box-sizing: border-box;
 }
 
 .boton-gratis{
-position: absolute;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: var(--secundario);
-bottom: 0;
-height: 64px;
-width: 300px;
-outline: none;
-border: 0;
-color: var(--blanco);
-letter-spacing: var(--espaciadoboton);
-}
-
-.boton-gratis:hover{
-    background-color: #5F5179;
-    cursor: pointer;
-}
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secundario);
+    bottom: 0;
+    height: 64px;
+    width: 300px;
+    outline: none;
+    border: 0;
+    color: var(--blanco);
+    letter-spacing: var(--espaciadoboton);
+    
+    
+    &:after {
+        background-color: #fff;
+        content: "";
+        height: 155px;
+        left: -75px;
+        opacity: .2;
+        position: absolute;
+        top: -50px;
+        transform: rotate(35deg);
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+        width: 50px;
+        z-index: 0;
+      }
+    }
+    
+    
+    .boton-gratis:hover {
+      
+      &:after {
+        left: 120%;
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
 
 .contenedor-juegos{
     display: flex;
