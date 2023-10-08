@@ -1,3 +1,27 @@
+const contenidoBoton = document.querySelector('.boton-pago');
+
+codigoSVG = '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="28" viewBox="0 0 36 28" fill="none">';
+codigoSVG += '<path d="M33 2.40582L12 25.5942L3 16.8986" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square"/>';
+codigoSVG += '</svg>';
+codigoSVG2 = '<svg xmlns="http://www.w3.org/2000/svg" width="50" height="49" viewBox="0 0 50 49" fill="none">';
+codigoSVG2 += '<path d="M15.8203 43.2578C16.6833 43.2578 17.3828 42.5722 17.3828 41.7266C17.3828 40.8809 16.6833 40.1953 15.8203 40.1953C14.9574 40.1953 14.2578 40.8809 14.2578 41.7266C14.2578 42.5722 14.9574 43.2578 15.8203 43.2578Z" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>';
+codigoSVG2 += '<path d="M37.6953 43.2578C38.5583 43.2578 39.2578 42.5722 39.2578 41.7266C39.2578 40.8809 38.5583 40.1953 37.6953 40.1953C36.8324 40.1953 36.1328 40.8809 36.1328 41.7266C36.1328 42.5722 36.8324 43.2578 37.6953 43.2578Z" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>';
+codigoSVG2 += '<path d="M3.32031 9.57031H9.57031L14.2578 35.6016H39.2578" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>';
+codigoSVG2 += '<path d="M14.2578 29.4766H38.6172C38.7979 29.4767 38.973 29.4154 39.1128 29.3032C39.2526 29.191 39.3483 29.0348 39.3838 28.8612L42.1963 15.0799C42.219 14.9688 42.2162 14.8541 42.1882 14.7442C42.1602 14.6342 42.1076 14.5317 42.0343 14.4441C41.9609 14.3565 41.8686 14.2859 41.7641 14.2375C41.6595 14.1891 41.5453 14.164 41.4297 14.1641H11.1328" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>';
+codigoSVG2 += '</svg>';
+
+let estadoOriginal = true;
+
+contenidoBoton.addEventListener('click', ()=>{
+  if(estadoOriginal){
+  contenidoBoton.innerHTML = codigoSVG2 + codigoSVG;
+  }else{
+    contenidoBoton.innerHTML = 'AÑADIR AL CARRO';
+      }
+      estadoOriginal = !estadoOriginal;
+})
+
+
 const boton = document.querySelector('.contenedor_boton');
 const nav = document.querySelector('.contenedor-generos');
 
