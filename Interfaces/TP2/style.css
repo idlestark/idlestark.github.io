@@ -1395,22 +1395,6 @@ width: 48%;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .precio-juego-pago-pequenio{
     position: absolute;
     display: flex;
@@ -1426,6 +1410,8 @@ width: 48%;
     font-weight: 900;
 }
 
+
+
 .boton-pago-pequenio{
     font-size: var(--fuenteboton);
 letter-spacing: var(--espaciadoboton);
@@ -1437,6 +1423,12 @@ bottom: 0;
 right: 0;
 outline: none;
 border: 0;
+}
+
+
+.boton-pago-pequenio:hover{
+    background-color: #C7F61A;
+    cursor: pointer;
 }
 
 .imagen-card-pequenio img{
