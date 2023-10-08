@@ -2071,3 +2071,50 @@ height: 100%;
       width: 30px;
    }
  }
+  
+ .contenedor-boton-registro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .boton-registro, .tick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+
+  .boton-registro {
+    font-weight: lighter;
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--fuenteboton);
+    width: 300px;
+    height: 45px;
+    background: var(--secundario);
+    transition: all .3s cubic-bezier(0.67, 0.17, 0.40, 0.83);
+  }
+  
+  .boton-registro svg {
+    transform: rotate(180deg);
+    transition: all .5s;
+  }
+  
+  .button__circle {
+    width: 105px;
+    height: 105px;
+    background: mediumseagreen;
+    border-radius: 50%;
+    transform: rotate(-180deg);
+  }
+  
+  .boton-registro:hover {
+    cursor: pointer;
+  }
+  
+  .tick {
+    color: white;
+    font-size: 2em;
+    transition: all .9s;
+  }
