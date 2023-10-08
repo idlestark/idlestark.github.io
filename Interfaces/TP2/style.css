@@ -1251,20 +1251,66 @@ width: 48%;
     position: relative;
 }
 
+
 .boton-card-pequenio-gratis{
+    cursor: pointer;
+    overflow: hidden;
     position: absolute;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: var(--secundario);
-bottom: 0;
-height: 47px;
-width: 300px;
-outline: none;
-border: 0;
-color: var(--blanco);
-letter-spacing: var(--espaciadoboton);
-}
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secundario);
+    bottom: 0;
+    height: 47px;
+    width: 300px;
+    outline: none;
+    border: 0;
+    color: var(--blanco);
+    letter-spacing: var(--espaciadoboton);
+    
+    
+    &:after {
+        background-color: #fff;
+        content: "";
+        height: 155px;
+        left: -75px;
+        opacity: .2;
+        position: absolute;
+        top: -50px;
+        transform: rotate(35deg);
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+        width: 50px;
+        z-index: 0;
+      }
+    }
+    
+    
+    .boton-card-pequenio-gratis:hover {
+      
+      &:after {
+        left: 120%;
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .precio-juego-pago-pequenio{
     position: absolute;
