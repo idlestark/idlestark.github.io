@@ -1,4 +1,4 @@
-const contenidoBoton = document.querySelector('.boton-pago');
+const botonCarrito = document.querySelector('.boton-pago');
 
 codigoSVG = '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="28" viewBox="0 0 36 28" fill="none">';
 codigoSVG += '<path d="M33 2.40582L12 25.5942L3 16.8986" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square"/>';
@@ -12,15 +12,14 @@ codigoSVG2 += '</svg>';
 
 let estadoOriginal = true;
 
-contenidoBoton.addEventListener('click', ()=>{
+botonCarrito.addEventListener('click', ()=>{
   if(estadoOriginal){
-  contenidoBoton.innerHTML = codigoSVG2 + codigoSVG;
+    botonCarrito.innerHTML = codigoSVG2 + codigoSVG;
   }else{
-    contenidoBoton.innerHTML = 'AÑADIR AL CARRO';
+    botonCarrito.innerHTML = 'AÑADIR AL CARRO';
       }
       estadoOriginal = !estadoOriginal;
 })
-
 
 const boton = document.querySelector('.contenedor_boton');
 const nav = document.querySelector('.contenedor-generos');
@@ -35,6 +34,7 @@ const desplegar = document.querySelector('.perfil-usuario');
 botonPerfil.addEventListener('click',()=>{
   desplegar.classList.toggle('desplegar')
 })
+
 
 const carouselContainers = document.querySelectorAll(".carousel-container");
 
