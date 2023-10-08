@@ -1068,12 +1068,16 @@ background-color: var(--negroopacidad);
 .perfil-usuario{
     background-color: var(--grisverdoso);
     width: 240px;
-    height: 175px;
+    height: 140px;
     z-index: 1;
     right: 0;
     top:85px;
     position: absolute;
     display: none;
+}
+
+.cerrar-sesion:hover{
+    background-color: var(--acento);
 }
 
 .desplegar{

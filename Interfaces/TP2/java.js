@@ -21,6 +21,29 @@ botonCarrito.addEventListener('click', ()=>{
       estadoOriginal = !estadoOriginal;
 })
 
+const botonCarritoPequenio = document.querySelector('.boton-pago-pequenio');
+
+codigoSVG3 = '<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">';
+codigoSVG3 += '<path d="M10.6562 26.1562C11.1913 26.1562 11.625 25.7225 11.625 25.1875C11.625 24.6525 11.1913 24.2188 10.6562 24.2188C10.1212 24.2188 9.6875 24.6525 9.6875 25.1875C9.6875 25.7225 10.1212 26.1562 10.6562 26.1562Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+codigoSVG3 += '<path d="M24.2188 26.1562C24.7538 26.1562 25.1875 25.7225 25.1875 25.1875C25.1875 24.6525 24.7538 24.2188 24.2188 24.2188C23.6837 24.2188 23.25 24.6525 23.25 25.1875C23.25 25.7225 23.6837 26.1562 24.2188 26.1562Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+codigoSVG3 += '<path d="M2.90625 4.84375H6.78125L9.6875 21.3125H25.1875" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+codigoSVG3 += '<path d="M9.6875 17.4375H24.7903C24.9023 17.4376 25.0109 17.3988 25.0976 17.3278C25.1842 17.2569 25.2436 17.158 25.2656 17.0482L27.0094 8.32943C27.0234 8.25913 27.0217 8.18658 27.0043 8.11702C26.9870 8.04745 26.9544 7.98262 26.9089 7.92718C26.8634 7.87175 26.8062 7.8271 26.7414 7.79646C26.6766 7.76582 26.6058 7.74995 26.5341 7.75H7.75" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+codigoSVG3 += '</svg>';
+codigoSVG4 = '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="21" viewBox="0 0 26 21" fill="none">';
+codigoSVG4 += '<path d="M23 3L9 18L3 12.375" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square"/>';
+codigoSVG4 += '</svg>';
+
+let estadoOriginalPequenio = true;
+
+botonCarritoPequenio.addEventListener('click', ()=>{
+  if(estadoOriginalPequenio){
+    botonCarritoPequenio.innerHTML = codigoSVG3 + codigoSVG4;
+  }else{
+    botonCarritoPequenio.innerHTML = 'AÑADIR AL CARRO';
+      }
+      estadoOriginalPequenio = !estadoOriginalPequenio;
+})
+
 const boton = document.querySelector('.contenedor_boton');
 const nav = document.querySelector('.contenedor-generos');
 
