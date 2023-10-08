@@ -547,7 +547,6 @@ input, label {
 }
 
 .card-juego-pago{
-    margin-left: 30px;
     position: relative;
     margin-top: 12px;
     width: 300px;
@@ -709,7 +708,6 @@ box-sizing: border-box;
 }
 
 .card-juego-pago{
-    margin-left: 30px;
     position: relative;
     margin-top: 12px;
     width: 300px;
@@ -1339,18 +1337,17 @@ width: 48%;
 .card-pequenio-pago{
     width: 300px;
     height: 160px;
-    margin-left: 30px;
+   
     margin-top: 12px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     position: relative;
 }
 
 .card-pequeño-gratis{
     width: 300px;
     height: 160px;
-    margin-left: 30px;
-    margin-top: 12px;
-    margin-bottom: 18px;
+    margin-top: 14px;
+    margin-bottom: 12px;
     position: relative;
 }
 
