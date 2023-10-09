@@ -1618,15 +1618,15 @@ border: 0;
   .etiqueta-gratis{
     position: absolute;
     z-index: 9;
-    top:29px;
-    left: 213px;
+    top:18px;
+    right: -20px;
   }
 
 .texto-etiqueta-gratis{
     position: relative;
     color: var(--blanco);
     bottom: 23px;
-    left:33px;
+    left:21px;
     font-size: var(--fuentecard);
 }
 
@@ -1634,8 +1634,8 @@ border: 0;
   .etiqueta{
     position: absolute;
     z-index: 9;
-    top:29px;
-    right: 6px;
+    top:18px;
+    right: -20px;
   }
 
   .texto-etiqueta{
