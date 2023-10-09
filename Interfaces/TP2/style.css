@@ -664,6 +664,7 @@ box-sizing: border-box;
 }
 
 .boton-gratis{
+    cursor: pointer;
     overflow: hidden;
     position: absolute;
     display: flex;
