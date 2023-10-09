@@ -160,6 +160,7 @@ setTimeout(function() {
 document.addEventListener("DOMContentLoaded", function() {
   var barraFondo = document.querySelector('.barra-fondo');
   var porcentaje = 0;
+  var porcentajeElement = document.querySelector('.porcentaje'); 
 
   var intervalo = setInterval(function() {
       if (porcentaje >= 100) {
@@ -167,10 +168,10 @@ document.addEventListener("DOMContentLoaded", function() {
       } else {
           porcentaje += 1;
           barraFondo.style.width = porcentaje + '%';
+          porcentajeElement.textContent = porcentaje + '%'; 
       }
   }, 50);
 });
-
 var swiper = new Swiper('.blog-slider', {
   spaceBetween: 30,
   effect: 'fade',
@@ -178,7 +179,7 @@ var swiper = new Swiper('.blog-slider', {
   mousewheel: {
     invert: false,
   },
-  // autoHeight: true,
+
   pagination: {
     el: '.blog-slider__pagination',
     clickable: true,

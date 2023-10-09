@@ -107,6 +107,14 @@ body{
     background-color: #4caf50;
 }
 
+.porcentaje {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #fff;
+}
 
 img{
     width: 8vh;
@@ -623,9 +631,9 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0);
     left: 0;
     width: 50%;
     height: 100%;
-    background-color: var(--blanco); /* Color de fondo de cierre */
-    transform-origin: left; /* Cambia el origen de la transformación */
-    transform: scaleX(0); /* Inicialmente, está completamente cerrado */
+    background-color: var(--blanco);
+    transform-origin: left; 
+    transform: scaleX(0); 
     transition: transform 0.3s ease;
     z-index: -1;
 }
@@ -637,16 +645,16 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0);
     right: 0;
     width: 50%;
     height: 100%;
-    background-color: var(--blanco); /* Color de fondo de cierre */
-    transform-origin: right; /* Cambia el origen de la transformación */
-    transform: scaleX(0); /* Inicialmente, está completamente cerrado */
+    background-color: var(--blanco); 
+    transform-origin: right;
+    transform: scaleX(0); 
     transition: transform 0.3s ease;
     z-index: -1;
 }
 
 .boton-pago:hover::before,
 .boton-pago:hover::after {
-    transform: scaleX(1); /* Se abre desde ambos lados en hover */
+    transform: scaleX(1); 
 }
 
 .boton-pago:hover{
