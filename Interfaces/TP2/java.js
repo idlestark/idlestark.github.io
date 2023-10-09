@@ -1,4 +1,4 @@
-const botonCarrito = document.querySelector('.boton-pago');
+const botonCarrito = document.querySelectorAll('.boton-pago');
 
 codigoSVG = '<svg xmlns="http://www.w3.org/2000/svg" width="36" height="28" viewBox="0 0 36 28" fill="none">';
 codigoSVG += '<path d="M33 2.40582L12 25.5942L3 16.8986" stroke="black" stroke-width="3" stroke-miterlimit="10" stroke-linecap="square"/>';
@@ -12,16 +12,18 @@ codigoSVG2 += '</svg>';
 
 let estadoOriginal = true;
 
-botonCarrito.addEventListener('click', ()=>{
-  if(estadoOriginal){
-    botonCarrito.innerHTML = codigoSVG2 + codigoSVG;
-  }else{
-    botonCarrito.innerHTML = 'AÑADIR AL CARRO';
-      }
-      estadoOriginal = !estadoOriginal;
-})
+botonCarrito.forEach(botonCarrito => {
+  botonCarrito.addEventListener('click', () => {
+    if (estadoOriginal) {
+      botonCarrito.innerHTML = codigoSVG2 + codigoSVG;
+    } else {
+      botonCarrito.innerHTML = 'AÑADIR AL CARRO';
+    }
+    estadoOriginal = !estadoOriginal;
+  });
+});
 
-const botonCarritoPequenio = document.querySelector('.boton-pago-pequenio');
+const botonCarritoPequenio = document.querySelectorAll('.boton-pago-pequenio');
 
 codigoSVG3 = '<svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31" fill="none">';
 codigoSVG3 += '<path d="M10.6562 26.1562C11.1913 26.1562 11.625 25.7225 11.625 25.1875C11.625 24.6525 11.1913 24.2188 10.6562 24.2188C10.1212 24.2188 9.6875 24.6525 9.6875 25.1875C9.6875 25.7225 10.1212 26.1562 10.6562 26.1562Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
@@ -35,14 +37,16 @@ codigoSVG4 += '</svg>';
 
 let estadoOriginalPequenio = true;
 
-botonCarritoPequenio.addEventListener('click', ()=>{
-  if(estadoOriginalPequenio){
-    botonCarritoPequenio.innerHTML = codigoSVG3 + codigoSVG4;
-  }else{
-    botonCarritoPequenio.innerHTML = 'AÑADIR AL CARRO';
-      }
-      estadoOriginalPequenio = !estadoOriginalPequenio;
-})
+botonCarritoPequenio.forEach(botonCarritoPequenio => {
+  botonCarritoPequenio.addEventListener('click', () => {
+    if (estadoOriginalPequenio) {
+      botonCarritoPequenio.innerHTML = codigoSVG3 + codigoSVG4;
+    } else {
+      botonCarritoPequenio.innerHTML = 'AÑADIR AL CARRO';
+    }
+    estadoOriginalPequenio = !estadoOriginalPequenio;
+  });
+});
 
 const boton = document.querySelector('.contenedor_boton');
 const nav = document.querySelector('.contenedor-generos');
@@ -180,4 +184,6 @@ var swiper = new Swiper('.blog-slider', {
     clickable: true,
   }
 });
+
+
 
