@@ -1443,26 +1443,29 @@ width: 48%;
     font-weight: 900;
 }
 
-
-
-.boton-pago-pequenio{
+.boton-pago-pequenio {
     font-size: var(--fuenteboton);
-letter-spacing: var(--espaciadoboton);
-background-color: var(--exito);
-width: 177px;
-height: 47px;
-position: absolute;
-bottom: 0;
-right: 0;
-outline: none;
-border: 0;
+    letter-spacing: var(--espaciadoboton);
+    background-image: linear-gradient(to top, var(--exito) 50%, transparent 50%);
+    background-size: 100% 200%;
+    background-position: bottom;
+    width: 177px;
+    height: 47px; 
+    position: absolute; 
+    bottom: 0;
+    right: 0;
+    outline: none;
+    border: 0;
+    overflow: hidden;
+    transition: background-position 0.3s ease;
+}
+
+.boton-pago-pequenio:hover {
+    background-position: top;
+    cursor: pointer; 
 }
 
 
-.boton-pago-pequenio:hover{
-    background-color: #C7F61A;
-    cursor: pointer;
-}
 
 .imagen-card-pequenio img{
     width: 100%;
