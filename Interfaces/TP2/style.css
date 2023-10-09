@@ -482,6 +482,8 @@ input{
 }
 
 .div-carrito{
+    transition-duration: 2s;
+    transition-property: transform;
     margin-right: 25px;
     display: flex;
     justify-content: center;
@@ -489,6 +491,10 @@ input{
     position: relative;
 }
 
+
+.div-carrito:hover {
+    transform: rotate(360deg);
+}
 input, label {
     display:block;
 }
