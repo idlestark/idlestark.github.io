@@ -899,6 +899,11 @@ border: 0;
     width: 950px;
     height: 600px;
     background-color: var(--acento);
+    z-index: 1;
+}
+
+#canvas{
+    z-index: 2;
 }
 
 .opciones-juego{
