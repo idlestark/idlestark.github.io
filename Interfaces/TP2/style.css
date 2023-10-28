@@ -1131,7 +1131,7 @@ background-color: var(--negroopacidad);
     background-color: var(--grisverdoso);
     width: 240px;
     height: 140px;
-    z-index: 1;
+    z-index: 9;
     right: 0;
     top:85px;
     position: absolute;
