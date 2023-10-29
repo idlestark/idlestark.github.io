@@ -1,68 +1,51 @@
-class Ficha{
-    constructor(posX, posY, fill, context, radio){
+class Ficha {
+    constructor(posX, posY, img, context, width, height) {
         this.posX = posX;
         this.posY = posY;
-        this.fill = fill;
+        this.img = img;
         this.context = context;
+        this.width = width;
+        this.height = height;
         this.resaltado = false;
-        this.resaltadoEstilo = 'black';
-        this.radio = radio;
+        this.resaltadoEstilo = 'green';
     }
 
-    setFill(fill){
-        this.fill = fill;
+    dibujar() {
+        if (this.img.complete) {
+            this.context.save();
+            this.context.beginPath();
+            this.context.arc(this.posX + this.width / 2, this.posY + this.height / 2, this.width / 2, 0, Math.PI * 2, true);
+            this.context.clip();
+            this.context.drawImage(this.img, this.posX, this.posY, this.width, this.height);
+            this.context.closePath();
+            this.context.restore();
+
+            if (this.resaltado) {
+                this.context.beginPath();
+                this.context.arc(this.posX + this.width / 2, this.posY + this.height / 2, this.width / 2 + 2.5, 0, Math.PI * 2, true); 
+                this.context.strokeStyle = this.resaltadoEstilo;
+                this.context.lineWidth = 5;
+                this.context.stroke();
+                this.context.closePath();
+            }
+        }
     }
 
-    setPosicion(x,y){
+    setPosicion(x, y) {
         this.posX = x;
         this.posY = y;
     }
 
-    getPosicion(){
-        return{
-            x: this.getPosX(),
-            y: this.getPosY()
-        }
-    }
-
-    getPosX(){
-        return this.posX;
-    }
-
-    getPosY(){
-        return this.posY;
-    }
-
-    getFill(){
-        return this.fill;
-    }
-
-    dibujar(){
-        this.context.fillStyle =this.fill;
-        this.context.beginPath();
-        this.context.arc(this.posX,this.posY,this.radio,0,2 * Math.PI);
-        this.context.fill();
-
-        if(this.resaltado === true){
-            this.context.strokeStyle = this.resaltadoEstilo;
-            this.context.lineWidth = 5;
-            this.context.stroke();
-        }
-        this.context.closePath();
-    }
-
-    getRdio(){
-        return this.radio;
-    }
-
-    setResaltado(resaltado){
+    setResaltado(resaltado) {
         this.resaltado = resaltado;
     }
 
-    punteroDentro(x,y){ 
-        let _x = this.posX - x;
-        let _y = this.posY - y;
-        return Math.sqrt(_x * _x + _y * _y) < this.radio;
-    };
-
+    punteroDentro(x, y) {
+        return (
+            x > this.posX &&
+            x < this.posX + this.width &&
+            y > this.posY &&
+            y < this.posY + this.height
+        );
+    }
 }

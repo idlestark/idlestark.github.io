@@ -2216,3 +2216,16 @@ height: 100%;
     font-size: 2em;
     transition: all .9s;
   }
+
+  #buttonContainer {
+    text-align: center;
+    margin-top: 20px;
+}
+.canvas-button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
