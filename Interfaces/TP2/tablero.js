@@ -1,8 +1,8 @@
 
-//descomentar lo de las líneas 4 y 5 para verlo
 
-let canvas = document.getElementById("canvas");
-let ctx = canvas.getContext('2d');
+
+//let canvas = document.getElementById("canvas");
+//let ctx = canvas.getContext('2d');
 
 var columnCount = 7;
 var rowCount = 6;
