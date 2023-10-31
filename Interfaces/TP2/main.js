@@ -85,19 +85,34 @@ function clearCanvas(){
    // agregarFichas();
 //}, 333);
 
-function onMounseDown(e){
+function onMounseDown(e) {
     isMouseDown = true;
-    if(ultimaFiguraClickeada != null){
+    if (ultimaFiguraClickeada !== null) {
         ultimaFiguraClickeada.setResaltado(false);
-        ultimaFiguraClickeada = false;
+        ultimaFiguraClickeada = null;
+        dibujarFicha();
     }
 
-    let clickFicha = encontrarFichaClickeada(e.layerX, e.layerY);
-    if(clickFicha != null){
+    let rect = canvas.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+    let y = e.clientY - rect.top;
+
+    let clickFicha = encontrarFichaClickeada(x, y);
+    if (clickFicha !== null) {
         clickFicha.setResaltado(true);
         ultimaFiguraClickeada = clickFicha;
     }
     dibujarFicha();
+}
+
+function encontrarFichaClickeada(x, y) {
+    for (let i = figuras.length - 1; i >= 0; i--) {
+        const ficha = figuras[i];
+        if (ficha.punteroDentro(x, y)) {
+            return ficha;
+        }
+    }
+    return null; 
 }
 
 function onMouseUp(e){
