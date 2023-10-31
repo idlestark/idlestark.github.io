@@ -1,5 +1,5 @@
-//let canvas = document.getElementById("canvas");
-//let ctx = canvas.getContext('2d');
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext('2d');
 
 var columnCount = 7;
 var rowCount = 6;
@@ -35,62 +35,66 @@ const buttons = [
         }
 
         function clicEnBoton(event) {
-            if (botonesVisibles) {
-                var x = event.clientX - canvas.getBoundingClientRect().left;
-                var y = event.clientY - canvas.getBoundingClientRect().top;
+    if (botonesVisibles) {
+        // Borrar el canvas antes de dibujar el tablero
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-                if (x >= 50 && x <= 150 && y >= 50 && y <= 100) {
-                    // Cargar la imagen de fondo    
+        var x = event.clientX - canvas.getBoundingClientRect().left;
+        var y = event.clientY - canvas.getBoundingClientRect().top;
+
+        if (x >= 50 && x <= 150 && y >= 50 && y <= 100) {
+            // Cargar la imagen de fondo
+            backgroundImage.src = "https://mathcentral.uregina.ca/QQ/database/QQ.09.14/h/michael4.1.gif";
+
+            // Dibuja el fondo una vez que la imagen cargó
+            backgroundImage.onload = function() {
+                for (let y = 0; y < canvas.height; y += backgroundImage.height) {
+                    for (let x = 0; x < canvas.width; x += backgroundImage.width) {
+                        ctx.drawImage(backgroundImage, x, y);
+                    }
+                }
+            };
+                } else if (x >= 200 && x <= 300 && y >= 50 && y <= 100) {
+                    // Cargar la imagen de fondo
                     backgroundImage.src = "https://mathcentral.uregina.ca/QQ/database/QQ.09.14/h/michael4.1.gif";
+        
                     // Dibuja el fondo una vez que la imagen cargó
                     backgroundImage.onload = function() {
+                        rowCount = 8;
+                        columnCount = 7;
+                        // Calcular las coordenadas para centrar la imagen
+                        const centerX = (canvas.width - columnCount * cellSize) / 2;
+                        const centerY = (canvas.height - rowCount * cellSize) / 2;
                         for (let y = 0; y < rowCount; y++) {
                             for (let x = 0; x < columnCount; x++) {
-                                const cellX = x * cellSize;
-                                const cellY = y * cellSize;
+                                const cellX = centerX + x * cellSize;
+                                const cellY = centerY + y * cellSize;
                                 ctx.drawImage(backgroundImage, cellX, cellY, cellSize, cellSize);
-                                  }
-                             }
-                    }
-                    
-                } else if (x >= 200 && x <= 300 && y >= 50 && y <= 100) {
-                // Cargar la imagen de fondo    
-                backgroundImage.src = "https://mathcentral.uregina.ca/QQ/database/QQ.09.14/h/michael4.1.gif";
-
-                 // Dibuja el fondo una vez que la imagen cargó
-                 backgroundImage.onload = function() {
-                rowCount = 8;
-                columnCount = 7;
-                 for (let y = 0; y < rowCount; y++) {
-                    for (let x = 0; x < columnCount; x++) {
-                         const cellX = x * cellSize;
-                         const cellY = y * cellSize;
-                        ctx.drawImage(backgroundImage, cellX, cellY, cellSize, cellSize);
+                            }
                         }
-                     }
-                }
-                    
+                    };
                 } else if (x >= 350 && x <= 450 && y >= 50 && y <= 100) {
-                    // Cargar la imagen de fondo    
-                backgroundImage.src = "https://mathcentral.uregina.ca/QQ/database/QQ.09.14/h/michael4.1.gif";
-
-                // Dibuja el fondo una vez que la imagen cargó
-                backgroundImage.onload = function() {
-               rowCount = 9;
-               columnCount = 11;
-                for (let y = 0; y < rowCount; y++) {
-                   for (let x = 0; x < columnCount; x++) {
-                        const cellX = x * cellSize;
-                        const cellY = y * cellSize;
-                       ctx.drawImage(backgroundImage, cellX, cellY, cellSize, cellSize);
-                       }
-                    }
-               }
-                
+                    // Cargar la imagen de fondo
+                    backgroundImage.src = "https://mathcentral.uregina.ca/QQ/database/QQ.09.14/h/michael4.1.gif";
+        
+                    // Dibuja el fondo una vez que la imagen cargó
+                    backgroundImage.onload = function() {
+                        rowCount = 9;
+                        columnCount = 11;
+                        // Calcular las coordenadas para centrar la imagen
+                        const centerX = (canvas.width - columnCount * cellSize) / 2;
+                        const centerY = (canvas.height - rowCount * cellSize) / 2;
+                        for (let y = 0; y < rowCount; y++) {
+                            for (let x = 0; x < columnCount; x++) {
+                                const cellX = centerX + x * cellSize;
+                                const cellY = centerY + y * cellSize;
+                                ctx.drawImage(backgroundImage, cellX, cellY, cellSize, cellSize);
+                            }
+                        }
+                    };
                 }
             }
         }
-
         canvas.addEventListener("click", clicEnBoton);
 
  canvas.addEventListener("click", clicEnBoton);
