@@ -2323,4 +2323,72 @@ form {
     gap: 0.5rem;
   }
 
+  .container {
+    position: relative;
+    width: 950px; 
+    height: 600px; 
+    margin: 0 auto;
+}
+
+.opciones-jugador {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.opciones-jugador#jugador1 {
+    top: 0;
+    margin-top: 60px;
+}
+
+.opciones-jugador#jugador2 {
+    bottom: 0;
+    margin-bottom: 90px;
+}
+
+.personajes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.opcion-personaje {
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
+    overflow: hidden;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.opcion-personaje img {
+    width: 100%;
+    height: 100%;
+}
+
+.tiempo{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+     font-family: Arial, sans-serif;
+}
+
+.mensaje-empate {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 1px solid #000;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
 

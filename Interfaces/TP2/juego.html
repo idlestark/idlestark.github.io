@@ -113,67 +113,36 @@
                         </div>
                       </div>
                     </div>
-                    <div class="player-1">
-                      <div class="character-selection">
-                        <div class="character-images">
-                          <div class="wrapper">
-                            <input type="radio" id="benny" name="player_1" value="benny" checked>
-                            <label for="benny">
-                              <img src="./assets/img/bennyPic.jpg" alt="">
-                            </label>
+                    <div class="container">
+                      <div id="tiempo" class="tiempo"></div>
+                      <div class="opciones-jugador" id="jugador1">
+                          <h2>Jugador 1 - Elige tu personaje:</h2>
+                          <div class="personajes">
+                              <div class="opcion-personaje">
+                                  <img src="https://yoolk.ninja/wp-content/uploads/2020/06/Games-Valorant-1024x1024.png" alt="Personaje 1" onclick="seleccionarPersonaje('jugador1', 'https://yoolk.ninja/wp-content/uploads/2020/06/Games-Valorant-1024x1024.png')">
+                              </div>
+                              <div class="opcion-personaje">
+                                  <img src="https://yoolk.ninja/wp-content/uploads/2020/06/Games-Valorant-1024x1024.png" alt="Personaje 2" onclick="seleccionarPersonaje('jugador1', 'https://yoolk.ninja/wp-content/uploads/2020/06/Games-Valorant-1024x1024.png')">
+                              </div>
+                              <div class="opcion-personaje">
+                                  <img src="https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258" alt="Personaje 3" onclick="seleccionarPersonaje('jugador1', 'https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258')">
+                              </div>
                           </div>
-                          <div class="wrapper">
-                            <input type="radio" id="sheriff" name="player_1" value="sheriff">
-                            <label for="sheriff">
-                              <img src="./assets/img/sheriff.webp" alt="">
-                            </label>
-                          </div>
-                          <div class="wrapper">
-                            <input type="radio" id="ncr" name="player_1" value="ncr">
-                            <label for="ncr">
-                              <img src="./assets/img/necrophague.jpg" alt="">
-                            </label>
-                          </div>
-                          <div class="wrapper">
-                            <input type="radio" id="npc" name="player_1" value="npc">
-                            <label for="npc">
-                               <img id="npcPic" src="./assets/img/Gloria_van_Graff.webp" alt="">
-                            </label>
-                          </div>
-                        </div>
                       </div>
-                    </div>
-                    <div class="player-2">
-                      <div class="character-selection">
-                        <div class="character-images">
-                          <div class="wrapper">
-                            <input type="radio" id="benny2" name="player_2" value="benny" checked>
-                            <label for="benny2">
-                              <img  id="bennyPic" src="./assets/img/bennyPic.jpg" alt="">
-                            </label>
+                      <div class="opciones-jugador" id="jugador2">
+                          <h2>Jugador 2 - Elige tu personaje:</h2>
+                          <div class="personajes">
+                              <div class="opcion-personaje">
+                                  <img src="https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258" alt="Personaje 4" onclick="seleccionarPersonaje('jugador2', 'https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258')">
+                              </div>
+                              <div class="opcion-personaje">
+                                  <img src="https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258" alt="Personaje 5" onclick="seleccionarPersonaje('jugador2', 'https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258')">
+                              </div>
+                              <div class="opcion-personaje">
+                                  <img src="https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258" alt="Personaje 6" onclick="seleccionarPersonaje('jugador2', 'https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258')">
+                              </div>
                           </div>
-                          <div class="wrapper">
-                            <input type="radio" id="sheriff2" name="player_2" value="sheriff">
-                            <label for="sheriff2">
-                              <img id="sheriffPic" src="./assets/img/sheriff.webp" alt="">
-                            </label>
-                          </div>
-                          <div class="wrapper">
-                            <input type="radio" id="necrophague2" name="player_2" value="ncr">
-                            <label for="necrophague2">
-                               <img id="ncrPic" src="./assets/img/necrophague.jpg" alt="">
-                            </label>
-                          </div>
-                          <div class="wrapper">
-                            <input type="radio" id="npc2" name="player_2" value="npc">
-                            <label for="npc2">
-                               <img id="npcPic" src="./assets/img/Gloria_van_Graff.webp" alt="">
-                            </label>
-                          </div>
-                        </div>
                       </div>
-                    </div>
-                    
                   </div>
                   <div class="game__options-rules">
                     <div class="game__data">
@@ -197,12 +166,10 @@
                         </p>
                       </div>
                       <button class="reset-btn" type="submit">START</button>
-  
                     </div>
                   </div>
                 </div>
               </form>
-  
               <div class="winner-reset" id="winner">
                 <div class="winner-title">
                   <div id="winner-name"></div>
@@ -380,10 +347,7 @@
         </div>
     </div>
 </footer>
-<script src="/main.js"></script>
-<script src="./js/chip.js"></script>
-<script src="./js/connect4.js"></script>
-<script src="./js/game.js"></script>
-<script src="./js/player.js"></script>
+<script src="ficha.js"></script>
+<script src="main.js"></script> 
 </body>
 </html>

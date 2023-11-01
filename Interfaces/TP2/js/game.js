@@ -43,11 +43,18 @@ class Game {
     }
   
   
-    addPlayers(player_1, player_2) {
-      let p1 = new Player('Player 1', 1, player_1, true);
-      let p2 = new Player('Player 2', 2, player_2, false);
-      this.players.push(p1, p2);
-    }
+    addPlayers(jugador, imagen) {
+      if (jugador === 'jugador1') {
+          jugador1ImagenSeleccionada = imagen;
+      } else if (jugador === 'jugador2') {
+          jugador2ImagenSeleccionada = imagen;
+      }
+  
+      if (jugador1ImagenSeleccionada !== '' && jugador2ImagenSeleccionada !== '') {
+          dibujarDosFilasDeFichas(jugador1ImagenSeleccionada, jugador2ImagenSeleccionada);
+          ocultarOpcionesJugadores(); 
+      }
+  }
   
     removePlayers(){
       this.players = []
