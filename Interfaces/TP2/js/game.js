@@ -3,103 +3,96 @@
 class Game {
     constructor() {
       this.ctx = ctx;
-      this.ready = false;
-      this.players = [];
-      this.isDragging = false;
-      this.previousSelectedChip = null;
-      this.boardPositions = []
+      this.listo = false;
+      this.jugadores = [];
+      this.estaArrastrando = false;
+      this.fichaAnteriorSeleccionada = null;
+      this.posicionesTablero = []
     }
   
-    getBoardPositions() {
-      return this.boardPositions;
+    getPosicionesTablero() {
+      return this.posicionesTablero;
     }
   
-    getPlayers() {
-      return this.players;
+    getJugadores() {
+      return this.jugadores;
     }
   
-    getReady() {
-      return this.ready;
+    getListo() {
+      return this.listo;
     }
   
-    getIsDraggin() {
-      return this.isDragging;
+    getEstaArrastrando() {
+      return this.estaArrastrando;
     }
   
-    getPreviusSelectedChip() {
-      return this.previousSelectedChip;
+    getFichaAnteriorSeleccionada() {
+      return this.fichaAnteriorSeleccionada;
     }
   
-    setIsDragging(boolean) {
-      this.isDragging = boolean;
+    setEstaArrastrando(boolean) {
+      this.estaArrastrando = boolean;
     }
   
-    setPreviusSelectedChip(Chip) {
-      this.previousSelectedChip = Chip;
+    setFichaAnteriorSeleccionada(Chip) {
+      this.fichaAnteriorSeleccionada = Chip;
     }
   
-    play() {
-      this.turn();
+    jugar() {
+      this.turno();
     }
   
   
-    addPlayers(jugador, imagen) {
-      if (jugador === 'jugador1') {
-          jugador1ImagenSeleccionada = imagen;
-      } else if (jugador === 'jugador2') {
-          jugador2ImagenSeleccionada = imagen;
-      }
-  
-      if (jugador1ImagenSeleccionada !== '' && jugador2ImagenSeleccionada !== '') {
-          dibujarDosFilasDeFichas(jugador1ImagenSeleccionada, jugador2ImagenSeleccionada);
-          ocultarOpcionesJugadores(); 
-      }
-  }
-  
-    removePlayers(){
-      this.players = []
+    agregarJugadores(jugador_1, jugador_2) {
+      let p1 = new Player('Counter Strike', 1, jugador_1, true);
+      let p2 = new Player('Valorant', 2, jugador_2, false);
+      this.jugadores.push(p1, p2);
     }
   
-    setTurn() {
-      this.players[0].setIsPlaying(!this.players[0].getIsPlaying());
-      this.players[1].setIsPlaying(!this.players[1].getIsPlaying());
+    quitarJugadores(){
+      this.jugadores = []
     }
   
-    checkWinner(columnPos, rowPos , connect) {
-      let row = this.boardPositions[rowPos]
-      let owner = this.boardPositions[rowPos][columnPos].getOwner();
+    setTurno() {
+      this.jugadores[0].setEstaJugando(!this.jugadores[0].getEstaJugando());
+      this.jugadores[1].setEstaJugando(!this.jugadores[1].getEstaJugando());
+    }
+  
+    verificarGanador(columnaPos, filaPos , connect) {
+      let fila = this.posicionesTablero[filaPos]
+      let duenio = this.posicionesTablero[filaPos][columnaPos].getDuenio();
       let diag = 1;
-      if (this.checkHorizontal(row, columnPos, owner, connect)) {
-        return [true, owner]
+      if (this.verificarHorizontal(fila, columnaPos, duenio, connect)) {
+        return [true, duenio]
       }
-      if (this.checkVertical(rowPos, columnPos, owner, connect)) {
-        return [true, owner]
+      if (this.verificarVertical(filaPos, columnaPos, duenio, connect)) {
+        return [true, duenio]
       }
-      diag += this.checkDiagonal1(rowPos, columnPos, owner, connect) + this.checkDiagonal2(rowPos, columnPos, owner, connect)
+      diag += this.verificarDiagonal(filaPos, columnaPos, duenio, connect) + this.verificarDiagonal2(filaPos, columnaPos, duenio, connect)
       if (diag >= connect) {
-        return [true, owner]
+        return [true, duenio]
       }
   
     }
   
-    checkDiagonal1(rowPos, columnPos, owner) {
+    verificarDiagonal(rowPos, columnPos, owner) {
       let row = rowPos;
       let col = columnPos;
       let diag = 0;
-      while (col != this.boardPositions[row].length - 1 && row != 0) {
+      while (col != this.posicionesTablero[row].length - 1 && row != 0) {
         row--;
         col++;
-        if (this.boardPositions[row][col] != null && this.boardPositions[row][col].getOwner() == owner ) {
+        if (this.posicionesTablero[row][col] != null && this.posicionesTablero[row][col].getDuenio() == owner ) {
           diag++;
         }
       }
   
       row = rowPos;
       col = columnPos;
-      while (row != this.boardPositions.length - 1 && col != 0) {
+      while (row != this.posicionesTablero.length - 1 && col != 0) {
         row++
         col--
-        if (this.boardPositions[row][col] != null && this.boardPositions[row][col].getOwner() == owner) {
+        if (this.posicionesTablero[row][col] != null && this.posicionesTablero[row][col].getDuenio() == owner) {
           diag++;
         }
       }
@@ -107,14 +100,14 @@ class Game {
       return diag 
     }
   
-    checkDiagonal2(rowPos, columnPos, owner) {
+    verificarDiagonal2(rowPos, columnPos, owner) {
       let row = rowPos;
       let col = columnPos;
       let diag = 0;
       while (row != 0 && col != 1) {
         row--;
         col--;
-        if (this.boardPositions[row][col] != null && this.boardPositions[row][col].getOwner() == owner) {
+        if (this.posicionesTablero[row][col] != null && this.posicionesTablero[row][col].getDuenio() == owner) {
           diag++;
         }
       }
@@ -122,10 +115,10 @@ class Game {
       row = rowPos;
       col = columnPos;
   
-      while (row != this.boardPositions.length - 1 && col != this.boardPositions[row].length - 1) {
+      while (row != this.posicionesTablero.length - 1 && col != this.posicionesTablero[row].length - 1) {
         row++
         col++
-        if (this.boardPositions[row][col] != null && this.boardPositions[row][col].getOwner() == owner) {
+        if (this.posicionesTablero[row][col] != null && this.posicionesTablero[row][col].getDuenio() == owner) {
           diag++;
         }
       }
@@ -134,12 +127,12 @@ class Game {
     }
   
   
-    checkVertical(rowPos, columnPos, owner, connect) {
+    verificarVertical(rowPos, columnPos, owner, connect) {
       let nulls = 0;
       let vert = 1;
       let aux;
   
-      if (rowPos == this.boardPositions.length - 1) {
+      if (rowPos == this.posicionesTablero.length - 1) {
         nulls++;
         aux = rowPos - 1
       } else {
@@ -148,16 +141,16 @@ class Game {
   
       while (nulls < 2) {
   
-        if (aux == this.boardPositions.length) {
+        if (aux == this.posicionesTablero.length) {
           nulls++
           if (rowPos == 0) {
             return vert >= connect
           }
           aux = rowPos - 1
         }
-        let chip = this.boardPositions[aux][columnPos]
+        let chip = this.posicionesTablero[aux][columnPos]
   
-        if (chip != null && chip.getOwner() == owner) {
+        if (chip != null && chip.getDuenio() == owner) {
           vert++;
         } else {
           return vert >= connect;
@@ -173,12 +166,12 @@ class Game {
       return vert >= connect
     }
   
-    checkHorizontal(row, pos ,owner, connect) {
+    verificarHorizontal(row, pos ,owner, connect) {
       let nulls = 0;
       let aux = pos + 1;
       let hori = 1;
       while (nulls < 2) {
-        if (row[aux] != null && row[aux].getOwner() == owner) {
+        if (row[aux] != null && row[aux].getDuenio() == owner) {
           hori++;
         } else {
           nulls++;

@@ -880,6 +880,7 @@ border: 0;
     width: 100%;
     height: 5em;
     background-color: var(--grisoscuro);
+    margin-bottom: 35px;
 
 }
 .titulo-breakpoints{
@@ -2230,7 +2231,11 @@ height: 100%;
     margin: 5px;
 }
 
-
+.canvas{
+    background-image: url('./assets/img/canvas-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 
 
@@ -2240,6 +2245,106 @@ height: 100%;
 
 /*/////////////////////////////////////////////////////////////////////////////*/
 
+
+.btns-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 5rem;
+    align-items: center;
+  }
+  
+  .btns-container div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+
+
+.wrapper-juego {
+    background-color: var(--neutrals-N300);
+    height: 150px;
+    width: 150px;
+    border-radius: 90px;
+    border: 3px solid var(--secundarios2);
+    transition: .3s;
+    position: relative;
+  }
+  
+  .wrapper-juego img {
+    height: 150px;
+    width: 150px;
+    border-radius: 90px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+  }
+
+  .selecccion-personaje {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .imagenes-personajes-juego {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+
+  
+.radio-modo-de-juego{
+    appearance: none;
+    border: 1px solid var(--secundarios1);
+    width: 10px;
+    height: 10px;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.radio-modo-de-juego:checked{
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem var(--acento),
+    0 0 0.8rem var(--acento), 0 0 2.8rem var(--acento), inset 0 0 1.3rem var(--acento);
+    cursor: pointer;
+}
+
+.radio-modo-de-juego:hover{
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem var(--acento),
+    0 0 0.8rem var(--acento), 0 0 2.8rem var(--acento), inset 0 0 1.3rem var(--acento);
+    cursor: pointer;
+}
+
+.radio-seleccion-personaje{
+    width: 150px;
+    height: 150px;
+    appearance: none;
+    border: 1px solid #01fe78;
+    border-radius: 90px;
+    cursor: pointer;
+}
+
+.radio-seleccion-personaje:hover{
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem var(--acento),
+    0 0 0.8rem var(--acento), 0 0 2.8rem var(--acento), inset 0 0 1.3rem var(--acento);
+    cursor: pointer;
+ 
+}
+
+.radio-seleccion-personaje:checked{
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem var(--acento),
+    0 0 0.8rem var(--acento), 0 0 2.8rem var(--acento), inset 0 0 1.3rem var(--acento);
+    cursor: pointer;
+}
+
 form {
     z-index: 200;
     position: absolute;
@@ -2248,7 +2353,7 @@ form {
     background-repeat: repeat-y;
   }
   
-  .winner-reset {
+  .ganador-reinicio {
     z-index: 200;
     position: absolute;
     width: 950px;
@@ -2257,33 +2362,38 @@ form {
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
-    background-image: url('../img/winner.webp');
+    background-image: url('./assets/img/winner.webp');
     background-repeat: no-repeat;
     background-position-y: -100px;
     background-size: cover;
     align-items: center;
   }
   
-  .winner-title {
+  .titulo-ganador {
     display: flex;
     gap: .5rem;
   }
   
   
-  .winner-title h1 {
+  .titulo-ganador h1{
     color: #01fe78;
   }
   
   .reset-btn {
-    border: 1px solid #01fe78;
-    color: #01fe78;
+    left: 375px;
+    position: absolute;
+    top: 530px;
+    border: 1px solid var(--acento);
+    color: var(--acento);
     width: 200px;
     height: 60px;
     transition: .3s;
+    letter-spacing: var(--espaciadoBoton);
   }
   
   .reset-btn:hover {
-    background-color: #01fe78;
+    background-color: var(--acento);
+    color: var(--negro);
   }
   
   .game__options-container {
@@ -2292,16 +2402,15 @@ form {
     width: 918px;
     height: 575px;
     z-index: 9999;
-    display: flex;
     padding: 1rem;
     gap: 1rem;
   }
   
-  .game__options-characters{
+  .opciones-personajes{
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 3rem;
   }
 
 
@@ -2321,74 +2430,6 @@ form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-  }
-
-  .container {
-    position: relative;
-    width: 950px; 
-    height: 600px; 
-    margin: 0 auto;
-}
-
-.opciones-jugador {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-}
-
-.opciones-jugador#jugador1 {
-    top: 0;
-    margin-top: 60px;
-}
-
-.opciones-jugador#jugador2 {
-    bottom: 0;
-    margin-bottom: 90px;
-}
-
-.personajes {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.opcion-personaje {
-    width: 80px; 
-    height: 80px; 
-    border-radius: 50%; 
-    overflow: hidden;
-    cursor: pointer;
-    margin: 0 10px;
-}
-
-.opcion-personaje img {
-    width: 100%;
-    height: 100%;
-}
-
-.tiempo{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px;
-    background-color: #f0f0f0;
-    color: #333;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-     font-family: Arial, sans-serif;
-}
-
-.mensaje-empate {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    border: 1px solid #000;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
 
 

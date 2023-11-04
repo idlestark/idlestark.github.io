@@ -1,16 +1,15 @@
-
-
+// CONTROLA LAS FICHAS
 
 class Chip {
-    constructor(x, y, img, owner, turn) {
+    constructor(x, y, img, duenio, turno) {
       this.originalX = x;
       this.originalY = y;
       this.x = x;
       this.y = y
       this.radius = 30;
       this.isSelected = false;
-      this.turn = turn;
-      this.owner = owner;
+      this.turno = turno;
+      this.duenio = duenio;
   
       this.urlimage = img;
       this.image = new Image();
@@ -18,24 +17,24 @@ class Chip {
       this.context = ctx;
     }
   
-    getOwner() {
-      return this.owner;
+    getDuenio() {
+      return this.duenio;
     }
   
-    getTurn() {
-      return this.turn;
+    getTurno() {
+      return this.turno;
     }
   
-    getIsSelected(){
+    getEstaSeleccionada(){
       return this.isSelected;
     }
   
-    setIsSelected(boolean){
+    setEstaSeleccionada(boolean){
       this.isSelected = boolean;
     }
   
-    setTurn(boolean) {
-      this.turn = boolean
+    setTurno(boolean) {
+      this.turno = boolean
     }
     
     setX(x){
@@ -46,34 +45,30 @@ class Chip {
       this.y = y;
     }
   
-    resetPosition(){
+    reiniciarPosicion(){
       this.setX(this.originalX);
       this.setY(this.originalY);
     }
   
     draw() {
-      if (this.img.complete) {
-        this.context.save();
         this.context.beginPath();
-        this.context.arc(this.posX + this.width / 2, this.posY + this.height / 2, this.width / 2, 0, Math.PI * 2, true);
-        this.context.clip();
-        this.context.drawImage(this.img, this.posX, this.posY, this.width, this.height);
-        this.context.closePath();
-        this.context.restore();
-
-        if (this.resaltado) {
-            this.context.beginPath();
-            this.context.arc(this.posX + this.width / 2, this.posY + this.height / 2, this.width / 2 + 2.5, 0, Math.PI * 2, true); 
-            this.context.strokeStyle = this.resaltadoEstilo;
-            this.context.lineWidth = 5;
-            this.context.stroke();
-            this.context.closePath();
+        this.context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+  
+        if (this.image.src === "") {
+            this.image.src = this.urlimage;
+            let loadImg = function () {
+                this.context.drawImage(this.image, this.x - this.radius, this.y - this.radius, this.radius / .5, this.radius / .5);
+            }
+            this.image.onload = loadImg.bind(this);
+        } else {
+            this.context.drawImage(this.image, this.x - this.radius, this.y - this.radius, this.radius / .5, this.radius / .5);
         }
-    }
-}
+        
+        this.context.closePath();
+  }
   
   
-    isClicked(x, y) {
+    estaClickeado(x, y) {
       let _x = this.x - x;
       let _y = this.y - y;
   
@@ -81,4 +76,5 @@ class Chip {
     }
   }
   
-   
+  //21 fichas
+  

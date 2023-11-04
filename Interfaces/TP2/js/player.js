@@ -1,42 +1,42 @@
 // PLAYER
 class Player {
-    constructor(name, id, character, isPlaying) {
-      this.chips = [];
-      this.name = name;
+    constructor(nombre, id, personaje, estaJugando) {
+      this.fichas = [];
+      this.nombre = nombre;
       this.id = id;
-      this.character = character;
-      this.isPlaying = isPlaying;
+      this.personaje = personaje;
+      this.estaJugando = estaJugando;
     }
   
-    getCharacter(){
-      return this.character;
+    getPersonaje(){
+      return this.personaje;
     }
   
     getId() {
       return this.id;
     }
   
-    getIsPlaying() {
-      return this.isPlaying;
+    getEstaJugando() {
+      return this.estaJugando;
     }
   
-    getChips(){
-      return this.chips;
+    getFichas(){
+      return this.fichas;
     }
   
-    setIsPlaying(boolean) {
-      this.isPlaying = boolean;
-      for (let i = 0; i < this.chips.length; i++) {
-        this.chips[i].setTurn(boolean);
+    setEstaJugando(boolean) {
+      this.estaJugando = boolean;
+      for (let i = 0; i < this.fichas.length; i++) {
+        this.fichas[i].setTurno(boolean);
       }
     }
   
-    addChip(chip) {
-      this.chips.push(chip);
+    agregarFicha(ficha) {
+      this.fichas.push(ficha);
     }
   
-    clearChips(){
-      this.chips = []
+    limpiarFichas(){
+      this.fichas = []
     }
   }
   

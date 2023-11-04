@@ -95,100 +95,79 @@
             <div class="showcase__container container">
               <form action="" id="form">
                 <div class="game__options-container">
-                  <div class="game__options-characters">
+                  <div class="opciones-personajes">
                     <div>
                       <div class="btns-container">
                         <div>
-                          <input type="radio" id="connect4" name="connect" value=4 checked required>
-                          <label for="connect4">Connect 4 (6x7)</label>
+                          <input type="radio" class="radio-modo-de-juego" id="connect4" name="connect" value=4 checked required>
+                          <label for="connect4">4 en Línea (6x7)</label>
                         </div>
                         <div>
-                          <input type="radio" id="connect5" name="connect" value=5 required>
-                          <label for="connect5">Connect 5 (7x8)</label>
+                          <input type="radio" class="radio-modo-de-juego" id="connect5" name="connect" value=5 required>
+                          <label for="connect5">5 en Línea (7x8)</label>
                         </div>
   
                         <div>
-                          <input type="radio" id="connect6" name="connect" value=6 required>
-                          <label for="connect6">Connect 6 (8x9)</label>
+                          <input type="radio" class="radio-modo-de-juego" id="connect6" name="connect" value=6 required>
+                          <label for="connect6">6 en Línea (8x9)</label>
                         </div>
                       </div>
                     </div>
-                    <div class="container">
-                      <div id="tiempo" class="tiempo"></div>
-                      <div class="opciones-jugador" id="jugador1">
-                          <h2>Jugador 1 - Elige tu personaje:</h2>
-                          <div class="personajes">
-                              <div class="opcion-personaje">
-                                  <img src="https://yoolk.ninja/wp-content/uploads/2020/06/Games-Valorant-1024x1024.png" alt="Personaje 1" onclick="seleccionarPersonaje('jugador1', 'https://yoolk.ninja/wp-content/uploads/2020/06/Games-Valorant-1024x1024.png')">
-                              </div>
-                              <div class="opcion-personaje">
-                                  <img src="https://yoolk.ninja/wp-content/uploads/2020/06/Games-Valorant-1024x1024.png" alt="Personaje 2" onclick="seleccionarPersonaje('jugador1', 'https://yoolk.ninja/wp-content/uploads/2020/06/Games-Valorant-1024x1024.png')">
-                              </div>
-                              <div class="opcion-personaje">
-                                  <img src="https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258" alt="Personaje 3" onclick="seleccionarPersonaje('jugador1', 'https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258')">
-                              </div>
+                    <div class="player-1">
+                      <div class="selecccion-personaje">
+                        <div class="imagenes-personajes-juego">
+                          <div class="wrapper-juego">
+                            <input type="radio" class="radio-seleccion-personaje" id="Counter-Strike" name="player_1" value="Counter-Strike" checked>
+                            <label for="Counter-Strike">
+                              <img src="./assets/img/Counter-Strike.jpg" alt="">
+                            </label>
                           </div>
-                      </div>
-                      <div class="opciones-jugador" id="jugador2">
-                          <h2>Jugador 2 - Elige tu personaje:</h2>
-                          <div class="personajes">
-                              <div class="opcion-personaje">
-                                  <img src="https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258" alt="Personaje 4" onclick="seleccionarPersonaje('jugador2', 'https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258')">
-                              </div>
-                              <div class="opcion-personaje">
-                                  <img src="https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258" alt="Personaje 5" onclick="seleccionarPersonaje('jugador2', 'https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258')">
-                              </div>
-                              <div class="opcion-personaje">
-                                  <img src="https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258" alt="Personaje 6" onclick="seleccionarPersonaje('jugador2', 'https://cdnb.artstation.com/p/assets/images/images/051/262/643/large/kethaka-vidyananda-5.jpg?1656869258')">
-                              </div>
+                          <div class="wrapper-juego">
+                            <input type="radio" class="radio-seleccion-personaje" id="CSGO" name="player_1" value="CSGO">
+                            <label for="CSGO">
+                              <img src="./assets/img/CSGO.webp" alt="">
+                            </label>
                           </div>
+                        </div>
                       </div>
-                  </div>
-                  <div class="game__options-rules">
-                    <div class="game__data">
-                      <div class="game__data-content">
-                        <h1>How to play</h1>
-                        <p>
-                          First, decide who goes first and what color each player will
-                          have. Players must alternate turns, and only one disc can be
-                          dropped in each turn. On your turn, drop one of your colored
-                          discs from the top into any of the seven slots The game ends
-                          when there is a 4-in-a-row or a stalemate. The starter of
-                          the previous game goes second on the next game.
-                        </p>
-                      </div>
-                      <div class="game__data-content">
-                        <h1>Objective</h1>
-                        <p>
-                          To be the first player to connect 4 of the same colored
-                          discs in a row (either vertically, horizontally, or
-                          diagonally)
-                        </p>
-                      </div>
-                      <button class="reset-btn" type="submit">START</button>
                     </div>
+                    <div class="player-2">
+                      <div class="selecccion-personaje">
+                        <div class="imagenes-personajes-juego">
+                          <div class="wrapper-juego">
+                            <input type="radio" class="radio-seleccion-personaje" id="Valorant" name="player_2" value="Valorant" checked>
+                            <label for="Valorant">
+                               <img id="ncrPic" src="./assets/img/Valorant.jpg" alt="">
+                            </label>
+                          </div>
+                          <div class="wrapper-juego">
+                            <input type="radio" class="radio-seleccion-personaje" id="Valorant2" name="player_2" value="Valorant2">
+                            <label for="Valorant2">
+                               <img id="npcPic" src="./assets/img/Valorant2.webp" alt="">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
                   </div>
+                  <button class="reset-btn" type="submit">JUGAR</button>
                 </div>
               </form>
-              <div class="winner-reset" id="winner">
-                <div class="winner-title">
-                  <div id="winner-name"></div>
+  
+              <div class="ganador-reinicio" id="ganador">
+                <div class="titulo-ganador">
+                  <div id="ganador-nombre"></div>
                   <h1>wins</h1>
                 </div>
                 <button class="reset-btn" id="reset-btn" type="button">Reset game</button>
               </div>
-  
-              <canvas
-                class="canvas"
-                id="canvas"
-                width="950"
-                height="600"
-              ></canvas>
+              <canvas class="canvas" id="canvas" width="950" height="600"></canvas>
             </div>
             <div style="display: none">
                 <img id="connect4-img" src="./assets/img/connect4 board.png" alt="">
-                <img id="arrow" src="./assets/img/arrow 2.png" alt="">
-                <img id="reload" src="./assets/img/reload.png" alt="">
+                <img id="flecha" src="./assets/img/arrow 2.png" alt="">
+                <img id="recargar" src="./assets/img/reload.png" alt="">
               </div>
           </div>
     <div class="contenedor-opciones-juego"></div>
@@ -347,7 +326,10 @@
         </div>
     </div>
 </footer>
-<script src="ficha.js"></script>
-<script src="main.js"></script> 
+<script src="/main.js"></script>
+<script src="./js/chip.js"></script>
+<script src="./js/connect4.js"></script>
+<script src="./js/game.js"></script>
+<script src="./js/player.js"></script>
 </body>
 </html>
