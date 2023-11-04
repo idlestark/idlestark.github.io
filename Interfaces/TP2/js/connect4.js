@@ -303,21 +303,21 @@ function verificarPosicion(pos){
 }
 
 function mouseDown(e) {
-    let players = juego.getJugadores();
+    let jugadores = juego.getJugadores();
     let clickX = e.pageX - canvas.offsetLeft;
     let clickY = e.pageY - canvas.offsetTop;
-    let previousSelectedChip = juego.getFichaAnteriorSeleccionada();
-    let clickedChip = encontrarClickeado(clickX, clickY);
-    if (clickedChip != null) {
-        if (clickedChip.getTurno()) {
-        if (previousSelectedChip != null) {
-            previousSelectedChip.setEstaSeleccionada(false)
+    let fichaAnteriorSeleccionada = juego.getFichaAnteriorSeleccionada();
+    let fichaClickeada = encontrarClickeado(clickX, clickY);
+    if (fichaClickeada != null) {
+        if (fichaClickeada.getTurno()) {
+        if (fichaAnteriorSeleccionada != null) {
+            fichaAnteriorSeleccionada.setEstaSeleccionada(false)
         }
-        juego.setFichaAnteriorSeleccionada(clickedChip)
-        for (let p = 0; p < players.length; p++) {
-            if (players[p].getEstaJugando() == true) {
-                if (clickedChip.getDuenio() === players[p].getId()) {
-                        clickedChip.setEstaSeleccionada(true);
+        juego.setFichaAnteriorSeleccionada(fichaClickeada)
+        for (let p = 0; p < jugadores.length; p++) {
+            if (jugadores[p].getEstaJugando() == true) {
+                if (fichaClickeada.getDuenio() === jugadores[p].getId()) {
+                        fichaClickeada.setEstaSeleccionada(true);
                         dibujarFichas();
                         juego.setEstaArrastrando(true);
 
@@ -348,13 +348,13 @@ function checkearAreaReseteo(clickX, clickY){
 
 
 function encontrarClickeado(clickX, clickY) {
-    let players = juego.getJugadores();
-    for (let p = 0; p < players.length; p++) {
-        let chips = players[p].getFichas();
-        for (let i = chips.length - 1; i >= 0; i--) {
-            let chip = chips[i];
-            if (chip.estaClickeado(clickX, clickY)) {
-                return chip;
+    let jugadores = juego.getJugadores();
+    for (let p = 0; p < jugadores.length; p++) {
+        let fichas = jugadores[p].getFichas();
+        for (let i = fichas.length - 1; i >= 0; i--) {
+            let ficha = fichas[i];
+            if (ficha.estaClickeado(clickX, clickY)) {
+                return ficha;
             }
         }
     }
