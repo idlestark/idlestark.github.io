@@ -169,11 +169,11 @@ function cargarTablero(fila,columna){
 }
 
 function crearFichas(cant, fichas_1, fichas_2) {
-    let players = juego.getJugadores();
+    let jugadores = juego.getJugadores();
     
-    for (let j = 0; j < players.length; j++) {
+    for (let j = 0; j < jugadores.length; j++) {
         for (let i = 0; i < cant; i++) {
-            if (players[j].getId() === 1) {
+            if (jugadores[j].getId() === 1) {
                 let x = 95;
                 let y = 150;
                 let img = fichas_1;
@@ -181,11 +181,11 @@ function crearFichas(cant, fichas_1, fichas_2) {
                     x,
                     y,
                     img,
-                    players[j].getId(),
-                    players[j].getEstaJugando()
+                    jugadores[j].getId(),
+                    jugadores[j].getEstaJugando()
                 );
 
-                players[j].agregarFicha(ficha);
+                jugadores[j].agregarFicha(ficha);
             } else {
                 let x = 855
                 let y = 150;
@@ -195,10 +195,10 @@ function crearFichas(cant, fichas_1, fichas_2) {
                     x,
                     y,
                     img,
-                    players[j].getId(),
-                    players[j].getEstaJugando()
+                    jugadores[j].getId(),
+                    jugadores[j].getEstaJugando()
                 );
-                players[j].agregarFicha(chip);
+                jugadores[j].agregarFicha(chip);
             }
         }
         dibujarFichas();
@@ -211,11 +211,11 @@ function dibujarTablero(){
     let pos = canvas.width/4; 
     let posy= canvas.height/6
     for (let i = 0; i < posicionesTablero.length; i++) {
-        let row = posicionesTablero[i]
-        for (let j = 0; j < row.length; j++) {
-            if(row[j] != null){
-                row[j].setX((pos + j*61)+ (60/2) )
-                row[j].setY((posy + i*61)+ (60/2))
+        let fila = posicionesTablero[i]
+        for (let j = 0; j < fila.length; j++) {
+            if(fila[j] != null){
+                fila[j].setX((pos + j*61)+ (60/2) )
+                fila[j].setY((posy + i*61)+ (60/2))
             }
             ctx.drawImage(img,pos + j*61,posy + i*61, 60 ,60)
             
@@ -234,14 +234,14 @@ function dibujarTablero(){
 }
 
 function dibujarFichas() {
-    let players = juego.getJugadores();
+    let jugadores = juego.getJugadores();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     dibujarPersonajes()
     dibujarTablero();
-    for (let j = 0; j < players.length; j++) {
-        let chips = players[j].getFichas();
-        for (let i = 0; i < chips.length; i++) {
-            chips[i].draw();
+    for (let j = 0; j < jugadores.length; j++) {
+        let fichas = jugadores[j].getFichas();
+        for (let i = 0; i < fichas.length; i++) {
+            fichas[i].draw();
         }
     }
 }
