@@ -936,7 +936,7 @@ border: 0;
     position: relative;
     color: var(--negro);
     top: 325px;
-    left: 48px;
+    left: 98px;
 }
 
 
@@ -1015,6 +1015,7 @@ border: 0;
     width: 1px;
     position: relative;
     background-color: var(--negroopacidad);
+    left: 10px
 }
 
 .linea-separacion2{
@@ -1036,7 +1037,7 @@ border: 0;
 
 .como-jugar{
     margin-top: 20px;
-    margin-left:30px; 
+    margin-left:40px; 
 }
 
 .controles{
@@ -1067,8 +1068,9 @@ border: 0;
 
 .contenedor-comentarios{
     flex-direction: column;
-    justify-content: flex-start;
     width: 90%;
+    position: relative;
+    left: 130px;
 }
 
 .enviar{
@@ -1090,8 +1092,8 @@ border: 0;
 }
 
 .publicidad{
-    width: 232px;
-    height: 462px;
+    position: relative;
+    left: 1120px;
 }
 
 .contenedor-generos{
@@ -1540,42 +1542,58 @@ width: 48%;
 
 .video{
     width: 600px;
-    height: 391px;
+    height: 440px;
     position: relative;
-    top:355px;
-    left:50px;
+    top:300px;
+    left:100px;
 }
 
 .imagen-juego-1{
     position: relative;
     height:180px;
     width:300px;
-    top:144px;
-    left: 76px
+    top:90px;
+    left: 126px
 }
 
 .imagen-juego-2{
     position: relative;
     height:180px;
     width:300px;
-    top:144px;
-    left: 102px
+    top:90px;
+    left: 152px
 }
 
 .imagen-juego-3{
     position: relative;
     height:180px;
     width:300px;
-    top:355px;
-    right:200px;
+    top:300px;
+    right:152px;
 }
 
 .imagen-juego-4{
     position: relative;
     height:180px;
     width:300px;
-    top:355px;
-    right: 836px;
+    top:300px;
+    right: 786px;
+}
+
+.imagen-juego-5{
+    position: relative;
+    height:180px;
+    width:300px;
+    top:-93px;
+    right: -1386px;
+}
+
+.imagen-juego-6{
+    position: relative;
+    height:180px;
+    width:300px;
+    top: 117px;
+    right: -1082px;
 }
 
 
