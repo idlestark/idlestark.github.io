@@ -60,24 +60,24 @@ class Juego{
   
     
   
-    verificarDiagonal(rowPos, columnPos, owner) {
-      let row = rowPos;
-      let col = columnPos;
+    verificarDiagonal(filaPos, columnaPos, owner) {
+      let file = filaPos;
+      let col = columnaPos;
       let diag = 0;
-      while (col != this.posicionesTablero[row].length - 1 && row != 0) {
-        row--;
+      while (col != this.posicionesTablero[file].length - 1 && file != 0) {
+        file--;
         col++;
-        if (this.posicionesTablero[row][col] != null && this.posicionesTablero[row][col].getDuenio() == owner ) {
+        if (this.posicionesTablero[file][col] != null && this.posicionesTablero[file][col].getDuenio() == owner ) {
           diag++;
         }
       }
   
-      row = rowPos;
-      col = columnPos;
-      while (row != this.posicionesTablero.length - 1 && col != 0) {
-        row++
+      file = filaPos;
+      col = columnaPos;
+      while (file != this.posicionesTablero.length - 1 && col != 0) {
+        file++
         col--
-        if (this.posicionesTablero[row][col] != null && this.posicionesTablero[row][col].getDuenio() == owner) {
+        if (this.posicionesTablero[file][col] != null && this.posicionesTablero[file][col].getDuenio() == owner) {
           diag++;
         }
       }
@@ -85,25 +85,25 @@ class Juego{
       return diag 
     }
   
-    verificarDiagonal2(rowPos, columnPos, owner) {
-      let row = rowPos;
+    verificarDiagonal2(filaPos, columnPos, owner) {
+      let fila = filaPos;
       let col = columnPos;
       let diag = 0;
-      while (row != 0 && col != 1) {
-        row--;
+      while (fila != 0 && col != 1) {
+        fila--;
         col--;
-        if (this.posicionesTablero[row][col] != null && this.posicionesTablero[row][col].getDuenio() == owner) {
+        if (this.posicionesTablero[fila][col] != null && this.posicionesTablero[fila][col].getDuenio() == owner) {
           diag++;
         }
       }
   
-      row = rowPos;
+      fila = filaPos;
       col = columnPos;
   
-      while (row != this.posicionesTablero.length - 1 && col != this.posicionesTablero[row].length - 1) {
-        row++
+      while (fila != this.posicionesTablero.length - 1 && col != this.posicionesTablero[fila].length - 1) {
+        fila++
         col++
-        if (this.posicionesTablero[row][col] != null && this.posicionesTablero[row][col].getDuenio() == owner) {
+        if (this.posicionesTablero[fila][col] != null && this.posicionesTablero[fila][col].getDuenio() == owner) {
           diag++;
         }
       }
@@ -128,30 +128,30 @@ class Juego{
   
     }
   
-    verificarVertical(rowPos, columnPos, owner, connect) {
+    verificarVertical(filaPos, columnaPos, duenio, connect) {
       let nulls = 0;
       let vert = 1;
       let aux;
   
-      if (rowPos == this.posicionesTablero.length - 1) {
+      if (filaPos == this.posicionesTablero.length - 1) {
         nulls++;
-        aux = rowPos - 1
+        aux = filaPos - 1
       } else {
-        aux = rowPos + 1
+        aux = filaPos + 1
       }
   
       while (nulls < 2) {
   
         if (aux == this.posicionesTablero.length) {
           nulls++
-          if (rowPos == 0) {
+          if (filaPos == 0) {
             return vert >= connect
           }
-          aux = rowPos - 1
+          aux = filaPos - 1
         }
-        let chip = this.posicionesTablero[aux][columnPos]
+        let chip = this.posicionesTablero[aux][columnaPos]
   
-        if (chip != null && chip.getDuenio() == owner) {
+        if (chip != null && chip.getDuenio() == duenio) {
           vert++;
         } else {
           return vert >= connect;
@@ -167,12 +167,12 @@ class Juego{
       return vert >= connect
     }
   
-    verificarHorizontal(row, pos ,owner, connect) {
+    verificarHorizontal(fila, pos ,duenio, connect) {
       let nulls = 0;
       let aux = pos + 1;
       let hori = 1;
       while (nulls < 2) {
-        if (row[aux] != null && row[aux].getDuenio() == owner) {
+        if (fila[aux] != null && fila[aux].getDuenio() == duenio) {
           hori++;
         } else {
           nulls++;

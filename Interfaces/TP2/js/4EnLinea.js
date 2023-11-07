@@ -25,7 +25,7 @@ let timer;
 let gameData;
 let juego;
 let tablero = [];
-let squarePos = [];
+let cuadradoPos = [];
 let posicionesTablero ;
 
 
@@ -171,11 +171,11 @@ function dibujarTimer() {
 
 function cargarTablero(fila,columna){
     for (let i = 0; i < fila; i++) {
-        let row = []
+        let fila = []
         for (let j = 0; j < columna; j++) {
-            row.push(null)
+            fila.push(null)
         }
-        posicionesTablero.push(row);    
+        posicionesTablero.push(fila);    
     }
 }
 
@@ -250,8 +250,8 @@ function dibujarFichas() {
 }
 
 function estaSoltada(x,y){
-    for (let i = 0; i < squarePos.length; i++) {
-        if(!(x < squarePos[i].x || x > squarePos[i].x + squarePos[i].w || y < squarePos[i].y || y > squarePos[i].y + squarePos[i].h)){
+    for (let i = 0; i < cuadradoPos.length; i++) {
+        if(!(x < cuadradoPos[i].x || x > cuadradoPos[i].x + cuadradoPos[i].w || y < cuadradoPos[i].y || y > cuadradoPos[i].y + cuadradoPos[i].h)){
             return i
         }
     }
@@ -347,7 +347,7 @@ function encontrarClickeado(clickX, clickY) {
 }
 
 function dibujarTablero(){
-    squarePos = [];
+    cuadradoPos = [];
     let pos = canvas.width/4; 
     let posy= canvas.height/6
     for (let i = 0; i < posicionesTablero.length; i++) {
@@ -360,13 +360,13 @@ function dibujarTablero(){
             ctx.drawImage(img,pos + j*61,posy + i*61, 60 ,60)
             
             if(i == 0){
-                let throwPos = {
+                let tirarPos = {
                     x: pos + j*61,
                     y: posy - 61,
                     w : 60,
                     h : 60
                 }
-                squarePos.push(throwPos)
+                cuadradoPos.push(tirarPos)
                 ctx.drawImage(flecha,pos + j*61,posy - 61, 60 ,60)
             }
         }
