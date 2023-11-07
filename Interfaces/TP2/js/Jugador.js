@@ -1,5 +1,5 @@
 // PLAYER
-class Player {
+class Jugador {
     constructor(nombre, id, personaje, estaJugando) {
       this.fichas = [];
       this.nombre = nombre;

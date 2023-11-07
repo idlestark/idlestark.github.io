@@ -1,6 +1,6 @@
 // CONTROLA LAS FICHAS
 
-class Chip {
+class Ficha {
     constructor(x, y, img, duenio, turno) {
       this.originalX = x;
       this.originalY = y;
@@ -50,23 +50,7 @@ class Chip {
       this.setY(this.originalY);
     }
   
-    draw() {
-        this.context.beginPath();
-        this.context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
-  
-        if (this.image.src === "") {
-            this.image.src = this.urlimage;
-            let loadImg = function () {
-                this.context.drawImage(this.image, this.x - this.radius, this.y - this.radius, this.radius / .5, this.radius / .5);
-            }
-            this.image.onload = loadImg.bind(this);
-        } else {
-            this.context.drawImage(this.image, this.x - this.radius, this.y - this.radius, this.radius / .5, this.radius / .5);
-        }
-        
-        this.context.closePath();
-  }
-  
+    
   
     estaClickeado(x, y) {
       let _x = this.x - x;
@@ -74,7 +58,30 @@ class Chip {
   
       return Math.sqrt(_x * _x + _y * _y) <= this.radius;
     }
+
+
+    draw() {
+      this.context.beginPath();
+      this.context.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+
+      if (this.image.src === "") {
+          this.image.src = this.urlimage;
+          let loadImg = function () {
+              this.context.drawImage(this.image, this.x - this.radius, this.y - this.radius, this.radius / .5, this.radius / .5);
+          }
+          this.image.onload = loadImg.bind(this);
+      } else {
+          this.context.drawImage(this.image, this.x - this.radius, this.y - this.radius, this.radius / .5, this.radius / .5);
+      }
+      
+      this.context.closePath();
+}
+
+
+
   }
+
+
   
   //21 fichas
   

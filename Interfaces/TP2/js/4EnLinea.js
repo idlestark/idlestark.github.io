@@ -27,11 +27,6 @@ let juego;
 let tablero = [];
 let squarePos = [];
 let posicionesTablero ;
-let font = new FontFace('alarm-font', 'url(assets/font/alarm-clock.ttf)');
-
-font.load().then(function(font) {
-    document.fonts.add(font);
-})
 
 
 
@@ -79,7 +74,7 @@ canvas.addEventListener('mousemove', (e) => {
 
 function init(data) {
     form.style.display = 'none';
-    juego = new Game();
+    juego = new Juego();
     posicionesTablero = juego.getPosicionesTablero();
     setReglas(data);
 }
@@ -107,20 +102,36 @@ function setReglas(data){
     dibujarTimer()
 }
 
-function setearPersonajes(jugador_1, jugador_2, cant){
-    let jugador_personaje_1 = personajes.find(o => o.nombre === jugador_1)
-    let jugador_personaje_2 = personajes.find(o => o.nombre === jugador_2)
-
-    let fichas_1 = jugador_personaje_1.ficha
-    let fichas_2 = jugador_personaje_2.ficha
-
-    fotoPersonaje1 = document.querySelector(`#${jugador_personaje_1.nombre}Pic`)
-    fotoPersonaje2 = document.querySelector(`#${jugador_personaje_2.nombre}Pic`)
-
-    juego.agregarJugadores(jugador_personaje_1, jugador_personaje_2)
-    crearFichas(cant, fichas_1, fichas_2)
+function mouseUp(e) {
+    if(juego.getEstaArrastrando()){
+        let x = e.pageX - canvas.offsetLeft;
+        let y = e.pageY - canvas.offsetTop;
+        let columnaPos = estaSoltada(x,y)
+        if(columnaPos >= 0){
+            let filaPos = verificarPosicion(columnaPos)
+            agregarFicha(filaPos, columnaPos)
+            dibujarFichas();
+            juego.setTurno();
+            clearInterval(interval)
+            dibujarTimer()
+            let ganador = juego.verificarGanador(columnaPos, filaPos , gameData.connect)
+            let nombres_ganador = juego.getJugadores()
+            if(ganador != undefined) {
+                if(ganador[0] === true) {
+                   pantallaGanador.style.display = "flex"
+                    nombreGanador.innerHTML = `<h1>${nombres_ganador[ganador[1]-1].nombre}</h1>`
+                }
+            }
+        }else{
+            juego.getFichaAnteriorSeleccionada().reiniciarPosicion();
+            dibujarFichas();
+        }
+    }
+    juego.setEstaArrastrando(false)
     
 }
+
+
 
 function dibujarPersonajes(){
     let x = canvasWidth / 2
@@ -177,7 +188,7 @@ function crearFichas(cant, fichas_1, fichas_2) {
                 let x = 95;
                 let y = 150;
                 let img = fichas_1;
-                let ficha = new Chip(
+                let ficha = new Ficha(
                     x,
                     y,
                     img,
@@ -191,7 +202,7 @@ function crearFichas(cant, fichas_1, fichas_2) {
                 let y = 150;
                 let img = fichas_2;
 
-                let chip = new Chip(
+                let chip = new Ficha(
                     x,
                     y,
                     img,
@@ -206,32 +217,24 @@ function crearFichas(cant, fichas_1, fichas_2) {
 }
 
 
-function dibujarTablero(){
-    squarePos = [];
-    let pos = canvas.width/4; 
-    let posy= canvas.height/6
-    for (let i = 0; i < posicionesTablero.length; i++) {
-        let fila = posicionesTablero[i]
-        for (let j = 0; j < fila.length; j++) {
-            if(fila[j] != null){
-                fila[j].setX((pos + j*61)+ (60/2) )
-                fila[j].setY((posy + i*61)+ (60/2))
-            }
-            ctx.drawImage(img,pos + j*61,posy + i*61, 60 ,60)
-            
-            if(i == 0){
-                let throwPos = {
-                    x: pos + j*61,
-                    y: posy - 61,
-                    w : 60,
-                    h : 60
-                }
-                squarePos.push(throwPos)
-                ctx.drawImage(flecha,pos + j*61,posy - 61, 60 ,60)
-            }
-        }
-    }
+
+
+function setearPersonajes(jugador_1, jugador_2, cant){
+    let jugador_personaje_1 = personajes.find(o => o.nombre === jugador_1)
+    let jugador_personaje_2 = personajes.find(o => o.nombre === jugador_2)
+
+    let fichas_1 = jugador_personaje_1.ficha
+    let fichas_2 = jugador_personaje_2.ficha
+
+    fotoPersonaje1 = document.querySelector(`#${jugador_personaje_1.nombre}Pic`)
+    fotoPersonaje2 = document.querySelector(`#${jugador_personaje_2.nombre}Pic`)
+
+    juego.agregarJugadores(jugador_personaje_1, jugador_personaje_2)
+    crearFichas(cant, fichas_1, fichas_2)
+    
 }
+
+
 
 function dibujarFichas() {
     let jugadores = juego.getJugadores();
@@ -255,33 +258,16 @@ function estaSoltada(x,y){
     return -1;
 }
 
-function mouseUp(e) {
-    if(juego.getEstaArrastrando()){
-        let x = e.pageX - canvas.offsetLeft;
-        let y = e.pageY - canvas.offsetTop;
-        let columnaPos = estaSoltada(x,y)
-        if(columnaPos >= 0){
-            let filaPos = verificarPosicion(columnaPos)
-            agregarFicha(filaPos, columnaPos)
-            dibujarFichas();
-            juego.setTurno();
-            clearInterval(interval)
-            dibujarTimer()
-            let ganador = juego.verificarGanador(columnaPos, filaPos , gameData.connect)
-            let nombres_ganador = juego.getJugadores()
-            if(ganador != undefined) {
-                if(ganador[0] === true) {
-                   pantallaGanador.style.display = "flex"
-                    nombreGanador.innerHTML = `<h1>${nombres_ganador[ganador[1]-1].nombre}</h1>`
-                }
-            }
-        }else{
-            juego.getFichaAnteriorSeleccionada().reiniciarPosicion();
+function arrastrarFicha(e) {
+    if (juego.getEstaArrastrando() == true) {
+        if (juego.getFichaAnteriorSeleccionada() != null) {
+            let x = e.pageX - canvas.offsetLeft;
+            let y = e.pageY - canvas.offsetTop;
+            juego.getFichaAnteriorSeleccionada().setX(x);
+            juego.getFichaAnteriorSeleccionada().setY(y);
             dibujarFichas();
         }
     }
-    juego.setEstaArrastrando(false)
-    
 }
 
 function agregarFicha(filaPos, columnaPos){
@@ -360,17 +346,32 @@ function encontrarClickeado(clickX, clickY) {
     }
 }
 
-
-
-
-function arrastrarFicha(e) {
-    if (juego.getEstaArrastrando() == true) {
-        if (juego.getFichaAnteriorSeleccionada() != null) {
-            let x = e.pageX - canvas.offsetLeft;
-            let y = e.pageY - canvas.offsetTop;
-            juego.getFichaAnteriorSeleccionada().setX(x);
-            juego.getFichaAnteriorSeleccionada().setY(y);
-            dibujarFichas();
+function dibujarTablero(){
+    squarePos = [];
+    let pos = canvas.width/4; 
+    let posy= canvas.height/6
+    for (let i = 0; i < posicionesTablero.length; i++) {
+        let fila = posicionesTablero[i]
+        for (let j = 0; j < fila.length; j++) {
+            if(fila[j] != null){
+                fila[j].setX((pos + j*61)+ (60/2) )
+                fila[j].setY((posy + i*61)+ (60/2))
+            }
+            ctx.drawImage(img,pos + j*61,posy + i*61, 60 ,60)
+            
+            if(i == 0){
+                let throwPos = {
+                    x: pos + j*61,
+                    y: posy - 61,
+                    w : 60,
+                    h : 60
+                }
+                squarePos.push(throwPos)
+                ctx.drawImage(flecha,pos + j*61,posy - 61, 60 ,60)
+            }
         }
     }
 }
+
+
+

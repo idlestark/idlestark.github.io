@@ -1,6 +1,6 @@
 // CONTROLA TODO EL JOGO
 
-class Game {
+class Juego{
     constructor() {
       this.ctx = ctx;
       this.listo = false;
@@ -44,8 +44,8 @@ class Game {
   
   
     agregarJugadores(jugador_1, jugador_2) {
-      let p1 = new Player('Counter Strike', 1, jugador_1, true);
-      let p2 = new Player('Valorant', 2, jugador_2, false);
+      let p1 = new Jugador('Counter Strike', 1, jugador_1, true);
+      let p2 = new Jugador('Valorant', 2, jugador_2, false);
       this.jugadores.push(p1, p2);
     }
   
@@ -58,22 +58,7 @@ class Game {
       this.jugadores[1].setEstaJugando(!this.jugadores[1].getEstaJugando());
     }
   
-    verificarGanador(columnaPos, filaPos , connect) {
-      let fila = this.posicionesTablero[filaPos]
-      let duenio = this.posicionesTablero[filaPos][columnaPos].getDuenio();
-      let diag = 1;
-      if (this.verificarHorizontal(fila, columnaPos, duenio, connect)) {
-        return [true, duenio]
-      }
-      if (this.verificarVertical(filaPos, columnaPos, duenio, connect)) {
-        return [true, duenio]
-      }
-      diag += this.verificarDiagonal(filaPos, columnaPos, duenio, connect) + this.verificarDiagonal2(filaPos, columnaPos, duenio, connect)
-      if (diag >= connect) {
-        return [true, duenio]
-      }
-  
-    }
+    
   
     verificarDiagonal(rowPos, columnPos, owner) {
       let row = rowPos;
@@ -126,6 +111,22 @@ class Game {
       return diag 
     }
   
+    verificarGanador(columnaPos, filaPos , connect) {
+      let fila = this.posicionesTablero[filaPos]
+      let duenio = this.posicionesTablero[filaPos][columnaPos].getDuenio();
+      let diag = 1;
+      if (this.verificarHorizontal(fila, columnaPos, duenio, connect)) {
+        return [true, duenio]
+      }
+      if (this.verificarVertical(filaPos, columnaPos, duenio, connect)) {
+        return [true, duenio]
+      }
+      diag += this.verificarDiagonal(filaPos, columnaPos, duenio, connect) + this.verificarDiagonal2(filaPos, columnaPos, duenio, connect)
+      if (diag >= connect) {
+        return [true, duenio]
+      }
+  
+    }
   
     verificarVertical(rowPos, columnPos, owner, connect) {
       let nulls = 0;
