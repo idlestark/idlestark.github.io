@@ -11,7 +11,6 @@ document.getElementById('reset-btn').onclick = function() {
     document.querySelector('form').style.display = "flex"
     document.getElementById("ganador").style.display = "none";
 
-    //reset (arreglar fondo)
     clearAll();
 }
 
