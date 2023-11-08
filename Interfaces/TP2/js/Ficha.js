@@ -80,8 +80,4 @@ class Ficha {
 
 
   }
-
-
-  
-  //21 fichas
   
