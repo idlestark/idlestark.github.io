@@ -6,6 +6,8 @@ body{
     background-image: url(img/Untitled-1\ 1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
+    height: 50vh;
 }
 
 .boton-comprar{
@@ -16,7 +18,7 @@ body{
     background: #FFE901;
     box-shadow: 4px 5px 0px 0px #02187E;
     position: relative;
-    left: 1480px;;
+    left: 1000px;;
     color: #02187E;
     font-family: Lato;
     font-size: 20px;
@@ -26,27 +28,26 @@ body{
     letter-spacing: 2.2px;
 }
 
+.menu-hamburguesa{
+    
+}
+
 .edificio-izquierda{
   position: relative;
-  right:307px;
-  top: 150px;
+  right:210px;
+  top: 83px;
 }
 
 .edificio-derecha{
     position: relative;
-    top: 140px;
-    left:691px;
+    top: 60px;
+    left:227px;
 }
 
 .edificio-centro{
     position: relative;
-    top:640px;
-    right:450px;
-}
-
-.menu-hamburguesa{
-    position: relative;
-    right: 110px;
+    top:568px;
+    right:650px;
 }
 
 .seccion-estirable1{
@@ -55,44 +56,95 @@ body{
 
 .spiderman-negro{
     position: absolute;
-    top: 360px;
-    right: 360px;
+    top: 320px;
+    right: 140px;
 }
 
 .spiderman-rojo{
     position: absolute;
     top:400px;
-    right:660px;
+    right:370px;
 }
 
 .spiderman-blanco{
     position: absolute;
-    top:400px;
-    right:1160px;
+    top:380px;
+    right:780px;
 }
 
 .titulo-spidey{
     position: absolute;
-    left: 550px;
+    left: 270px;
     top: 80px;
 }
 
 .telaraña-izqueirda{
     position: absolute;
-    right: 960px;
+    right: 670px;
     top:370px;
 }
 
 .telaraña-derecha{
     position: absolute;
-    right:30px;
-    top: 400px;
+    right:-195px;
+    top: 370px;
 }
 
 
 .rectangulo-violeta {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    right: 10px;
+    z-index: -1;
+    bottom: 25px;
 }
 
+.seccion-1080{
+    width: 1080px;
+}
+
+.titulo-seccion-1080{
+    color: white;
+    position: relative;
+    bottom: 620px;
+    font-size: 55px;
+    left: 70px;
+}
+
+.texto-seccion-1080{
+    color: white;
+    position: relative;
+    bottom: 660px;
+    left: 70px;
+    font-size: 18px;
+}
+
+.duende-gigante{
+    position: relative;
+    bottom: 1050px;
+    left: 670px;
+}
+
+.imagen-duende{
+    position: relative;
+    bottom: 1600px;
+    z-index: -1;
+    left: 45px;
+}
+
+.imagen-spiderman-rojo{
+    position: relative;
+    bottom: 1500px;
+    left: 60px;
+}
+
+.imagen-spiderman-negro{
+    position: relative;
+    bottom: 2016px;
+    left: 425px;
+}
+
+.imagen-spiderman-blanco{
+    position: relative;
+    bottom: 2511px;
+    left: 790px;
+}
