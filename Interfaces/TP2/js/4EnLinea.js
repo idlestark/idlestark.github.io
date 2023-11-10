@@ -242,7 +242,7 @@ function dibujarFichas() {
     for (let j = 0; j < jugadores.length; j++) {
         let fichas = jugadores[j].getFichas();
         for (let i = 0; i < fichas.length; i++) {
-            fichas[i].draw();
+            fichas[i].dibujar();
         }
     }
 }
