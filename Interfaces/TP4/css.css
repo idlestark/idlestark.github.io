@@ -1,0 +1,98 @@
+.seccion-estirable1{
+    width: 100%;
+}
+
+body{
+    background-image: url(img/Untitled-1\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.boton-comprar{
+    width: 200px;
+    height: 50px;
+    border-radius: 111px;
+    border: 8px solid var(--2982-ff, #2982FF);
+    background: #FFE901;
+    box-shadow: 4px 5px 0px 0px #02187E;
+    position: relative;
+    left: 1480px;;
+    color: #02187E;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 96.5%; 
+    letter-spacing: 2.2px;
+}
+
+.edificio-izquierda{
+  position: relative;
+  right:307px;
+  top: 150px;
+}
+
+.edificio-derecha{
+    position: relative;
+    top: 140px;
+    left:691px;
+}
+
+.edificio-centro{
+    position: relative;
+    top:640px;
+    right:450px;
+}
+
+.menu-hamburguesa{
+    position: relative;
+    right: 110px;
+}
+
+.seccion-estirable1{
+    display: flex;
+}
+
+.spiderman-negro{
+    position: absolute;
+    top: 360px;
+    right: 360px;
+}
+
+.spiderman-rojo{
+    position: absolute;
+    top:400px;
+    right:660px;
+}
+
+.spiderman-blanco{
+    position: absolute;
+    top:400px;
+    right:1160px;
+}
+
+.titulo-spidey{
+    position: absolute;
+    left: 550px;
+    top: 80px;
+}
+
+.telaraña-izqueirda{
+    position: absolute;
+    right: 960px;
+    top:370px;
+}
+
+.telaraña-derecha{
+    position: absolute;
+    right:30px;
+    top: 400px;
+}
+
+
+.rectangulo-violeta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
