@@ -18,18 +18,19 @@ body{
     background: #FFE901;
     box-shadow: 4px 5px 0px 0px #02187E;
     position: relative;
-    left: 1000px;;
+    left: 1000px;
     color: #02187E;
     font-family: Lato;
     font-size: 20px;
-    font-style: normal;
+    font-style:normal;
     font-weight: 900;
-    line-height: 96.5%; 
+    line-height: 94.5%;
     letter-spacing: 2.2px;
 }
 
 .menu-hamburguesa{
-    
+    position: absolute;
+    left: 50px;
 }
 
 .edificio-izquierda{
@@ -98,24 +99,22 @@ body{
     bottom: 25px;
 }
 
-.seccion-1080{
-    width: 1080px;
-}
-
 .titulo-seccion-1080{
     color: white;
     position: relative;
     bottom: 620px;
     font-size: 55px;
     left: 70px;
+    line-height: 0.9;
 }
 
 .texto-seccion-1080{
     color: white;
     position: relative;
-    bottom: 660px;
+    bottom: 640px;
     left: 70px;
     font-size: 18px;
+    font-weight: 100;
 }
 
 .duende-gigante{
@@ -147,4 +146,81 @@ body{
     position: relative;
     bottom: 2511px;
     left: 790px;
+}
+
+.ghost-spider{
+    position: relative;
+    bottom:2360px;
+    right:50px;
+}
+
+.tarjeta-1{
+    position: relative;
+    bottom: 3100px;
+}
+
+.tarjeta-2{
+    position: relative;
+    bottom: 3400px;
+}
+
+.tarjeta-3{
+    position: relative;
+    bottom: 3740px;
+    left: 20px;
+}
+
+.rectangulo-negro{
+    position: relative;
+    bottom: 4200px;
+    z-index: -1000;
+    right:20px;
+    margin-bottom: -4000px;
+}
+
+.texto-rectangulo-negro{
+    position: relative;
+    left: 90px;
+    font-size: 50px;
+    bottom: 470px;
+    line-height: 0.9;
+    color: white;
+}
+
+.fondo-cielo{
+    position: relative;
+    bottom: 700px;
+    left: 36px;
+    margin-bottom: -1000px;
+}
+
+.arboles{
+    position: relative;
+    bottom: 317px;
+    left: 65px;
+}
+
+.hojas-piedra{
+    position: relative;
+    bottom: 850px;
+    left: 65px;
+    z-index: 10;
+}
+
+.hulk{
+    position: relative;
+    bottom: 1275px;
+    left: 730px;
+}
+
+.robot{
+    position: relative;
+    bottom: 2130px;
+    left: 500px;
+}
+ 
+.chica-elastica{
+    position: relative;
+    bottom: 2590px;
+    left: 80px;
 }
