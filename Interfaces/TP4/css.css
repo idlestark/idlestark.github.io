@@ -224,3 +224,51 @@ body{
     bottom: 2590px;
     left: 80px;
 }
+
+.contenedor-footer{
+    box-sizing: border-box;
+    padding: 3.8rem 10rem 12rem 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #5e5e5d;
+    flex-shrink: 0;
+}
+
+.topfooter{
+    box-sizing: border-box;
+    padding: 0.1rem 10rem;
+    width: 100%;
+    height: 8rem;
+    background-color: #242424;
+    flex-shrink: 0;
+}
+
+.topfooter .image-plats{
+    width: 108rem;
+    height: 7.5rem;
+    position: relative;
+    background-size: 106.456% 100%;
+    background-position: -3.3275rem 0;
+    background-image: url(Interfaces\TP4\img\image-plats.png);
+}
+
+.midfooter p{
+    margin-bottom: 3.9rem;
+    max-width: 82.3rem;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 0.9449999809;
+    letter-spacing: 0.22rem;
+    color: #ffffff;
+    font-family: Lato, 'Source Sans Pro';
+    flex-shrink: 0;
+}
+
+.images-socials{
+    width: 21.2rem;
+    height: 4.1rem;
+    object-fit: cover;
+    vertical-align: top;
+    flex-shrink: 0;
+}
