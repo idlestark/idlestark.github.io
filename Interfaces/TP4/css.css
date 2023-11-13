@@ -229,3 +229,221 @@ body{
     height: 0vh;
 }
 
+.texto-mas-amigos{
+    position: relative;
+    bottom: 800px;
+    left: 65px;
+    font-size: 60px;
+}
+
+.img-mas-amigos-1{
+    position: relative;
+    bottom: 750px;
+    left: 70px;
+}
+
+.img-mas-amigos-2{
+    position: relative;
+    bottom: 650px;
+    left: 70px;
+}
+
+.img-mas-amigos-3{
+    position: relative;
+    bottom: 550px;
+    left: 70px;
+}
+
+.img-mas-amigos-4{
+    position: relative;
+    bottom: 450px;
+    left: 70px;
+    margin-bottom: -800px;
+}
+
+.titulo-mas-amigos-1, .titulo-mas-amigos-2, .titulo-mas-amigos-3, .titulo-mas-amigos-4{
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+    left: 620px;
+    bottom: 345px;
+    line-height: 0.9;
+}
+
+.texto-mas-amigos-1, .texto-mas-amigos-3, .texto-mas-amigos-4{
+    font-size: 20px;
+    font-weight: 200;
+    position: relative;
+    left: 620px;
+    bottom: 350px;
+    margin-bottom: -345px;
+}
+
+.texto-mas-amigos-2{
+    font-size: 20px;
+    font-weight: 200;
+    position: relative;
+    left: 620px;
+    bottom: 360px;
+    margin-bottom: -360px;
+}
+
+.boton-comprar-ahora{
+    width: 292px;
+    height: 50px;
+    border-radius: 111px;
+    border: 8px solid var(--2982-ff, #2982FF);
+    background: #FFE901;
+    box-shadow: 4px 5px 0px 0px #02187E;
+    color: #02187E;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 94.5%; 
+    letter-spacing: 2.2px;
+    position: relative;
+    left: 75px;
+    top: 110px;
+}
+
+.titulo-comprar-ahora{
+    position: relative;
+    font-size: 50px;
+    top: 100px;
+    left: 75px;
+}
+
+.spiderman-blanco-final{
+    position: relative;
+    top:400px;
+    left: 120px;
+}
+
+.spiderman-rojo-final{
+    position: relative;
+    left: 340px;
+}
+
+.spiderman-negro-final{
+    position: relative;
+    bottom: 470px;
+    left: 730px;
+}
+
+.cielo{
+    position: relative;
+    bottom: 630px;
+    right: 10px;
+    margin-bottom: -1680px;
+}
+
+.edificios{
+    position: relative;
+    right: 10px;
+    top: 30px;
+}
+
+.titulo-suscribirse{
+    position: relative;
+    top: 380px;
+    left: 10px;
+    font-size: 60px;
+    text-align: center;
+}
+
+.suscribirse{
+    width: 562px;
+    height: 80px;
+    border-radius: 50px 0px 0px 50px;
+    border-top: 9px solid #2982FF;
+    border-bottom: 9px solid #2982FF;
+    border-left: 9px solid #2982FF;
+    background: #FFF;
+    box-shadow: 4px 5px 0px 0px #02187E;
+    position: relative;
+    bottom:900px;
+    left: 227px;
+    font-size: 20px;
+    text-indent: 30px;
+    letter-spacing: 5px;
+}
+
+.boton-suscribirse{
+    width: 218px;
+    height: 98px;
+    border-radius: 0px 50px 50px 0px;
+    border: 9px solid #2982FF;
+    background: #FFE901;
+    box-shadow: 4px 5px 0px 0px #02187E;
+    color: #02187E;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 94.5%; 
+    letter-spacing: 2.2px;
+    position: relative;
+    bottom:901px;
+    left: 220px;
+}
+
+.texto-suscribirse{
+    position: relative;
+    bottom: 860px;
+    left: 270px;
+    font-weight: 100;
+    line-height: 0.9;
+}
+
+a{
+    color: black;
+}
+
+.texto-footer a{
+    color: white;
+}
+
+.img-suscribirse{
+    position: relative;
+    bottom: 840px;
+    left: 270px;
+}
+
+.rectangulo-gris{
+    position: relative;
+    right: 10px;
+    top: 20px;
+}
+
+.img-ps5-ps4{
+    position: relative;
+    bottom: 60px;
+    left: 50px;
+}
+
+.rectangulo-gris-grande{
+    position: relative;
+    right: 20px;
+    bottom: 65px;
+    margin-bottom: -350px;
+    height: 20vh;
+}
+
+.texto-footer{
+    position: relative;
+    bottom:570px;
+    color: white;
+    left: 80px;
+    font-weight: 200;
+    letter-spacing: 4px;
+    line-height: 0.9;
+    font-size: 20px;
+}
+
+.img-redes-sociales{
+    position: relative;
+    top: 590px;
+    left: 60px;
+}
+
