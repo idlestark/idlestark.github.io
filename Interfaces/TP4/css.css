@@ -8,6 +8,7 @@ body{
     background-size: cover;
     overflow-x: hidden;
     height: 50vh;
+    font-family: 'Lato', sans-serif;
 }
 
 .boton-comprar{
@@ -20,7 +21,7 @@ body{
     position: relative;
     left: 1000px;
     color: #02187E;
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
     font-style:normal;
     font-weight: 900;
@@ -296,7 +297,7 @@ body{
     background: #FFE901;
     box-shadow: 4px 5px 0px 0px #02187E;
     color: #02187E;
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
     font-style: normal;
     font-weight: 900;
@@ -362,7 +363,7 @@ body{
     background: #FFF;
     box-shadow: 4px 5px 0px 0px #02187E;
     position: relative;
-    bottom:900px;
+    bottom: 902px;
     left: 227px;
     font-size: 20px;
     text-indent: 30px;
