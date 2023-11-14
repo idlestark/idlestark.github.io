@@ -197,13 +197,13 @@ body{
 
 .arboles{
     position: relative;
-    bottom: 567px;
+    bottom: 565px;
     left: 65px;
 }
 
 .hojas-piedra{
     position: relative;
-    bottom: 1100px;
+    bottom: 1097px;
     left: 65px;
     z-index: 10;
 }
@@ -455,4 +455,69 @@ a{
     top: 590px;
     left: 60px;
 }
+
+.body-falso{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+    clip-path: circle(150% at 100% 0);
+    transition: clip-path 2s ease-in-out;
+}
+
+.loader{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid white;
+    border-top-color: transparent;
+    animation: spin 1.2s linear infinite;
+    position: relative;
+    left: 20px;
+    top:8px;
+}
+
+.loader2{
+    clip-path: circle(0 at 100% 0);
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.barra-progreso {
+    width: 50%;
+    height: 20px;
+    background-color: #ccc;
+    margin-top: 20px;
+}
+
+.barra-fondo {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+    transition: width 0.1s;
+}
+
+.barra {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+}
+
+.porcentaje {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #fff;
+}
+
 
