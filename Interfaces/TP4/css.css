@@ -182,46 +182,46 @@ body{
     position: relative;
     left: 90px;
     font-size: 50px;
-    bottom: 470px;
+    bottom: 720px;
     line-height: 0.9;
     color: white;
 }
 
 .fondo-cielo{
     position: relative;
-    bottom: 700px;
+    bottom: 950px;
     left: 36px;
     margin-bottom: -1000px;
 }
 
 .arboles{
     position: relative;
-    bottom: 317px;
+    bottom: 567px;
     left: 65px;
 }
 
 .hojas-piedra{
     position: relative;
-    bottom: 850px;
+    bottom: 1100px;
     left: 65px;
     z-index: 10;
 }
 
 .hulk{
     position: relative;
-    bottom: 1275px;
+    bottom: 1525px;
     left: 730px;
 }
 
 .robot{
     position: relative;
-    bottom: 2130px;
+    bottom: 2380px;
     left: 500px;
 }
  
 .chica-elastica{
     position: relative;
-    bottom: 2590px;
+    bottom: 2840px;
     left: 80px;
 }
 
@@ -304,44 +304,52 @@ body{
     letter-spacing: 2.2px;
     position: relative;
     left: 75px;
-    top: 110px;
+    bottom: 350px;
 }
 
 .titulo-comprar-ahora{
     position: relative;
     font-size: 50px;
-    top: 100px;
     left: 75px;
+    bottom: 370px;
+    color: white;
 }
 
 .spiderman-blanco-final{
     position: relative;
-    top:400px;
+    bottom: 150px;
     left: 120px;
 }
 
 .spiderman-rojo-final{
     position: relative;
+    bottom: 550px;
     left: 340px;
 }
 
 .spiderman-negro-final{
     position: relative;
-    bottom: 470px;
+    bottom: 1010px;
     left: 730px;
 }
 
 .cielo{
     position: relative;
-    bottom: 630px;
+    bottom: 1190px;
     right: 10px;
-    margin-bottom: -1680px;
+    margin-bottom: -2280px;
 }
 
 .edificios{
     position: relative;
     right: 10px;
     top: 30px;
+}
+
+.rectangulo-negro-angosto{
+    position: relative;
+    top: 50px;
+    right: 10px;
 }
 
 .titulo-suscribirse{
