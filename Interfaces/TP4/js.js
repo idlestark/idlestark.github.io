@@ -1,4 +1,4 @@
-setTimeout(function() {
+/*setTimeout(function() {
     document.querySelector(".body-falso").classList.toggle("loader2");
   }, 5000);
   
@@ -30,4 +30,4 @@ setTimeout(function() {
       el: '.blog-slider__pagination',
       clickable: true,
     }
-  });
+  });*/
