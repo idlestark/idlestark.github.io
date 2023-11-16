@@ -30,6 +30,7 @@ body{
     letter-spacing: 2.2px;
 }
 
+
 .menu-hamburguesa{
     position: absolute;
     left: 50px;
@@ -184,6 +185,12 @@ body{
     position: relative;
     bottom: 2422px;
     left: 810px;
+}
+
+.card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.8s, transform 1.8s;
 }
 
 .ghost-spider{
@@ -412,7 +419,7 @@ body{
     position: relative;
     bottom: 1390px;
     right: 10px;
-    margin-bottom: -2480px;
+    margin-bottom: -2580px;
 }
 
 .edificios{
@@ -529,6 +536,64 @@ a{
     top: 590px;
     left: 60px;
 }
+
+.sprite {
+    width: 78px; 
+    height: 76px; 
+    background: url('img/CnCWYNOXEAA5DCW\ \(1\).png');
+    animation: animacion-spritesheet 1s steps(12) infinite;
+    position: relative;
+    left: 300px;
+    bottom: 80px;
+  }
+  
+  @keyframes animacion-spritesheet {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -936px  
+    }
+  }
+
+  .sprite2 {
+    width: 77px; 
+    height: 65px; 
+    background: url('img/CnCWYNOXEAA5DCW\ \(2\).png');
+    animation: animacion-spritesheet2 1s steps(6) infinite;
+    position: relative;
+    left: 800px;
+    bottom: 230px;
+  }
+  
+  @keyframes animacion-spritesheet2 {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -462px 0; 
+    }
+  }
+
+  .sprite3 {
+    width: 31px; 
+    height: 35px;
+    background: url('img/adventurer_sprite_sheet_v1.1\ \(1\).png');
+    animation: animacion-spritesheet3 1s steps(13) infinite;
+    position: relative;
+  }
+  
+  @keyframes animacion-spritesheet3 {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -403px 
+    }
+  }
+
+
+
 
 /*.body-falso{
     background-color: black;

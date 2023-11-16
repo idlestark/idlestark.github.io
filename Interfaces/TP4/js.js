@@ -31,3 +31,28 @@
       clickable: true,
     }
   });*/
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const cards = document.querySelectorAll('.card');
+
+    function fadeIn() {
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+
+            if (cardTop < windowHeight - 100) {
+                card.style.opacity = 1;
+                card.style.transform = 'translateY(0)';
+            }
+        });
+    }
+
+   window.addEventListener('scroll', function () {
+        fadeIn(cards[0], 0);  
+        fadeIn(cards[1], 2000);  
+        fadeIn(cards[2], 3000); 
+    });
+});
+
+
+
