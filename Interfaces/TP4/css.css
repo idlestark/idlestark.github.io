@@ -39,7 +39,7 @@ body{
 
 .edificio-izquierda{
   position: relative;
-  right:200px;
+  right:40px;
   top: 33px;
 }
 
@@ -50,7 +50,7 @@ body{
 .edificio-derecha{
     position: relative;
     top: 20px;
-    left:400px;
+    left:540px;
 }
 
 .edificio-derecha img{
@@ -60,7 +60,7 @@ body{
 .edificio-centro{
     position: relative;
     top:350px;
-    right:540px;
+    right:390px;
 }
 
 .edificio-centro img{
@@ -127,7 +127,7 @@ body{
 .rectangulo-violeta {
     position: relative;
     z-index: -1;
-    bottom: 55px;
+    bottom: 75px;
 }
 
 .titulo-seccion-1080{
@@ -592,10 +592,7 @@ a{
     }
   }
 
-
-
-
-/*.body-falso{
+.body-falso{
     background-color: black;
     width: 100%;
     height: 100%;
@@ -659,6 +656,25 @@ a{
     font-size: 18px;
     color: #fff;
 }
+
+.header{
+    background-color: #519af9;
+    height: 50px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

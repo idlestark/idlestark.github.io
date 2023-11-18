@@ -1,4 +1,4 @@
-/*setTimeout(function() {
+setTimeout(function() {
     document.querySelector(".body-falso").classList.toggle("loader2");
   }, 5000);
   
@@ -17,20 +17,6 @@
         }
     }, 50);
   });
-
-  var swiper = new Swiper('.blog-slider', {
-    spaceBetween: 30,
-    effect: 'fade',
-    loop: true,
-    mousewheel: {
-      invert: false,
-    },
-  
-    pagination: {
-      el: '.blog-slider__pagination',
-      clickable: true,
-    }
-  });*/
 
   document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.card');
@@ -53,6 +39,5 @@
         fadeIn(cards[2], 3000); 
     });
 });
-
 
 
