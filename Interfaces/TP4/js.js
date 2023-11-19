@@ -18,6 +18,9 @@ setTimeout(function() {
     }, 50);
   });
 
+
+
+
   document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.card');
 
@@ -39,5 +42,7 @@ setTimeout(function() {
         fadeIn(cards[2], 3000); 
     });
 });
+
+
 
 
