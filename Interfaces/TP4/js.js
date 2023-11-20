@@ -54,3 +54,23 @@ function parallax(e){
     });
 }
 
+
+let header = document.getElementById('header');
+let botonComprar = document.getElementById('boton-comprar')
+
+document.addEventListener('scroll', function() {
+  
+  // Get the scroll position
+  let scrollPos = window.pageYOffset;
+  
+  if ( scrollPos > 135 ) {
+    header.classList.add('activo')
+    botonComprar.classList.add('activo-comprar')
+  } else {
+    header.classList.remove('activo')
+    botonComprar.classList.remove('activo-comprar')
+  }
+  
+  
+});
+
