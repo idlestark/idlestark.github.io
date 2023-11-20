@@ -250,6 +250,10 @@ body{
     color: white;
 }
 
+.parallax-container{
+    position: relative;
+}
+
 .fondo-cielo{
     position: relative;
     bottom: 707px;
@@ -297,6 +301,7 @@ body{
     bottom: 1480px;
     left: 550px;
 }
+
 
 .robot img{
     height: 350px;
@@ -597,7 +602,7 @@ a{
     }
   }
 
-.body-falso{
+/*.body-falso{
     background-color: black;
     width: 100%;
     height: 100%;
@@ -660,7 +665,7 @@ a{
     transform: translate(-50%, -50%);
     font-size: 18px;
     color: #fff;
-}
+}*/
 
 .header{
     background-color: #519af9;
@@ -686,13 +691,4 @@ a{
 .tarjeta:hover {
     transform: translateZ(10px) skew(10deg, 0);
 }
-
-
-
-
-
-
-
-
-
 

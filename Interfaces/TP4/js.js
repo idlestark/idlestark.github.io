@@ -1,4 +1,4 @@
-setTimeout(function() {
+/*setTimeout(function() {
     document.querySelector(".body-falso").classList.toggle("loader2");
   }, 5000);
   
@@ -16,7 +16,7 @@ setTimeout(function() {
             porcentajeElement.textContent = porcentaje + '%'; 
         }
     }, 50);
-  });
+  });*/
 
 
 
@@ -42,3 +42,15 @@ setTimeout(function() {
         fadeIn(cards[2], 3000); 
     });
 });
+
+document.addEventListener("mousemove", parallax);
+function parallax(e){
+    document.querySelectorAll(".objeto").forEach(function(move){
+        var moving_value = move.getAttribute("data-value");
+        var x = e.clientX * moving_value / 250;
+        var y = e.clientY * moving_value / 250;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+    });
+}
+
