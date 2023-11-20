@@ -42,7 +42,3 @@ setTimeout(function() {
         fadeIn(cards[2], 3000); 
     });
 });
-
-
-
-

@@ -44,27 +44,28 @@ body{
 }
 
 .edificio-izquierda img{
-    height: 600px;
+    height: 610px;
+    
 }
 
 .edificio-derecha{
     position: relative;
     top: 20px;
-    left:540px;
+    left:579px;
 }
 
 .edificio-derecha img{
-    height: 600px;
+    height: 610px;
 }
 
 .edificio-centro{
     position: relative;
     top:350px;
-    right:390px;
+    right:388px;
 }
 
 .edificio-centro img{
-    height: 270px;
+    height: 280px;
 }
 
 .seccion-estirable1{
@@ -146,6 +147,10 @@ body{
     left: 150px;
     font-size: 18px;
     font-weight: 100;
+}
+
+#wrapper-duende{
+    position: relative;
 }
 
 .duende-gigante{
@@ -601,7 +606,7 @@ a{
     align-items: center;
     position: fixed;
     margin: 0;
-    z-index: 100;
+    z-index: 10001;
     clip-path: circle(150% at 100% 0);
     transition: clip-path 2s ease-in-out;
 }
@@ -661,7 +666,7 @@ a{
     background-color: #519af9;
     height: 50px;
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 10000;
 }
