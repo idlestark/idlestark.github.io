@@ -65,7 +65,7 @@ document.addEventListener('scroll', function() {
   // Get the scroll position
   let scrollPos = window.pageYOffset;
   
-  if ( scrollPos > 135 ) {
+  if ( scrollPos > 185 ) {
     header.classList.add('activo')
     botonComprar.classList.add('activo-comprar')
     menuHamburguesa.classList.add('activo-menu')

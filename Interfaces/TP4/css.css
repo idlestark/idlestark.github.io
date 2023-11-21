@@ -16,7 +16,7 @@ body{
 
 .edificio-izquierda{
   position: relative;
-  right:40px;
+  right:44px;
   top: 33px;
 }
 
@@ -710,7 +710,7 @@ a{
     height: 45px;
     width: 150px;
     object-fit:contain;
-    left: 350px;
+    left: 315px;
     top: -3px;
 }
 
