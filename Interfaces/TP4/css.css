@@ -663,6 +663,7 @@ a{
 
 
 .boton-comprar{
+    -webkit-text-stroke:2px;
     width: 200px;
     height: 50px;
     border-radius: 111px;
