@@ -13,11 +13,6 @@ body{
 }
 
 
-.menu-hamburguesa{
-    position: absolute;
-    left: 50px;
-    cursor: pointer;
-}
 
 .edificio-izquierda{
   position: relative;
@@ -650,18 +645,19 @@ a{
 }*/
 
 .header{
-    background-color: #519af9;
     height: 50px;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 10000;
     transition: all 0.2s ease-in-out;
+   
 }
+
 
 .header.activo{
     background-color: red;
-    height: 35px
+    height: 40px
 }
 
 
@@ -682,15 +678,45 @@ a{
     font-weight: 900;
     line-height: 94.5%;
     letter-spacing: 2.2px;
+    transition: all 0.2s ease-in-out;
+    top: 2px;
 }
 
 .boton-comprar.activo-comprar{
    scale: 0.6;
-   top: -10px;
+   top: -19px;
+   
+}
+
+.menu-hamburguesa{
+    position: absolute;
+    left: 50px;
+    cursor: pointer;
+    top: 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-hamburguesa.activo-menu{
+    scale: 0.6;
+    top: -1px;
 }
 
 
+.logo-header{
+    display: none;
+    position: relative;
+    transition: all 0.6s ease-in-out;
+    height: 45px;
+    width: 150px;
+    object-fit:contain;
+    left: 350px;
+    top: -3px;
+}
 
+.logo-header.activo-logo{
+    display: inline;
+    transition: all 0.6s ease-in-out;
+}
 
 .seccion-ghost-spider {
     perspective: 1000px;

@@ -56,7 +56,9 @@ function parallax(e){
 
 
 let header = document.getElementById('header');
-let botonComprar = document.getElementById('boton-comprar')
+let botonComprar = document.getElementById('boton-comprar');
+let menuHamburguesa = document.getElementById('menu-hamburguesa');
+let logoHeader = document.getElementById('logo-header');
 
 document.addEventListener('scroll', function() {
   
@@ -66,9 +68,13 @@ document.addEventListener('scroll', function() {
   if ( scrollPos > 135 ) {
     header.classList.add('activo')
     botonComprar.classList.add('activo-comprar')
+    menuHamburguesa.classList.add('activo-menu')
+    logoHeader.classList.add('activo-logo')
   } else {
     header.classList.remove('activo')
     botonComprar.classList.remove('activo-comprar')
+    menuHamburguesa.classList.remove('activo-menu')
+    logoHeader.classList.remove('activo-logo')
   }
   
   
