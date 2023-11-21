@@ -291,7 +291,7 @@ body{
 }
 
 .chica-elastica img{
-    height: 500px;
+    height: 530px;
 }
 
 .seccion-ghost-spider{
@@ -524,15 +524,19 @@ a{
     left: 60px;
 }
 
+/*1135px tope*/
+
 .sprite {
     width: 78px; 
     height: 76px; 
     background: url('img/CnCWYNOXEAA5DCW\ \(1\).png');
     animation: animacion-spritesheet 1s steps(12) infinite;
     position: relative;
-    left: 300px;
-    bottom: 80px;
+    left: 15px;
+    bottom: 26px;
   }
+
+  
   
   @keyframes animacion-spritesheet {
     from {
@@ -542,6 +546,8 @@ a{
       background-position: -936px  
     }
   }
+
+
 
   .sprite2 {
     width: 77px; 
