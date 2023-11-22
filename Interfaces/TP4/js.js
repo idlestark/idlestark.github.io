@@ -80,3 +80,10 @@ document.addEventListener('scroll', function() {
   
 });
 
+const menu_btn = document.querySelector('.boton-menu');
+	
+
+	menu_btn.addEventListener('click', function () {
+		menu_btn.classList.toggle('is-active');
+
+	});

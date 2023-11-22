@@ -695,18 +695,7 @@ a{
    
 }
 
-.menu-hamburguesa{
-    position: absolute;
-    left: 50px;
-    cursor: pointer;
-    top: 3px;
-    transition: all 0.2s ease-in-out;
-}
 
-.menu-hamburguesa.activo-menu{
-    scale: 0.6;
-    top: -1px;
-}
 
 
 .logo-header{
@@ -739,3 +728,53 @@ a{
     transform: translateZ(10px) skew(10deg, 0);
 }
 
+.menu-hamburguesa{
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    left: 50px;
+    cursor: pointer;
+    top: 3px;
+    margin-top: 10px;
+   
+}
+
+.menu-hamburguesa.activo-menu{
+    scale: 0.6;
+    top: -1px;
+}
+
+.boton-menu{
+    display: block;
+    width: 45px;
+    height: 4px;
+
+}
+
+.boton-menu .bar, .boton-menu:after, .boton-menu:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 8px;
+    background-color: #ffe800;
+    margin: -3px;
+    transition: 0.4s;
+    border: 5px solid #2880ff;
+    box-shadow: 3px 4px 1px 1px #02187E;
+}
+
+.boton-menu.is-active:before{
+
+transform: rotate(-45deg) translate(-10px, 6px);
+box-shadow: none;
+}
+
+.boton-menu.is-active .bar{
+    opacity: 0;
+}
+
+.boton-menu.is-active:after{
+
+    transform: rotate(45deg) translate(-7px, -4px);
+    box-shadow: none;
+    }
