@@ -65,7 +65,7 @@ document.addEventListener('scroll', function() {
   // Get the scroll position
   let scrollPos = window.pageYOffset;
   
-  if ( scrollPos > 135 ) {
+  if ( scrollPos > 185 ) {
     header.classList.add('activo')
     botonComprar.classList.add('activo-comprar')
     menuHamburguesa.classList.add('activo-menu')
@@ -80,6 +80,118 @@ document.addEventListener('scroll', function() {
   
 });
 
+const menu_btn = document.querySelector('.boton-menu');
+	
+
+	menu_btn.addEventListener('click', function () {
+		menu_btn.classList.toggle('is-active');
+
+	});
 
 
+  document.addEventListener("DOMContentLoaded", function() {
+    var sidebar = document.querySelector('.sidebar');
+    var items = document.querySelectorAll('.item');
+  
+    function animateSidebar(index) {
+      if (index < items.length) {
+        setTimeout(function() {
+          items[index].style.transform = 'translateX(0)';
+          animateSidebar(index + 1);
+        }, 500); // Ajusta el retraso (500 milisegundos en este ejemplo)
+      }
+    }
+  
+    function toggleSidebar() {
+      var currentLeft = parseInt(sidebar.style.left, 10) || 0;
+  
+      if (currentLeft === 0) {
+        sidebar.style.left = '-250px'; // Cambiado a un valor negativo igual al ancho inicial
+        items.forEach(function(item) {
+          item.style.transform = 'translateX(-100%)';
+        });
+      } else {
+        sidebar.style.left = '0';
+        animateSidebar(0);
+      }
+    }
+  
+    // Adjunta la función toggleSidebar al evento de clic del botón
+    document.querySelector('.boton-menu').addEventListener('click', toggleSidebar);
+    
+    // Llamar a la función toggleSidebar para configurar el estado inicial
+    toggleSidebar();
+  });
 
+  var miDiv = document.getElementById('sprite');
+  var posicionFinal = 1100;
+  
+  function moverDiv() {
+    miDiv.animate(
+      [
+        { transform: 'translateX(0px)' },
+        { transform: `translateX(${posicionFinal}px)` }
+      ],
+      {
+        duration: 10000,
+        easing: 'ease-in-out'
+      }
+    ).onfinish = function () {
+      miDiv.style.transform = `translateX(${posicionFinal}px)`;
+    };
+  }
+  
+
+  moverDiv();
+
+  var miDiv2 = document.getElementById('sprite2');
+  var posicionFinal2 = 300;
+
+  function moverDiv2() {
+    miDiv2.animate(
+      [
+        { transform: 'translateY(0px) rotate(-90deg)' },
+        { transform: `translateY(-${posicionFinal2}px)` }
+      ],
+      {
+        duration: 10000,
+        easing: 'ease-in-out' 
+      }
+    ).onfinish = function () {
+      miDiv2.style.transform = `translateY(-${posicionFinal2}px)`;
+    };
+  }
+
+  moverDiv2();
+
+  let rojo = document.getElementById('rojo');
+  let telaraña_izqueirda = document.getElementById('telaraña-izqueirda');
+  let negro = document.getElementById('negro');
+  let telaraña_derecha = document.getElementById('telaraña-derecha');
+  let ed_izquierda = document.getElementById('ed-izquierda');
+  let ed_derecha = document.getElementById('ed-derecha');
+  let blanco = document.getElementById('blanco');
+  let ed_centro = document.getElementById('ed-centro')
+
+  function actualizarEstilos() {
+    let valor = window.scrollY;
+
+    rojo.style.transform = `translateY(${valor * 3.5}px)`;
+    telaraña_izqueirda.style.transform = `translateY(${valor * 3.5}px)`;
+    negro.style.transform = `translateX(${valor * 2.4}px)`;
+    telaraña_derecha.style.transform = `translateX(${valor * 2.4}px)`;
+    ed_izquierda.style.transform = `translateX(${valor * -1.2}px)`;
+    ed_derecha.style.transform = `translateX(${valor * 1.4}px)`;
+    blanco.style.transform = `translateX(${valor * -2.9}px)`;
+    ed_centro.style.transform = `translateY(${valor * -3.3}px)`;
+
+    requestAnimationFrame(actualizarEstilos);
+  }
+
+  actualizarEstilos();
+
+  window.addEventListener('scroll', function () {
+    cancelAnimationFrame(requestAnimationFrame(actualizarEstilos));
+  });
+
+  

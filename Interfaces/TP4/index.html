@@ -20,49 +20,43 @@
         <div id="header" class="header">
             <button id="boton-comprar"class="boton-comprar">COMPRAR</button>
             <img class="logo-header" id="logo-header" src="img/image 5 1.png">
-            <svg id="menu-hamburguesa" class="menu-hamburguesa" xmlns="http://www.w3.org/2000/svg" width="46" height="39" viewBox="0 0 46 39" fill="none">
-                <g filter="url(#filter0_d_19_84)">
-                <rect x="2" y="2" width="38" height="8" rx="4" fill="#FFE901" stroke="#2981FF" stroke-width="4"/>
-                <rect x="2" y="13" width="38" height="8" rx="4" fill="#FFE901" stroke="#2981FF" stroke-width="4"/>
-                <rect x="2" y="24" width="38" height="8" rx="4" fill="#FFE901" stroke="#2981FF" stroke-width="4"/>
-                </g>
-                <defs>
-                <filter id="filter0_d_19_84" x="0" y="0" width="46" height="39" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                <feOffset dx="4" dy="5"/>
-                <feComposite in2="hardAlpha" operator="out"/>
-                <feColorMatrix type="matrix" values="0 0 0 0 0.00784314 0 0 0 0 0.0941176 0 0 0 0 0.494118 0 0 0 1 0"/>
-                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_19_84"/>
-                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_19_84" result="shape"/>
-            </svg>
+            <div id="menu-hamburguesa" class="menu-hamburguesa">
+            <div class="boton-menu">
+                <div class="bar"></div>
+            </div>
+            </div>
         </div>
+        <div class="sidebar">
+            <div class="item" id="item1">Peter Parker</div>
+            <div class="item" id="item2">Gwen Stacy</div>
+            <div class="item" id="item3">Miles Morales</div>
+          </div>
     <div class="seccion-estirable1">
         <div class="titulo-spidey">
             <img src="img/image 5 1.png">
         </div>
-        <div class="edificio-izquierda">
+        <div class="edificio-izquierda" id="ed-izquierda">
             <img src="img/Untitled-1 3.png">
         </div>
-        <div class="edificio-derecha">
+        <div class="edificio-derecha" id="ed-derecha">
             <img src="img/Untitled-1 4.png">
         </div>
-        <div class="edificio-centro">
+        <div class="edificio-centro" id="ed-centro">
             <img src="img/Untitled-1 5.png">
         </div>
-        <div class="spiderman-negro">
+        <div class="spiderman-negro" id="negro">
             <img src="img/image 1.png">
         </div>
-        <div class="spiderman-rojo">
+        <div class="spiderman-rojo" id="rojo">
             <img src="img/image 2.png">
         </div>
-        <div class="spiderman-blanco">
+        <div class="spiderman-blanco" id="blanco">
             <img src="img/image 3.png">
         </div>
-        <div class="telaraña-izqueirda">
+        <div class="telaraña-izqueirda" id="telaraña-izqueirda">
             <img src="img/Untitled-5 1.png">
         </div>
-        <div class="telaraña-derecha">
+        <div class="telaraña-derecha" id="telaraña-derecha">
             <img src="img/Untitled-5 3.png">
         </div>
     </div>
@@ -136,6 +130,7 @@
         <div class="img-mas-amigos-1">
             <img src="img/image 21.png">
             <h2 class="titulo-mas-amigos-1">Mas de 100 misiones para<br> que juegues sin parar!</h2>
+            <h3 class="texto-mas-amigos-1">Tus padres, contentos. Explora el emocionante<br>mundo de Spider-Man con más de 100 misiones que<br>te mantendrán en constante acción y adrenalina.<br>Enfréntate a desafíos únicos, desentraña misterios, y<br>ayuda a Spider-Man a mantener la paz en la ciudad<br>mientras te sumerges en la piel del héroe arácnido.<br>¿Tienes lo que se necesita para superar todas las<br>misiones y convertirte en el auténtico Spider-Man?</h3>
     </div>
         <div class="img-mas-amigos-2">
             <img src="img/image 9.png">
@@ -200,8 +195,8 @@
         <div class="img-redes-sociales">
             <img src="img/image 238.png">
         </div>
-        <div class="sprite"></div>
-        <div class="sprite2"></div>
+        <div id="sprite" class="sprite"></div>
+        <div id="sprite2" class="sprite2"></div>
         <div class="sprite3"></div>
    </footer>
    <script src="js.js"></script>
