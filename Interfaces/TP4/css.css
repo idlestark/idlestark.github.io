@@ -388,7 +388,9 @@ body{
     position: relative;
     bottom: 350px;
     left: 120px;
+    overflow: hidden;
 }
+
 
 .spiderman-rojo-final{
     position: relative;
@@ -732,4 +734,5 @@ a{
 .tarjeta:hover {
     transform: translateZ(10px) skew(10deg, 0);
 }
+
 
