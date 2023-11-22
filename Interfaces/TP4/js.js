@@ -62,7 +62,6 @@ let logoHeader = document.getElementById('logo-header');
 
 document.addEventListener('scroll', function() {
   
-  // Get the scroll position
   let scrollPos = window.pageYOffset;
   
   if ( scrollPos > 185 ) {
@@ -98,7 +97,7 @@ const menu_btn = document.querySelector('.boton-menu');
         setTimeout(function() {
           items[index].style.transform = 'translateX(0)';
           animateSidebar(index + 1);
-        }, 500); // Ajusta el retraso (500 milisegundos en este ejemplo)
+        }, 500);
       }
     }
   
@@ -106,7 +105,7 @@ const menu_btn = document.querySelector('.boton-menu');
       var currentLeft = parseInt(sidebar.style.left, 10) || 0;
   
       if (currentLeft === 0) {
-        sidebar.style.left = '-250px'; // Cambiado a un valor negativo igual al ancho inicial
+        sidebar.style.left = '-250px'; 
         items.forEach(function(item) {
           item.style.transform = 'translateX(-100%)';
         });
@@ -116,10 +115,9 @@ const menu_btn = document.querySelector('.boton-menu');
       }
     }
   
-    // Adjunta la función toggleSidebar al evento de clic del botón
     document.querySelector('.boton-menu').addEventListener('click', toggleSidebar);
     
-    // Llamar a la función toggleSidebar para configurar el estado inicial
+
     toggleSidebar();
   });
 
