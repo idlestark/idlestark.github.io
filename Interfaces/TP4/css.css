@@ -661,9 +661,7 @@ a{
 
 
 .header.activo{
-    background-image: url(/Interfaces/TP4/img/spider-web-header.png);
-    background-size: auto;
-    background-color: red;
+    background-color: #5499F8;
     height: 40px
 }
 
@@ -801,13 +799,10 @@ a{
     z-index: 10000;
     top: 40px;
     left: 0;
-    background-color: red;
+    background-color: #5499F8;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    background-image: url(/Interfaces/TP4/img/spider-web-corner-6.png);
-    background-repeat: no-repeat;
-    background-size: contain;
   }
   
   .sidebar .item {
