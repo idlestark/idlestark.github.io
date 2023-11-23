@@ -136,11 +136,22 @@ const menu_btn = document.querySelector('.boton-menu');
       }
     ).onfinish = function () {
       miDiv.style.transform = `translateX(${posicionFinal}px)`;
+      miDiv.addEventListener('mouseenter', rotarImagen);
+      miDiv.addEventListener('mouseleave', resetearImagen);
     };
   }
   
-
+  function rotarImagen() {
+    moverDiv();
+  }
+  
+  function resetearImagen() {
+    miDiv.style.transform = 'translateX(0px)';
+  }
+  
   moverDiv();
+
+
 
   var miDiv2 = document.getElementById('sprite2');
   var posicionFinal2 = 300;
@@ -192,4 +203,27 @@ const menu_btn = document.querySelector('.boton-menu');
     cancelAnimationFrame(requestAnimationFrame(actualizarEstilos));
   });
 
-  
+
+  var duende = document.querySelector('.duende-gigante');
+  var posicionInicial = duende.getBoundingClientRect().top + window.scrollY;
+
+  window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY;
+      var slowScroll = (scrollPosition - posicionInicial) * 0.1;
+      duende.style.transform = 'translate(0, ' + slowScroll + 'px)';
+  });
+
+  var tarjeta = document.querySelector('.tarjeta');
+  var posicionInicial = tarjeta.getBoundingClientRect().top + window.scrollY;
+
+
+  var limiteSuperior = 7700;
+
+  window.addEventListener('scroll', function() {
+      var scrollPosition = window.scrollY;
+      if (scrollPosition > limiteSuperior) {
+          window.scrollTo(0, limiteSuperior);
+      }
+  });
+
+

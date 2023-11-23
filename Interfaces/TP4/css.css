@@ -132,7 +132,7 @@ body{
 
 .duende-gigante{
     position: relative;
-    bottom: 1100px;
+    bottom: 1000px;
     left: 720px;
 }
 
@@ -568,10 +568,10 @@ a{
   }
 
   .sprite3 {
-    width: 31px; 
-    height: 35px;
-    background: url('img/adventurer_sprite_sheet_v1.1\ \(1\).png');
-    animation: animacion-spritesheet3 1s steps(13) infinite;
+    width:233px;
+    height:233px;
+    background: url("img/1_WhDjw8GiV5o0flBXM4LXEw.png");
+    animation: animacion-spritesheet3 2s steps(6) infinite;
     position: relative;
   }
   
@@ -580,7 +580,7 @@ a{
       background-position: 0 0;
     }
     to {
-      background-position: -403px 
+      background-position: -1400px; 
     }
   }
 
@@ -695,8 +695,6 @@ a{
 }
 
 
-
-
 .logo-header{
     display: none;
     position: relative;
@@ -714,7 +712,7 @@ a{
 }
 
 .seccion-ghost-spider {
-    perspective: 1000px;
+    perspective: 1050px;
 }
 
 .tarjeta {
@@ -819,3 +817,6 @@ a{
   .sidebar .item:hover {
     color: #f1f1f1;
   }
+
+
+  
