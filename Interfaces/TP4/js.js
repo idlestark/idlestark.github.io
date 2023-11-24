@@ -217,13 +217,5 @@ const menu_btn = document.querySelector('.boton-menu');
   var posicionInicial = tarjeta.getBoundingClientRect().top + window.scrollY;
 
 
-  var limiteSuperior = 7700;
-
-  window.addEventListener('scroll', function() {
-      var scrollPosition = window.scrollY;
-      if (scrollPosition > limiteSuperior) {
-          window.scrollTo(0, limiteSuperior);
-      }
-  });
 
 
