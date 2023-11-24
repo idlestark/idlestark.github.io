@@ -59,6 +59,8 @@ let header = document.getElementById('header');
 let botonComprar = document.getElementById('boton-comprar');
 let menuHamburguesa = document.getElementById('menu-hamburguesa');
 let logoHeader = document.getElementById('logo-header');
+let spiderRojo = document.getElementById('rojo')
+let telaraña = document.getElementById('telaraña-izqueirda')
 
 document.addEventListener('scroll', function() {
   
@@ -69,11 +71,15 @@ document.addEventListener('scroll', function() {
     botonComprar.classList.add('activo-comprar')
     menuHamburguesa.classList.add('activo-menu')
     logoHeader.classList.add('activo-logo')
+    spiderRojo.classList.add('spiderman-rojo-activo')
+    telaraña.classList.add('telaraña-izqueirda-activo')
   } else {
     header.classList.remove('activo')
     botonComprar.classList.remove('activo-comprar')
     menuHamburguesa.classList.remove('activo-menu')
     logoHeader.classList.remove('activo-logo')
+    spiderRojo.classList.remove('spiderman-rojo-activo')
+    telaraña.classList.remove('telaraña-izqueirda-activo')
   }
   
   
