@@ -65,6 +65,8 @@ body{
     right:460px;
 }
 
+
+
 .spiderman-rojo img{
     height: 300px;
 }
@@ -93,6 +95,14 @@ body{
     position: absolute;
     right: 645px;
     top:95px;
+}
+
+.telaraña-izqueirda-activo{
+    display: none;
+}
+
+.spiderman-rojo-activo{
+    display: none;
 }
 
 .telaraña-derecha{
@@ -132,7 +142,7 @@ body{
 
 .duende-gigante{
     position: relative;
-    bottom: 1000px;
+    bottom: 1180px;
     left: 720px;
 }
 
