@@ -1,4 +1,4 @@
-/*setTimeout(function() {
+setTimeout(function() {
     document.querySelector(".body-falso").classList.toggle("loader2");
   }, 5000);
   
@@ -16,7 +16,7 @@
             porcentajeElement.textContent = porcentaje + '%'; 
         }
     }, 50);
-  });*/
+  });
 
 
 
