@@ -384,6 +384,11 @@ body{
     position: relative;
     left: 75px;
     bottom: 550px;
+    transition: 0.3s ease;
+}
+
+.boton-comprar-ahora:hover{
+    background: #a99b00;
 }
 
 .titulo-comprar-ahora{
@@ -475,6 +480,11 @@ body{
     position: relative;
     bottom:901px;
     left: 220px;
+    transition: 0.3s ease;
+}
+
+.boton-suscribirse:hover{
+    background: #a99b00;
 }
 
 .texto-suscribirse{
@@ -704,6 +714,9 @@ a{
    
 }
 
+.boton-comprar:hover{
+    background: #a99b00;
+}
 
 .logo-header{
     display: none;
