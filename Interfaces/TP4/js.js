@@ -128,7 +128,7 @@ const menu_btn = document.querySelector('.boton-menu');
   });
 
   var miDiv = document.getElementById('sprite');
-  var posicionFinal = 1100;
+  var posicionFinal = 1150;
   
   function moverDiv() {
     miDiv.animate(
@@ -156,28 +156,6 @@ const menu_btn = document.querySelector('.boton-menu');
   }
   
   moverDiv();
-
-
-
-  var miDiv2 = document.getElementById('sprite2');
-  var posicionFinal2 = 300;
-
-  function moverDiv2() {
-    miDiv2.animate(
-      [
-        { transform: 'translateY(0px) rotate(-90deg)' },
-        { transform: `translateY(-${posicionFinal2}px)` }
-      ],
-      {
-        duration: 10000,
-        easing: 'ease-in-out' 
-      }
-    ).onfinish = function () {
-      miDiv2.style.transform = `translateY(-${posicionFinal2}px)`;
-    };
-  }
-
-  moverDiv2();
 
   let rojo = document.getElementById('rojo');
   let telaraña_izqueirda = document.getElementById('telaraña-izqueirda');
@@ -219,8 +197,30 @@ const menu_btn = document.querySelector('.boton-menu');
       duende.style.transform = 'translate(0, ' + slowScroll + 'px)';
   });
 
-  var tarjeta = document.querySelector('.tarjeta');
-  var posicionInicial = tarjeta.getBoundingClientRect().top + window.scrollY;
+
+
+
+  
+  function applyTransform(element, transformValue) {
+    element.style.transform = transformValue;
+}
+
+window.addEventListener('scroll', function () {
+    var scrollPosition = window.scrollY;
+
+    var transform1 = 'translateZ(10px) skew(10deg, 0) translateY(' + (scrollPosition / 21) + 'px)';
+    var transform2 = 'translateZ(10px) skew(10deg, 0) translateY(' + (scrollPosition / 20) + 'px)';
+    var transform3 = 'translateZ(10px) skew(10deg, 0) translateY(' + (scrollPosition / 19) + 'px)';
+
+    applyTransform(document.getElementById('tarjeta-1'), transform1);
+    applyTransform(document.getElementById('tarjeta-2'), transform2);
+    applyTransform(document.getElementById('tarjeta-3'), transform3);
+});
+
+
+
+
+
 
 
 

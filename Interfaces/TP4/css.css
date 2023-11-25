@@ -193,7 +193,7 @@ body{
 
 .tarjeta-1{
     position: relative;
-    bottom: 3000px;
+    bottom: 3070px;
 }
 
 .tarjeta-1 img{
@@ -202,7 +202,7 @@ body{
 
 .tarjeta-2{
     position: relative;
-    bottom: 3250px;
+    bottom: 3320px;
 }
 
 .tarjeta-2 img{
@@ -212,7 +212,7 @@ body{
 
 .tarjeta-3{
     position: relative;
-    bottom: 3580px;
+    bottom: 3650px;
     left: 30px;
 }
 
@@ -538,34 +538,34 @@ a{
 
 /*1135px tope*/
 
-.sprite {
-    width: 78px; 
-    height: 76px; 
-    background: url('img/CnCWYNOXEAA5DCW\ \(1\).png');
-    animation: animacion-spritesheet 1s steps(12) infinite;
-    position: relative;
-    left: 15px;
-    bottom: 26px;
-    transition: transform 1s ease-in-out; 
-  }
 
-  @keyframes animacion-spritesheet {
+  .sprite {
+    width:72px;
+    height:72px;
+    background: url("img/1_WhDjw8GiV5o0flBXM4LXEw.png");
+    animation: animacion-spritesheet1 2s steps(6) infinite;
+    position: relative;
+    bottom: 27px;
+  }
+  
+  @keyframes animacion-spritesheet1 {
     from {
       background-position: 0 0;
     }
     to {
-      background-position: -936px  
+      background-position: -432px; 
     }
   }
 
+  
   .sprite2 {
-    width: 77px; 
-    height: 65px; 
-    background: url('img/CnCWYNOXEAA5DCW\ \(2\).png');
-    animation: animacion-spritesheet2 1s steps(6) infinite;
+    width:54px;
+    height:95px;
+    background: url("img/1_GJ6ZL0eX8tJE54ZYFSnI9Q\ \(1\).png");
+    animation: animacion-spritesheet2 2s steps(8) infinite;
     position: relative;
-    left: 230px;
-    bottom: 100px;
+    bottom: 280px;
+    left: 550px;
   }
   
   @keyframes animacion-spritesheet2 {
@@ -573,26 +573,11 @@ a{
       background-position: 0 0;
     }
     to {
-      background-position: -462px 0; 
+      background-position: -432px; 
     }
   }
 
-  .sprite3 {
-    width:233px;
-    height:233px;
-    background: url("img/1_WhDjw8GiV5o0flBXM4LXEw.png");
-    animation: animacion-spritesheet3 2s steps(6) infinite;
-    position: relative;
-  }
-  
-  @keyframes animacion-spritesheet3 {
-    from {
-      background-position: 0 0;
-    }
-    to {
-      background-position: -1400px; 
-    }
-  }
+
 
 /*.body-falso{
     background-color: black;
@@ -725,13 +710,13 @@ a{
     perspective: 1050px;
 }
 
-.tarjeta {
+.tarjeta img {
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.5s ease-out;
 }
 
-.tarjeta:hover {
+.tarjeta img:hover {
     transform: translateZ(10px) skew(10deg, 0);
 }
 
