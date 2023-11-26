@@ -569,24 +569,46 @@ a{
 
   
   .sprite2 {
-    width:54px;
-    height:95px;
-    background: url("img/1_GJ6ZL0eX8tJE54ZYFSnI9Q\ \(1\).png");
+    width: 80px;
+    height: 69px;
+    background: url("img/hero_spritesheet.png");
     animation: animacion-spritesheet2 2s steps(8) infinite;
     position: relative;
-    bottom: 280px;
-    left: 550px;
+    bottom: 335px;
+    left: 950px;
   }
-  
+
+  .sprite2:hover {
+    background: url("img/hero_spritesheet1.png");
+    animation:  animacion-spritesheet3 2s steps(6) infinite; 
+    background-position: -468px; 
+  }
+
   @keyframes animacion-spritesheet2 {
     from {
       background-position: 0 0;
     }
     to {
-      background-position: -432px; 
+      background-position: -640px;
     }
   }
 
+  .sprite3 {
+    width: 78px;
+    height: 69px;
+    background: url("img/hero_spritesheet1.png");
+    animation: animacion-spritesheet3 2s steps(6) infinite;
+    opacity: 0; 
+  }
+
+  @keyframes animacion-spritesheet3 {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -468px;
+    }
+  }
 
 
 /*.body-falso{
@@ -825,3 +847,5 @@ a{
   .sidebar .item:hover {
     color: #f1f1f1;
   }
+
+  

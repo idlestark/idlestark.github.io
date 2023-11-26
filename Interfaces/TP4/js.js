@@ -219,6 +219,19 @@ window.addEventListener('scroll', function () {
 
 
 
+window.addEventListener('scroll', function() {
+  var imgColumn = document.getElementById('imgColumn');
+  var scrollPosition = window.scrollY;
+
+  if (scrollPosition > 300) {
+      imgColumn.style.backgroundImage = 'url("img/image 9.png")';
+  } else {
+      imgColumn.style.backgroundImage = 'url("img/image 10.png")';
+  }
+});
+
+
+
 
 
 
