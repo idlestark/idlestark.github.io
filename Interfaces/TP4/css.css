@@ -308,63 +308,59 @@ body{
     height: 0vh;
 }
 
-.texto-mas-amigos{
+.titulo-mas-amigos{
     position: relative;
     bottom: 1000px;
-    left: 65px;
-    font-size: 60px;
+    left: 181px;
+    font-size: 3.5em;
 }
 
-.img-mas-amigos-1{
+.contenedor{
     position: relative;
-    bottom: 950px;
-    left: 70px;
+    bottom: 940px;
+    overflow: hidden;
+    background-position: 0 18%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    left: 50px;
 }
 
-.img-mas-amigos-2{
-    position: relative;
-    bottom: 850px;
-    left: 70px;
+#cont1{
+    background-image: url("img/image 21.png");
 }
 
-.img-mas-amigos-3{
-    position: relative;
-    bottom: 750px;
-    left: 70px;
+#cont2{
+    background-image: url("img/image 9.png");
 }
 
-.img-mas-amigos-4{
-    position: relative;
-    bottom: 650px;
-    left: 70px;
-    margin-bottom: -800px;
+#cont3{
+    background-image: url("img/image 10.png");
 }
 
-.titulo-mas-amigos-1, .titulo-mas-amigos-2, .titulo-mas-amigos-3, .titulo-mas-amigos-4{
-    font-size: 40px;
-    font-weight: 500;
+#cont4{
+    background-image: url("img/image 6.png");
+}
+
+.texto{
+    float: right;
     position: relative;
-    left: 620px;
-    bottom: 345px;
+    right: 50px;
+    min-height: 400px;
+}
+
+p.texto{
+    margin: 20px;
+    font-size: 1.5em;
+    line-height: 20.9px;
+}
+
+p.titulo{
+    position: relative;
+    right: 31px;
+    margin-top: 20px;
+    margin-bottom:10px;
+    font-size: 2.5em;
     line-height: 0.9;
-}
-
-.texto-mas-amigos-1, .texto-mas-amigos-3, .texto-mas-amigos-4{
-    font-size: 20px;
-    font-weight: 200;
-    position: relative;
-    left: 620px;
-    bottom: 350px;
-    margin-bottom: -345px;
-}
-
-.texto-mas-amigos-2{
-    font-size: 20px;
-    font-weight: 200;
-    position: relative;
-    left: 620px;
-    bottom: 360px;
-    margin-bottom: -360px;
 }
 
 .boton-comprar-ahora{
@@ -383,7 +379,7 @@ body{
     letter-spacing: 2.2px;
     position: relative;
     left: 75px;
-    bottom: 550px;
+    bottom: 1150px;
     transition: 0.3s ease;
 }
 
@@ -395,13 +391,13 @@ body{
     position: relative;
     font-size: 50px;
     left: 75px;
-    bottom: 570px;
+    bottom: 1170px;
     color: white;
 }
 
 .spiderman-blanco-final{
     position: relative;
-    bottom: 350px;
+    bottom: 950px;
     left: 120px;
     overflow: hidden;
 }
@@ -409,21 +405,21 @@ body{
 
 .spiderman-rojo-final{
     position: relative;
-    bottom: 750px;
+    bottom: 1350px;
     left: 340px;
 }
 
 .spiderman-negro-final{
     position: relative;
-    bottom: 1210px;
+    bottom: 1810px;
     left: 730px;
 }
 
 .cielo{
     position: relative;
-    bottom: 1390px;
+    bottom: 1990px;
     right: 10px;
-    margin-bottom: -2580px;
+    margin-bottom: -3080px;
 }
 
 .edificios{
@@ -435,7 +431,7 @@ body{
 .rectangulo-negro-angosto{
     position: relative;
     right: 10px;
-    bottom: 150px;
+    bottom: 750px;
 }
 
 .titulo-suscribirse{
@@ -512,20 +508,20 @@ a{
 .rectangulo-gris{
     position: relative;
     right: 10px;
-    top: 20px;
+    top: -401px;
 }
 
 .img-ps5-ps4{
     position: relative;
-    bottom: 60px;
+    bottom: 485px;
     left: 50px;
 }
 
 .rectangulo-gris-grande{
     position: relative;
     right: 20px;
-    bottom: 65px;
-    margin-bottom: -350px;
+    bottom: 485px;
+    margin-bottom: -750px;
     height: 20vh;
 }
 
@@ -546,7 +542,6 @@ a{
     left: 60px;
 }
 
-/*1135px tope*/
 
 
   .sprite {
@@ -555,7 +550,7 @@ a{
     background: url("img/1_WhDjw8GiV5o0flBXM4LXEw.png");
     animation: animacion-spritesheet1 2s steps(6) infinite;
     position: relative;
-    bottom: 27px;
+    bottom: 47px;
   }
   
   @keyframes animacion-spritesheet1 {
@@ -574,7 +569,7 @@ a{
     background: url("img/hero_spritesheet.png");
     animation: animacion-spritesheet2 2s steps(8) infinite;
     position: relative;
-    bottom: 335px;
+    bottom: 360px;
     left: 950px;
   }
 
@@ -848,4 +843,3 @@ a{
     color: #f1f1f1;
   }
 
-  
