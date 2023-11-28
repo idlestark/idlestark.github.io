@@ -319,32 +319,37 @@ body{
     position: relative;
     bottom: 940px;
     overflow: hidden;
+    overflow-x: visible;
     background-position: 0 18%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    left: 50px;
 }
+
 
 #cont1{
     background-image: url("img/image 21.png");
+    background-position: 10%;
 }
 
 #cont2{
     background-image: url("img/image 9.png");
+    background-position: 10%;
 }
 
 #cont3{
     background-image: url("img/image 10.png");
+    background-position: 10%;
 }
 
 #cont4{
     background-image: url("img/image 6.png");
+    background-position: 10%;
 }
 
 .texto{
     float: right;
     position: relative;
-    right: 50px;
+    right: 10px;
     min-height: 400px;
 }
 
@@ -356,9 +361,8 @@ p.texto{
 
 p.titulo{
     position: relative;
-    right: 31px;
-    margin-top: 20px;
-    margin-bottom:10px;
+    left: 10px;
+    bottom: -20px;
     font-size: 2.5em;
     line-height: 0.9;
 }
@@ -602,6 +606,49 @@ a{
     }
     to {
       background-position: -468px;
+    }
+  }
+
+  .sprite4 {
+    width: 78px;
+    height: 76px;
+    background: url("img/CnCWYNOXEAA5DCW\ \(1\).png");
+    animation: animacion-spritesheet4 2s steps(12) infinite;
+    opacity: 0; 
+  }
+
+
+  @keyframes animacion-spritesheet4 {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -936px;
+    }
+  }
+
+  .sprite5 {
+    width: 77px;
+    height: 65px;
+    background: url("img/CnCWYNOXEAA5DCW\ \(2\).png");
+    animation: animacion-spritesheet5 2s steps(6) infinite;
+    position: relative;
+    bottom: 715px;
+    left: 50px; 
+  }
+
+  .sprite5:hover {
+    background: url("img/CnCWYNOXEAA5DCW\ \(1\).png");
+    animation: animacion-spritesheet4 2s steps(12) infinite; 
+    background-position: -936px;
+  }
+
+  @keyframes animacion-spritesheet5 {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -462px;
     }
   }
 
