@@ -552,7 +552,7 @@ a{
     width:72px;
     height:72px;
     background: url("img/1_WhDjw8GiV5o0flBXM4LXEw.png");
-    animation: animacion-spritesheet1 2s steps(6) infinite;
+    animation: animacion-spritesheet1 1.2s steps(6) infinite;
     position: relative;
     bottom: 47px;
   }
@@ -653,7 +653,7 @@ a{
   }
 
 
-/*.body-falso{
+.body-falso{
     background-color: black;
     width: 100%;
     height: 100%;
@@ -716,7 +716,7 @@ a{
     transform: translate(-50%, -50%);
     font-size: 18px;
     color: #fff;
-}*/
+}
 
 .header{
     height: 50px;
